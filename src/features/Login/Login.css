@@ -1,0 +1,152 @@
+.full-screen-container {
+  height: 60vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 8vh;
+}
+
+.hidden {
+  display: none;
+}
+
+.login-container {
+  background-color: hsla(180, 1%, 19%, 0.877);
+  padding: 50px 30px;
+  border-radius: 15px;
+  min-width: 400px;
+  width: 50%;
+  border: 1px solid white;
+  max-width: 600px;
+}
+
+.login-title {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 40px;
+  font-size: 2.5em;
+  font-weight: normal;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 30vw;
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  color: white;
+  font-weight: lighter;
+  font-size: 1.2em;
+  margin-bottom: 1vh;
+}
+
+.input-group input {
+  font-size: 1.2em;
+  width: 20vw;
+  height: 3vh;
+  color: white;
+  padding: 0.1em 0.75em;
+  background-color: hsla(201, 100%, 91%, 0.3);
+  border: 1px solid hsl(201, 100%, 6%);
+  outline: none;
+  border-radius: 5px;
+  border: 0.1px solid white;
+  font-weight: lighter;
+}
+
+.input-group input:focus {
+  border: 1px solid hsl(24, 100%, 50%);
+}
+
+.login {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+  width: 5vw;
+  height: 4vh;
+  background: none;
+  border: 1px solid white;
+  border-radius: 100px;
+  transition: 0.5s;
+  font-size: 1.1em;
+  animation: pulse 10s infinite linear;
+}
+
+@keyframes pulse {
+  0% {
+    border-color: white;
+  }
+  25% {
+    border-color: rgba(249, 140, 112, 1);
+  }
+  50% {
+    border-color: rgb(72, 110, 185);
+  }
+  100% {
+    border-color: white;
+  }
+}
+
+.login span,
+svg {
+  position: absolute;
+  color: white;
+  font-size: 1em;
+}
+
+.login:focus {
+  outline: none;
+  border: 2px solid transparent;
+  width: 50px;
+  border-left: 2px solid rgba(249, 140, 112, 1);
+  border-bottom: 2px solid rgb(72, 110, 185);
+  animation: spin 2s 500ms forwards;
+}
+
+.login:focus span {
+  color: transparent;
+  background: none;
+}
+.login:focus svg {
+  animation: check 500ms 2300ms forwards;
+}
+
+@keyframes spin {
+  80% {
+    border: 2px solid transparent;
+    border-left: 2px solid rgb(72, 110, 185);
+  }
+  100% {
+    transform: rotate(1080deg);
+    border: 2px solid rgba(249, 140, 112, 1);
+  }
+}
+
+@keyframes check {
+  to {
+    fill: rgba(249, 140, 112, 1);
+  }
+}
+
+@keyframes circle {
+  to {
+    border: 2px solid rgba(249, 140, 112, 1);
+  }
+}
