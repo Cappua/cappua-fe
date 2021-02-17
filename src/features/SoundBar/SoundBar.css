@@ -1,10 +1,8 @@
 .soundbar-container {
-  margin-left: 5vw;
+  margin-left: 10vw;
+  margin-top: 5vh;
   display: flex;
   flex-direction: row;
   align-items: baseline;
 }
 
-.soundbar-container {
-  width: 100vw;
-}
