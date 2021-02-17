@@ -7,23 +7,46 @@ import { nanoid } from "nanoid";
 function Trio() {
   const trioTabs = trioData.map((tab) => {
     const { id, title, image, description, link } = tab;
-    return (
+    if (link !== "") {
+      return (
         <section className="tab-container" key={nanoid()} id={id}>
           <a href={link}>
-          <img
-            className="tab-img"
-            src={image}
-            key={id}
-            id={id}
-            alt="project-img"
-          />
+            <img
+              className="tab-img"
+              src={image}
+              key={id}
+              id={id}
+              alt="project-img"
+            />
+          </a>
+          <div className="tab-details" key={id}>
+            <h1 id="tab-title">{title}</h1>
+            <p id="tab-description">{description}</p>
+          </div>
+          <button className="tab-btn" href={link}>
+            Button
+          </button>
+        </section>
+      );
+    } else {
+      return (
+        <section className="tab-container" key={nanoid()} id={id}>
+          <a href={link}>
+            <img
+              className="tab-img"
+              src={image}
+              key={id}
+              id={id}
+              alt="project-img"
+            />
           </a>
           <div className="tab-details" key={id}>
             <h1 id="tab-title">{title}</h1>
             <p id="tab-description">{description}</p>
           </div>
         </section>
-    );
+      );
+    }
   });
   return <section className="trio-container">{trioTabs}</section>;
 }
