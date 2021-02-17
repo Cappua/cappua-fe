@@ -3,3 +3,9 @@ body {
   font-family: "Open Sans", sans-serif;
   font-weight: lighter;
 }
+
+ @media screen and (max-width: 650px) {
+   body{
+     margin-bottom: 20vh;
+   }
+ }
