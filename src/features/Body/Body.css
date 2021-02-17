@@ -34,3 +34,19 @@
   margin-right: 5vw;
   border-radius: 10px;
 }
+
+@media screen and (max-width: 889px) {
+  .winner-name {
+    font-size: 3vh;
+  }
+  .month {
+    font-size: 3vh;
+  }
+  .winner-details {
+    font-size: 2vh;
+  }
+  .body-image {
+    height: 20vh;
+    width: 20vw;
+  }
+}

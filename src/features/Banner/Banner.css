@@ -9,7 +9,7 @@
 }
 
 .banner {
-  border: solid .1rem black;
+  border: solid 0.1rem black;
   border-radius: 5px;
   margin: 1.4vh;
   left: 5vw;
@@ -19,4 +19,10 @@
   padding: 2.3vw;
   font-size: 4.5vw;
   width: 70%;
+}
+
+@media screen and (max-width: 889px) {
+  .banner-container {
+    display: none;
+  }
 }

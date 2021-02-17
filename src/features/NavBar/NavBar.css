@@ -4,7 +4,6 @@
   justify-content: space-between;
   align-items: center;
   position: sticky;
-  position: -webkit-sticky;
   box-shadow: 0px 6px 12px 0px #0000003d;
   top: 0;
   width: 100%;
@@ -13,30 +12,111 @@
   z-index: 2;
 }
 
-.logo {
-  width: 18vw;
-  padding-left: 1vw;
+@media screen and (min-width: 890px) {
+  .menu-container {
+    display: none;
+  }
+
+  .logo {
+    width: 18vw;
+    padding-left: 1vw;
+  }
+
+  .navbar-contents {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0 1vw;
+    width: 40%;
+    right: 1vw;
+  }
+
+  .navbar-contents a {
+    font-size: 2.5vh;
+    text-decoration: none;
+    padding: 1vw;
+    border-radius: 5px;
+    color: black;
+    transition: 0.8s;
+  }
+
+  .navbar-contents a:hover {
+    background-color: rgba(31, 29, 39, 0.925);
+    color: white;
+  }
 }
 
-.navbar-contents {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  padding: 0 1vw;
-  width: 40%;
-  right: 1vw;
-}
+@media screen and (max-width: 889px) {
+  .navbar-contents {
+    display: none;
+  }
+  .logo {
+    width: 15em;
+    padding-left: 1vw;
+  }
 
-.navbar-contents a {
-  font-size: 2.5vh;
-  text-decoration: none;
-  padding: 1vw;
-  border-radius: 5px;
-  color: black;
-  transition: .8s;
-}
+  .menu-container {
+    align-self: baseline;
+    text-align: center;
+  }
 
-.navbar-contents a:hover {
-  background-color: rgba(31, 29, 39, 0.925);
-  color: white;
+  #nav-icon {
+    position: absolute;
+    right: 0.8vw;
+    color: rgba(53, 52, 52, 0.904);
+    margin: 1em 0.1em 0em 1em;
+    font-size: 2.5rem;
+    z-index: 3;
+  }
+
+  .sidenav {
+    height: 100vh;
+    width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: fixed;
+    opacity: 0.9;
+    z-index: 2;
+    padding: 1vh 0;
+    top: 0;
+    right: 0;
+    transition: width 0.35s;
+    background-color: #e2edee;
+    overflow-x: hidden;
+    border-left: solid 1px black;
+    display: inline-block;
+  }
+
+  #sidenav-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 50%;
+  }
+  #sidenav-contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30%;
+  }
+
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.8vh;
+    color: black;
+    display: block;
+    transition: 0.3s;
+  }
+
+  #login {
+    text-decoration: underline;
+  }
+
+  .sidenav a:hover {
+    color: rgba(249, 140, 112, 1);
+    background-color: white;
+    text-decoration: underline;
+  }
 }

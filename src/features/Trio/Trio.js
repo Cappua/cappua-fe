@@ -2,7 +2,6 @@ import React from "react";
 import "./Trio.css";
 import trioData from "../../Utilities/trioData";
 import { nanoid } from "nanoid";
-// import { Link } from "react-router-dom";
 
 function Trio() {
   const trioTabs = trioData.map((tab) => {

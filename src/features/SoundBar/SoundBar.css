@@ -6,3 +6,12 @@
   align-items: baseline;
 }
 
+@media screen and (max-width: 889px) {
+  .soundbar-container {
+    margin-left: 3vw;
+    margin-top: 3vh;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+  }
+}
