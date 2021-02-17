@@ -1,0 +1,40 @@
+.announce-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 2em;
+}
+
+.announce-image {
+  height: 45vh;
+  width: 40vw;
+  margin-left: 5vw;
+}
+
+.announce-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: left;
+  margin-right: 5vw;
+  width: 35%;
+}
+
+.header {
+  font-size: 8vh;
+  margin: 0;
+}
+
+.announcement {
+  font-size: 4vh;
+}
+
+.btn {
+  background-color: rgba(31, 29, 39, 0.925);
+  border-radius: 5px;
+  color: white;
+  width: 9vw;
+  height: 5vh;
+  align-self: flex-end;
+  font-size: 2vh;
+}
