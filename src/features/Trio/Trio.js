@@ -19,7 +19,6 @@ function Trio() {
             />
           </a>
           <div className="tab-details" key={id}>
-            {/* <h1 id="tab-title">{title}</h1> */}
             <p id="tab-description">{description}</p>
           </div>
           <div id="tab-btn">

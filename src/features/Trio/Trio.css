@@ -43,15 +43,15 @@
 
 #tab-btn{
     position: absolute;
-    margin-top: 55vh;
+    margin-top: 53vh;
 }
 .tab-btn {
   background-color: rgba(31, 29, 39, 0.925);
   border-radius: 5px;
   color: white;
-  width: 7vw;
-  height: 5vh;
-  font-size: 1.2vw;
+  width: 6vw;
+  height: 4.5vh;
+  font-size: 1vw;
   border: none;
   margin: none;
   z-index: 2;
