@@ -9,7 +9,8 @@
 }
 
 .banner {
-  border: solid 1px black;
+  border: solid .1rem black;
+  border-radius: 5px;
   margin: 1.4vh;
   left: 5vw;
   right: 5vw;

@@ -9,6 +9,7 @@
   height: 45vh;
   width: 40vw;
   margin-left: 5vw;
+  border-radius: 10px;
 }
 
 .announce-text {
