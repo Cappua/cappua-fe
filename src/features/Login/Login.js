@@ -32,7 +32,7 @@ export default function LogIn() {
         <h3 className="login-title">Welcome</h3>
         <form>
           <div className="input-group">
-            <label for="name">Name</label>
+            <label for="name">Username</label>
             <input
               id="name"
               type="text"

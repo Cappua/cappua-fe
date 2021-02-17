@@ -15,7 +15,7 @@
 }
 
 .login-container {
-  background-color: hsla(180, 1%, 19%, 0.452);
+  background-color: hsla(180, 1%, 19%, 0.877);
   padding: 50px 30px;
   border-radius: 15px;
   min-width: 400px;
@@ -59,6 +59,7 @@ form {
   font-size: 1.2em;
   width: 20vw;
   height: 3vh;
+  color: white;
   padding: 0.1em 0.75em;
   background-color: hsla(201, 100%, 91%, 0.3);
   border: 1px solid hsl(201, 100%, 6%);
@@ -66,7 +67,6 @@ form {
   border-radius: 5px;
   border: 0.1px solid white;
   font-weight: lighter;
-
 }
 
 .input-group input:focus {
@@ -108,10 +108,7 @@ form {
 svg {
   position: absolute;
   color: white;
-  font-size: 0.7em;
-}
-.login:hover {
-  font-size: 1.3em;
+  font-size: 1em;
 }
 
 .login:focus {
