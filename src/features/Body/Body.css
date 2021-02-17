@@ -1,0 +1,35 @@
+.body-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 2em;
+}
+
+.body-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: left;
+  margin-left: 5vw;
+  width: 35%;
+}
+
+.winner-name {
+  font-size: 8vh;
+  margin: 0;
+}
+
+.month {
+  font-size: 7vh;
+  margin: 0;
+}
+
+.winner-details {
+  font-size: 4vh;
+}
+
+.body-image {
+  height: 45vh;
+  width: 40vw;
+  margin-right: 5vw;
+}
