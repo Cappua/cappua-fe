@@ -4,7 +4,7 @@ const trioData = [
     title: "",
     image: "https://picsum.photos/1000?" + Math.random(),
     description: "February's theme is trap music, click below to check it out",
-    link: "",
+    link: "/theme",
   },
   {
     id: 2,
