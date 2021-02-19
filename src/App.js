@@ -7,9 +7,7 @@ import SoundBar from "./features/SoundBar/SoundBar.js";
 import Trio from "./features/Trio/Trio.js";
 import Login from "./features/Login/Login.js";
 import Announcement from "./features/Announcement/Announcement.js";
-import TrackCard from './features/TrackCard/TrackCard.js';
-import TrackTitle from './features/Tracktitle/TrackTitle.js';
-import TrackNav from './features/TrackNav/TrackNav.js';
+import TrackPage from "./features/TrackPage/TrackPage.js";
 // import { Counter } from "./features/counter/Counter";
 import "./App.css";
 
@@ -32,15 +30,7 @@ function App() {
           )}
         />
         <Route exact path="/login" render={() => <Login />} />
-        <Route exact path="/trackmatch" render={() => (
-        <>  
-          <TrackTitle/>
-          <TrackCard/>
-          <SoundBar/>
-          <TrackNav/>
-        </>  
-          )}
-        />
+        <Route path="/track/:id" component={TrackPage} />
       </div>
     </Router>
   );
