@@ -44,8 +44,16 @@
   margin: 1em;
 }
 
+.search-the-ranks:focus {
+  outline-color: #fdde5a;
+}
+
 .track-sort-dropdown {
   height: 3.5vh;
   width: 10vw;
   margin: 1em;
+}
+
+.track-sort-dropdown:focus {
+  outline-color: #fdde5a;
 }
