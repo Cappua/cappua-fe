@@ -18,9 +18,11 @@
   display: flex;
   text-align: center;
   padding: 2.3vw;
-  font-size: 4.5vw;
+  font-size: 4vw;
   width: 70%;
   box-shadow: 0px 6px 12px 0px #0000003d;
+  letter-spacing: 5px;
+  color: rgb(73, 72, 72);
 }
 
 @media screen and (max-width: 889px) {

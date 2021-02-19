@@ -13,7 +13,7 @@ function NavBar() {
       navRef.current.style.width = "0";
       setOpen(false);
     } else {
-      navRef.current.style.width = "20vw";
+      navRef.current.style.width = "30vw";
       setOpen(true);
     }
   };
@@ -50,14 +50,3 @@ function NavBar() {
 }
 
 export default NavBar;
-
-// import React from "react";
-// import { useAuth0 } from "@auth0/auth0-react";
-
-// const LoginButton = () => {
-//   const { loginWithRedirect } = useAuth0();
-
-//   return <button onClick={() => loginWithRedirect()}>Log In</button>;
-// };
-
-// export default LoginButton;

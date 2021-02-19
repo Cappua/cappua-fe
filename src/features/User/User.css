@@ -12,10 +12,12 @@
   border-radius: 100px;
 }
 
-
 .auth0 {
-  width: 6vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 100;
+  width: fit-content;
   height: 5vh;
+  padding: 10px;
   background: none;
   border: 1px solid black;
   border-radius: 100px;
@@ -24,7 +26,7 @@
   outline: none;
 }
 
-.logout{
+.logout {
   animation: none;
 }
 

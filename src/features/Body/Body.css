@@ -14,8 +14,17 @@
   width: 35%;
 }
 
+.body-title {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: 100;
+  word-spacing: 20px;
+  letter-spacing: 5px;
+  color: rgb(73, 72, 72);
+}
+
 .winner-name {
-  font-size: 8vh;
+  font-size: 9vh;
+  font-style: italic;
   margin: 0;
 }
 
@@ -35,9 +44,55 @@
   border-radius: 10px;
 }
 
-@media screen and (max-width: 889px) {
-  .winner-name {
+@media screen and (max-width: 1260px) {
+  .winner-details {
     font-size: 3vh;
+  }
+}
+
+@media screen and (max-width: 1186px) {
+  .body-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: left;
+    margin-left: 5vw;
+    width: 35%;
+  }
+  .winner-name {
+    font-size: 7vh;
+    font-style: italic;
+    word-spacing: 0;
+  }
+  .month {
+    font-size: 4vh;
+    margin: 0;
+  }
+  .winner-details {
+    font-size: 3vh;
+  }
+}
+
+@media screen and (max-width: 889px) {
+  .body-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100vw;
+    padding: 1vh 0vw;
+  }
+
+  .body-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    margin-left: 5vw;
+    width: 35%;
+  }
+  .winner-name {
+    font-size: 5.5vh;
+    font-style: italic;
   }
   .month {
     font-size: 3vh;
@@ -46,7 +101,17 @@
     font-size: 2vh;
   }
   .body-image {
-    height: 20vh;
-    width: 20vw;
+    height: 40vh;
+    width: 40vw;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .winner-name {
+    font-size: 6vw;
+    font-style: italic;
+  }
+    .month {
+    font-size: 2.5vh;
   }
 }
