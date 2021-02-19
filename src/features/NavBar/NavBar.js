@@ -1,13 +1,12 @@
 import React from "react";
+import User from "../User/User";
 import { Link } from "react-router-dom";
 import { useRef, useState } from "react";
-import cappuaLogo from '../../assets/cappualogo.png'
 import "./NavBar.css";
-
 function NavBar() {
   let navRef = useRef();
   const [open, setOpen] = useState(false);
-  const toggleSettings = () => {
+  const toggleMenu = () => {
     if (open) {
       navRef.current.style.width = "0";
       setOpen(false);
@@ -21,26 +20,23 @@ function NavBar() {
       <Link to="/">
         <img
           className="logo"
-          src={cappuaLogo}
+          src="https://media.giphy.com/media/FxfVpjpQb1kwKadK9L/giphy.gif"
           alt="logo"
         />
       </Link>
       <div className="navbar-contents">
         <Link to="/halloffame">Hall of Fame</Link>
         <Link to="/competitions">Competitions</Link>
-        <Link to="/login">Login</Link>
+        <User />
       </div>
-
       <div className="menu-container">
-        <i class="fas fa-bars" id="nav-icon" onClick={toggleSettings} />
+        <i class="fas fa-bars" id="nav-icon" onClick={toggleMenu} />
         <div className="sidenav" ref={navRef}>
           <div id="sidenav-container">
             <div id="sidenav-contents">
               <Link to="/halloffame">Hall of Fame</Link>
               <Link to="/competitions">Competitions</Link>
-              <Link to="/login" id="login">
-                Login
-              </Link>
+              <User />
             </div>
           </div>
         </div>
@@ -48,5 +44,4 @@ function NavBar() {
     </div>
   );
 }
-
 export default NavBar;
