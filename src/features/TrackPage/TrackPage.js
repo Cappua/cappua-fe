@@ -13,9 +13,9 @@ const TrackPage = () => {
         <InstrumentalsArtwork />
         <UploadTrack />
       </section>
-      <TrackCard />
       <SoundBar />
       <TrackNav />
+      <TrackCard />
     </div>
   );
 };
