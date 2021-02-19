@@ -1,13 +1,14 @@
 import React from "react";
+import User from "../User/User";
 import { Link } from "react-router-dom";
 import { useRef, useState } from "react";
-
 import "./NavBar.css";
 
 function NavBar() {
   let navRef = useRef();
   const [open, setOpen] = useState(false);
-  const toggleSettings = () => {
+
+  const toggleMenu = () => {
     if (open) {
       navRef.current.style.width = "0";
       setOpen(false);
@@ -16,6 +17,7 @@ function NavBar() {
       setOpen(true);
     }
   };
+
   return (
     <div className="navbar-container">
       <Link to="/">
@@ -28,19 +30,17 @@ function NavBar() {
       <div className="navbar-contents">
         <Link to="/halloffame">Hall of Fame</Link>
         <Link to="/competitions">Competitions</Link>
-        <Link to="/login">Login</Link>
+        <User />
       </div>
 
       <div className="menu-container">
-        <i class="fas fa-bars" id="nav-icon" onClick={toggleSettings} />
+        <i class="fas fa-bars" id="nav-icon" onClick={toggleMenu} />
         <div className="sidenav" ref={navRef}>
           <div id="sidenav-container">
             <div id="sidenav-contents">
               <Link to="/halloffame">Hall of Fame</Link>
               <Link to="/competitions">Competitions</Link>
-              <Link to="/login" id="login">
-                Login
-              </Link>
+              <User />
             </div>
           </div>
         </div>
@@ -50,3 +50,14 @@ function NavBar() {
 }
 
 export default NavBar;
+
+// import React from "react";
+// import { useAuth0 } from "@auth0/auth0-react";
+
+// const LoginButton = () => {
+//   const { loginWithRedirect } = useAuth0();
+
+//   return <button onClick={() => loginWithRedirect()}>Log In</button>;
+// };
+
+// export default LoginButton;
