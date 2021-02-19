@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useRef, useState } from "react";
-
+import cappuaLogo from '../../assets/cappualogo.png'
 import "./NavBar.css";
 
 function NavBar() {
@@ -21,7 +21,7 @@ function NavBar() {
       <Link to="/">
         <img
           className="logo"
-          src="https://media.giphy.com/media/FxfVpjpQb1kwKadK9L/giphy.gif"
+          src={cappuaLogo}
           alt="logo"
         />
       </Link>

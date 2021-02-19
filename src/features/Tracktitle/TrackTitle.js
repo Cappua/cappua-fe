@@ -4,7 +4,7 @@ import './TrackTitle.css';
 const TrackTitle = () => {
   return (
     <div className="track-title-container">
-      <h2 className="track-title">This is sample Track Title</h2>
+      <h2 className="track-title  ">This is sample Track Title</h2>
     </div>
   )
 }
