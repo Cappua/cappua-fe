@@ -9,6 +9,7 @@
 
 .file-upload-button-text {
   color: white;
+  font-size: 2.5vh;
 }
 
 .file-upload {
@@ -22,12 +23,14 @@
   background-color: #fdde5a;
   border-radius: 5%;
   box-shadow: 0px 6px 12px 0px #0000003d;
+  transition: 500ms;
+}
+
+.file-upload:hover {
+  cursor: pointer;
+  transform: scale(1.03);
 }
 
 .file-upload-icon {
   height: 4vh;
-}
-
-.file-upload-text {
-  margin: 2em;
 }
