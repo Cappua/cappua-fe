@@ -16,10 +16,29 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  align-items: center;
   width: 50vw;
 }
 
-.search-contributors {
+.search-the-ranks-form {
+  display: flex;
+  flex-direction: row;
+}
+
+.search-the-ranks-button {
+  height: 3.5em;
+  border: none;
+  background-color: white;
+  color: none;
+  transition: 500ms;
+}
+
+.search-the-ranks-button:hover {
+  cursor: pointer;
+  transform: scale(1.15);
+}
+
+.search-the-ranks {
   height: 3.5vh;
   width: 20vw;
   margin: 1em;
