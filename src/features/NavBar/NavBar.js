@@ -3,6 +3,7 @@ import User from "../User/User";
 import { Link } from "react-router-dom";
 import { useRef, useState } from "react";
 import "./NavBar.css";
+import cappuaLogo from "../../assets/cappualogo.png";
 
 function NavBar() {
   let navRef = useRef();
@@ -19,11 +20,7 @@ function NavBar() {
   return (
     <div className="navbar-container">
       <Link to="/">
-        <img
-          className="logo"
-          src="https://media.giphy.com/media/FxfVpjpQb1kwKadK9L/giphy.gif"
-          alt="logo"
-        />
+        <img className="logo" src={cappuaLogo} alt="logo" />
       </Link>
       <div className="navbar-contents">
         <Link to="/halloffame">Hall of Fame</Link>
