@@ -24,7 +24,7 @@ const Profile = () => {
       <>
         <div className="user-info">
           <img id="user-icon" src={user.picture} alt={user.name} />
-          <h2 id="userName">{user.name}</h2>
+          {/* <h2 id="userName">{user.name}</h2> */}
           {/* <p> id="userEmail{user.email}</p> */}
         </div>
         <button
