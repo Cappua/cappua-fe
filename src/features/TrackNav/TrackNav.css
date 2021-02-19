@@ -8,6 +8,10 @@
   width: 95vw;
 }
 
+.the-ranks-title {
+  margin: 2.5em;
+}
+
 .track-sort-container {
   display: flex;
   flex-direction: row;
