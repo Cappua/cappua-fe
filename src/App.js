@@ -30,7 +30,7 @@ function App() {
           )}
         />
         <Route exact path="/login" render={() => <Login />} />
-        <Route path="/track/:id" component={TrackPage} />
+        <Route path="/track" component={TrackPage} />
       </div>
     </Router>
   );
