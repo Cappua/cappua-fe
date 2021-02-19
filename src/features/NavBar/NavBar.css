@@ -1,3 +1,9 @@
+#logo-container{
+  width: fit-content;
+  height: fit-content;
+  align-self: center;
+}
+
 @media screen and (min-width: 1110px) {
   .navbar-container {
     display: flex;
@@ -21,7 +27,7 @@
   }
 
   .logo {
-    width: 18vw;
+    width: 18em;
     padding-left: 1vw;
   }
 
@@ -70,10 +76,10 @@
   .navbar-contents {
     display: none;
   }
-  
+
   .logo {
     align-self: center;
-    width: 15em;
+    width: 18em;
     padding: 0 0 0 1vw;
     margin: 0;
   }
@@ -122,16 +128,26 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     height: 40%;
   }
 
   .sidenav a {
+    /* display: flex;
+    justify-content: center;
+    flex-direction: column; */
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 1.8vh;
     color: black;
     display: block;
     transition: 0.3s;
+    width: 100%;
+    height: 25%;
+    /* align-content: center;
+    align-items: center;
+    align-self: center;
+    text-align: center; */
   }
 
   .sidenav a:hover {

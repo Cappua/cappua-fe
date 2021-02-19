@@ -13,14 +13,14 @@ function NavBar() {
       navRef.current.style.width = "0";
       setOpen(false);
     } else {
-      navRef.current.style.width = "30vw";
+      navRef.current.style.width = "25%";
       setOpen(true);
     }
   };
 
   return (
     <div className="navbar-container">
-      <Link to="/">
+      <Link id="logo-container" to="/">
         <img
           className="logo"
           src="https://media.giphy.com/media/FxfVpjpQb1kwKadK9L/giphy.gif"
