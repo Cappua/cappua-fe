@@ -26,6 +26,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: baseline;
     padding: 0 1vw;
     width: 40%;
     right: 1vw;
@@ -108,10 +109,6 @@
     color: black;
     display: block;
     transition: 0.3s;
-  }
-
-  #login {
-    text-decoration: underline;
   }
 
   .sidenav a:hover {
