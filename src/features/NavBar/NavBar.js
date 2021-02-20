@@ -3,11 +3,9 @@ import User from "../User/User";
 import { Link } from "react-router-dom";
 import { useRef, useState } from "react";
 import "./NavBar.css";
-
 function NavBar() {
   let navRef = useRef();
   const [open, setOpen] = useState(false);
-
   const toggleMenu = () => {
     if (open) {
       navRef.current.style.width = "0";
@@ -32,7 +30,6 @@ function NavBar() {
         <Link to="/competitions">Competitions</Link>
         <User />
       </div>
-
       <div className="menu-container">
         <i className="fas fa-bars" id="nav-icon" onClick={toggleMenu} />
         <div className="sidenav" ref={navRef}>
@@ -48,5 +45,4 @@ function NavBar() {
     </div>
   );
 }
-
 export default NavBar;

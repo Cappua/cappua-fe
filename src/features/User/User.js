@@ -11,9 +11,11 @@ const Profile = () => {
     logout,
   } = useAuth0();
 
+
   if (!isAuthenticated) {
     return (
       <button className="auth0" onClick={() => loginWithRedirect()}>
+
         Log In
       </button>
     );
