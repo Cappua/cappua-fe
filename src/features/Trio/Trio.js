@@ -18,12 +18,17 @@ function Trio() {
           />
         </a>
         <div className="tab-details" key={id}>
-          <p id="tab-song">Vote on {artist}'s beat - {song}</p>
-        </div>
-        <div id="tab-btn">
-          <button className="tab-btn" href={link}>
-            Check it out!
-          </button>
+          {/* <h1 id="tab-song">
+            Vote on {artist}'s beat - {song}
+          </h1> */}
+          <h1 id="tab-vote">Vote on the beat!</h1>
+          <h2 id="tab-artist">{artist}</h2>
+          <h3 id="tab-song">{song}</h3>
+          {/* <div id="tab-btn-container"> */}
+            <button className="tab-btn" href={link}>
+              Listen Here
+            </button>
+          {/* </div> */}
         </div>
       </section>
     );
