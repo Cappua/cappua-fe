@@ -1,4 +1,4 @@
-#logo-container{
+#logo-container {
   width: fit-content;
   height: fit-content;
   align-self: center;
@@ -17,7 +17,7 @@
     width: 100vw;
     height: 7em;
     background-color: white;
-    z-index: 2;
+    z-index: 3;
     padding: 0;
     margin: 0;
   }
@@ -42,7 +42,7 @@
   }
 
   .navbar-contents a {
-    font-size: 2.5vh;
+    font-size: 1.6em;
     text-decoration: none;
     padding: 1vw;
     border-radius: 5px;
@@ -70,7 +70,7 @@
     width: 100vw;
     height: 7em;
     background-color: white;
-    z-index: 2;
+    z-index: 3;
   }
 
   .navbar-contents {
@@ -133,9 +133,6 @@
   }
 
   .sidenav a {
-    /* display: flex;
-    justify-content: center;
-    flex-direction: column; */
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 1.8vh;
@@ -144,10 +141,6 @@
     transition: 0.3s;
     width: 100%;
     height: 25%;
-    /* align-content: center;
-    align-items: center;
-    align-self: center;
-    text-align: center; */
   }
 
   .sidenav a:hover {

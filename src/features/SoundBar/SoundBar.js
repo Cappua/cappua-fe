@@ -6,7 +6,6 @@ export default function SoundBar() {
   return (
     <div className="soundbar-container">
       <ReactPlayer
-        className="soundbar"
         width="90%"
         height="100%"
         url="https://www.mixcloud.com/glibstylez/dj-glibstylez-dilla-dedication-producers-edition/"

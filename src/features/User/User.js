@@ -13,22 +13,17 @@ const Profile = () => {
 
   if (!isAuthenticated) {
     return (
-      <button
-        className="auth0"
-        onClick={() => loginWithRedirect()}
-      >
+      <button className="auth0" onClick={() => loginWithRedirect()}>
         Log In
       </button>
     );
   }
-console.log(user);
   return (
     isAuthenticated && (
       <>
         <div className="user-info">
           <img id="user-icon" src={user.picture} alt={user.name} />
           <h2 id="userName">{user.name}</h2>
-          {/* <p> id="userEmail{user.email}</p> */}
         </div>
         <button
           className="auth0 logout"

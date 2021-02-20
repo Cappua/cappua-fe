@@ -34,7 +34,7 @@ function NavBar() {
       </div>
 
       <div className="menu-container">
-        <i class="fas fa-bars" id="nav-icon" onClick={toggleMenu} />
+        <i className="fas fa-bars" id="nav-icon" onClick={toggleMenu} />
         <div className="sidenav" ref={navRef}>
           <div id="sidenav-container">
             <div id="sidenav-contents">
