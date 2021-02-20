@@ -6,7 +6,7 @@ function Body() {
     <div className="body-container">
       <div className="body-text">
         <div className="body-title">
-          <h2 className="winner-name">J Murray -</h2>
+          <h2 className="winner-name">J Murray</h2>
           <h3 className="month"> January's Winner</h3>
         </div>
         <p className="winner-details">

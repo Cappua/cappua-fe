@@ -3,6 +3,7 @@
   flex-direction: row;
   justify-content: space-around;
   padding: 2em;
+  margin-top: 3vh;
 }
 
 .body-text {
@@ -11,21 +12,35 @@
   justify-content: space-around;
   text-align: left;
   margin-left: 5vw;
-  width: 35%;
+  width: 40%;
+}
+
+.body-title {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: 100;
+  word-spacing: 20px;
+  letter-spacing: 5px;
+  color: rgb(73, 72, 72);
 }
 
 .winner-name {
-  font-size: 8vh;
+  color: rgb(54, 53, 53);
+  font-size: 7vw;
+  font-style: italic;
   margin: 0;
 }
 
+.winner-name:after {
+  content: " -";
+}
+
 .month {
-  font-size: 7vh;
+  font-size: 3vw;
   margin: 0;
 }
 
 .winner-details {
-  font-size: 4vh;
+  font-size: 2vw;
 }
 
 .body-image {
@@ -35,18 +50,71 @@
   border-radius: 10px;
 }
 
-@media screen and (max-width: 889px) {
+@media screen and (max-width: 1455px) {
   .winner-name {
-    font-size: 3vh;
+    font-size: 6vw;
+  }
+}
+
+@media screen and (max-width: 1186px) {
+  .body-text {
+    width: 35%;
   }
   .month {
+    font-size: 4vh;
+  }
+  .winner-details {
     font-size: 3vh;
+  }
+}
+
+@media screen and (max-width: 975px) {
+  .body-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100vw;
+    padding: 1vh 0vw;
+  }
+
+  .body-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    margin-left: 5vw;
+    width: 35%;
+  }
+  .winner-name {
+    font-size: 6vw;
+  }
+  .month {
+    font-size: 5vw;
   }
   .winner-details {
     font-size: 2vh;
   }
   .body-image {
-    height: 20vh;
-    width: 20vw;
+    height: 40vh;
+    width: 40vw;
+  }
+}
+
+@media screen and (max-width: 775px) {
+  .body-title {
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-weight: 100;
+    word-spacing: 0px;
+    letter-spacing: 0px;
+    color: rgb(73, 72, 72);
+  }
+  .winner-name {
+    font-size: 3.5em;
+  }
+  .month {
+    font-size: 1.5em;
+  }
+  .winner-name:after {
+    content: "";
   }
 }

@@ -1,14 +1,20 @@
-.trio-container{
-    display:flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: space-evenly;
+.trio-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
 }
 
-#featured-title{
-    font-size: 5em;
-    font-weight: 100;
-    color: rgb(73, 72, 72)
+#featured-title {
+  font-size: 7vw;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: 100;
+  word-spacing: 40px;
+  letter-spacing: 20px;
+  color: rgb(73, 72, 72);
+  margin: 10vh 0 5vh 0;
 }
 .featured-artists {
   display: flex;
@@ -43,31 +49,39 @@
   border-radius: 150px;
 }
 
-#tab-artist {
-  font-size: 1.5em;
-  font-size: 1.5vw;
-}
-.tab-details p {
+#tab-vote {
+  font-size: 1.3em;
   font-weight: lighter;
-  font-size: 1.4em;
-  font-size: 1.4vw;
-  padding: 0 2.5vw;
+  margin: 1.8vh 0;
 }
 
-#tab-btn{
-    position: absolute;
-    margin-top: 53vh;
+#tab-artist {
+  font-size: 2em;
+  font-size: 2vw;
+  margin-bottom: 0;
 }
+
+#tab-song {
+  font-size: 1.8em;
+  font-size: 1.8vw;
+  padding: 1vh 2.5vw 2.5vh;
+  margin-top: 0;
+  color: rgb(156, 5, 5);
+}
+
+#tab-song:hover {
+  color: red;
+}
+
 .tab-btn {
   background-color: rgba(31, 29, 39, 0.925);
   border-radius: 5px;
   color: white;
-  width: 8vw;
-  height: 5.5vh;
+  width: 7vw;
+  height: 5vh;
   font-size: 1vw;
-  border: none;
-  margin: none;
-  z-index: 2;
+  border: 0;
+  margin: 0;
 }
 
 .tab-container:hover .tab-btn {
@@ -75,43 +89,109 @@
   color: black;
 }
 
+@media screen and (max-width: 1500px) {
+  .trio-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 5vh 0 10vh 0;
+    text-decoration: none;
+  }
 
-@media screen and (max-width: 889px) {
-    .trio-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin: 5vh 0;
-  text-decoration: none;
-}
-.tab-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: center;
-  box-shadow: 0px 6px 12px 0px #0000003d;
-  height: 30vh;
-  font-family: "Roboto Mono", monospace;
-  border-radius: 15px;
-  width: 24vw;
-  padding: 10px;
-  transition: 0.7s;
+  #featured-title {
+    font-size: 7vw;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-weight: 100;
+    word-spacing: 20px;
+    letter-spacing: 10px;
+    color: rgb(73, 72, 72);
+    margin: 5vh 0 5vh 0;
+  }
+
+  .featured-artists {
+    margin: 0vh 0vh 2vh 0vh;
+  }
+
+  .tab-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0px 6px 12px 0px #0000003d;
+    height: 50vh;
+    font-family: "Roboto Mono", monospace;
+    border-radius: 15px;
+    width: 24vw;
+    padding: 10px;
+    transition: 0.7s;
+  }
+
+  .tab-details {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+
+  #tab-vote {
+    font-size: 2.5vw;
+  }
+
+  #tab-artist {
+    font-size: 2vw;
+  }
+
+  #tab-song {
+    font-weight: lighter;
+    font-size: 2vw;
+    padding: 0vh 2.5vw 5vh;
+  }
+
+  .tab-btn {
+    background-color: rgba(31, 29, 39, 0.925);
+    border-radius: 5px;
+    color: white;
+    align-self: center;
+    height: 4vh;
+    width: 14vw;
+    font-size: 1.8vw;
+    border: 0;
+    margin: 0;
+  }
 }
 
-#tab-btn{
-    position: absolute;
-    margin-top: 25vh;
-}
-.tab-btn {
-  background-color: rgba(31, 29, 39, 0.925);
-  border-radius: 5px;
-  color: white;
-  width: 7vw;
-  height: 3vh;
-  font-size: 1.1vw;
-  border: none;
-  margin: none;
-  z-index: 2;
-}
+@media screen and (max-width: 800px) {
+  #featured-title {
+    font-size: 6vw;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-weight: 100;
+    word-spacing: 20px;
+    letter-spacing: 5px;
+    color: rgb(73, 72, 72);
+  }
+
+  .featured-artists {
+    margin: 0vh 0vh 5vh 0vh;
+    height: fit-content;
+  }
+
+  .tab-container {
+    height: 30vh;
+  }
+
+  #tab-song {
+    font-size: 0.7em;
+  }
+
+  .tab-btn {
+    background-color: rgba(31, 29, 39, 0.925);
+    border-radius: 5px;
+    color: white;
+    width: fit-content;
+    align-self: center;
+    font-size: 0.5em;
+    border: none;
+    margin: none;
+    padding: 10px;
+  }
 }
