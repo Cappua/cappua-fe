@@ -20,10 +20,11 @@ const Profile = () => {
   }
   return (
     isAuthenticated && (
-      <>
+      <div className="user-info-container">
         <div className="user-info">
-          <img id="user-icon" src={user.picture} alt={user.name} />
-          <nav className="user-dropdown">
+          <img id="user-icon" src={user.picture} alt={user.name}></img>
+          <i class="fa fa-caret-down"></i>
+          <div className="user-dropdown">
             <div className="user-dropdown--item">
               <button
                 className="auth0 logout"
@@ -32,9 +33,9 @@ const Profile = () => {
                 Log Out
               </button>
             </div>
-          </nav>
+          </div>
         </div>
-      </>
+      </div>
     )
   );
 };
