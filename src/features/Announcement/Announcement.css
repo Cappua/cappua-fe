@@ -3,56 +3,74 @@
   flex-direction: row;
   justify-content: space-around;
   padding: 2em;
+  width: fit-content;
 }
-@media screen and (min-width: 890px) {
-  .announce-image {
-    height: 45vh;
-    width: 40vw;
-    margin-left: 2vw;
-    border-radius: 10px;
-  }
+.announce-image {
+  height: 45vh;
+  width: 40vw;
+  margin-left: 2vw;
+  border-radius: 10px;
+}
+.announce-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: left;
+  width: 35%;
+}
 
-  .announce-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    text-align: left;
-    margin-right: 5vw;
-    width: 35%;
-  }
+.announcement-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  padding: 20px;
+  align-self: flex-end;
+  text-align: center;
+  width: fit-content;
+  font-size: 2vh;
+  color: white;
+  background-color: rgba(31, 29, 39, 0.925);
+  border-radius: 5px;
+}
 
+.header {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: 100;
+  word-spacing: 20px;
+  letter-spacing: 5px;
+  color: rgb(73, 72, 72);
+  font-size: 5vw;
+  margin: 0;
+}
+
+.announcement {
+  font-size: 2.5vw;
+}
+
+@media screen and (max-width: 1145px) {
   .header {
-    font-size: 5vw;
+    font-size: 3.7vw;
     margin: 0;
   }
 
   .announcement {
-    font-size: 4vh;
+    font-size: 2.7vh;
   }
 
-  .btn {
-    background-color: rgba(31, 29, 39, 0.925);
-    border-radius: 5px;
-    color: white;
-    width: 9vw;
+  .announcement-btn {
+    width: fit-content;
     height: 5vh;
-    align-self: flex-end;
-    font-size: 2vh;
   }
 }
 
 @media screen and (max-width: 889px) {
   .announce-container {
-    padding: 1em;
+    width: 90%;
+    padding: 0;
   }
-  .announce-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    text-align: left;
-    margin-right: 2vw;
-    width: 35%;
-  }
+
   .announce-image {
     height: 25vh;
     width: 45vw;
@@ -61,7 +79,7 @@
   }
 
   .header {
-    font-size: 4vh;
+    font-size: 3vh;
     margin: 0;
   }
 
@@ -69,13 +87,24 @@
     font-size: 2vh;
   }
 
-  .btn {
-    background-color: rgba(31, 29, 39, 0.925);
-    border-radius: 5px;
-    color: white;
-    width: 9vw;
+  .announcement-btn {
     height: 5vh;
-    align-self: flex-end;
     font-size: 1.5vh;
+  }
+}
+
+@media screen and (max-width: 656px) {
+  .header {
+    font-size: 4.5vw;
+    margin: 0;
+  }
+
+  .announcement {
+    font-size: 3vw;
+    padding-right: 10px;
+  }
+  .announcement-btn {
+    height: 3vh;
+    font-size: 1vh;
   }
 }

@@ -17,7 +17,7 @@ export default function Announcement() {
           Big company announcement or simple sub-header taking two or more
           lines.
         </p>
-        <button className="btn">Button</button>
+        <button className="announcement-btn">Button</button>
       </div>
     </div>
   );

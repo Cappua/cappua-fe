@@ -13,14 +13,19 @@ function NavBar() {
       navRef.current.style.width = "0";
       setOpen(false);
     } else {
-      navRef.current.style.width = "20vw";
+      navRef.current.style.width = "25%";
       setOpen(true);
     }
   };
+
   return (
     <div className="navbar-container">
-      <Link to="/">
-        <img className="logo" src={cappuaLogo} alt="logo" />
+      <Link id="logo-container" to="/">
+        <img
+          className="logo"
+          src="https://media.giphy.com/media/FxfVpjpQb1kwKadK9L/giphy.gif"
+          alt="logo"
+        />
       </Link>
       <div className="navbar-contents">
         <Link to="/halloffame">Hall of Fame</Link>
@@ -28,7 +33,7 @@ function NavBar() {
         <User />
       </div>
       <div className="menu-container">
-        <i class="fas fa-bars" id="nav-icon" onClick={toggleMenu} />
+        <i className="fas fa-bars" id="nav-icon" onClick={toggleMenu} />
         <div className="sidenav" ref={navRef}>
           <div id="sidenav-container">
             <div id="sidenav-contents">
