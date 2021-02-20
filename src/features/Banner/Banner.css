@@ -9,7 +9,6 @@
 }
 
 .banner {
-  /* border: solid 0.1rem black; */
   border-radius: 5px;
   font-weight: 100;
   margin: 1.4vh;
@@ -23,6 +22,25 @@
   box-shadow: 0px 6px 12px 0px #0000003d;
   letter-spacing: 5px;
   color: rgb(73, 72, 72);
+}
+
+@media screen and (max-width: 1680px) {
+  .banner {
+    font-size: 3.5vw;
+  }
+}
+
+@media screen and (max-width: 1290px) {
+  .banner-container {
+    padding: 1vh 2vw 0;
+    height: 17vh;
+    width: 100%;
+    margin: 2vh 0 0;
+  }
+  .banner {
+    padding: 2vw;
+    margin: 0.5vh;
+  }
 }
 
 @media screen and (max-width: 889px) {
