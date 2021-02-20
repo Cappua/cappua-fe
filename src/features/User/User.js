@@ -23,14 +23,17 @@ const Profile = () => {
       <>
         <div className="user-info">
           <img id="user-icon" src={user.picture} alt={user.name} />
-          <h2 id="userName">{user.name}</h2>
+          <nav className="user-dropdown">
+            <div className="user-dropdown--item">
+              <button
+                className="auth0 logout"
+                onClick={() => logout({ returnTo: window.location.origin })}
+              >
+                Log Out
+              </button>
+            </div>
+          </nav>
         </div>
-        <button
-          className="auth0 logout"
-          onClick={() => logout({ returnTo: window.location.origin })}
-        >
-          Log Out
-        </button>
       </>
     )
   );
