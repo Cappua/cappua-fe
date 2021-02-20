@@ -3,6 +3,8 @@ import User from "../User/User";
 import { Link } from "react-router-dom";
 import { useRef, useState } from "react";
 import "./NavBar.css";
+import cappuaLogo from "../../assets/cappualogo.png";
+
 function NavBar() {
   let navRef = useRef();
   const [open, setOpen] = useState(false);

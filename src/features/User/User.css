@@ -1,3 +1,21 @@
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+  font-size: 8px;
+}
+
+#user-icon {
+  width: 4vw;
+  height: 7vh;
+  border-radius: 100px;
+}
+
+.auth0 {
+  width: 6vw;
+  height: 5vh;
+
 .user-info-container {
   overflow: hidden;
   display: flex;

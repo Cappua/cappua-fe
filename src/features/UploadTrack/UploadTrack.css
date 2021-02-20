@@ -1,0 +1,36 @@
+.upload-track-container {
+  height: 30vh;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.file-upload-button-text {
+  color: white;
+  font-size: 2.5vh;
+}
+
+.file-upload {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 15vw;
+  padding: 1em;
+  border: #fdde5a;
+  background-color: #fdde5a;
+  border-radius: 5%;
+  box-shadow: 0px 6px 12px 0px #0000003d;
+  transition: 500ms;
+}
+
+.file-upload:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+}
+
+.file-upload-icon {
+  height: 4vh;
+}
