@@ -28,8 +28,8 @@ function NavBar() {
         />
       </Link>
       <div className="navbar-contents">
-        <Link to="/halloffame">Hall of Fame</Link>
-        <Link to="/competitions">Competitions</Link>
+        <Link to="/halloffame" id="hall-fame">Hall of Fame</Link>
+        <Link to="/competitions" id="competitions">Competitions</Link>
         <User />
       </div>
       <div className="menu-container">

@@ -11,7 +11,7 @@
   padding: 20px 0;
   margin: 2vh 1vw;
   background-color: #212527;
-    box-shadow: 0px 6px 12px 0px #0000003d;
+  box-shadow: 0px 6px 12px 0px #0000003d;
 }
 
 .artwork {
@@ -21,6 +21,7 @@
 }
 
 audio {
+  cursor: url("https://img.icons8.com/color/48/000000/dog-pooping.png"), auto;
   width: 50%;
   outline: none;
   margin: 1vw;
