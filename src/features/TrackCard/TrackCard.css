@@ -16,6 +16,7 @@
   margin: 2vh 1vw;
   box-shadow: -5px 5px 5px 0px #0000003d;
   width: 90%;
+  border-radius: 15px;
 }
 
 .trackcard {

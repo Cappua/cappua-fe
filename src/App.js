@@ -11,8 +11,6 @@ import TrackCard from "./features/TrackCard/TrackCard.js";
 import TrackPage from "./features/TrackPage/TrackPage.js";
 import TrackNav from "./features/TrackNav/TrackNav.js";
 import AudioPlayer from "./features//AudioPlayer/AudioPlayer.js";
-
-// import { Counter } from "./features/counter/Counter";
 import "./App.css";
 
 function App() {
@@ -35,6 +33,7 @@ function App() {
         />
         <Route exact path="/login" render={() => <Login />} />
         <Route exact path="/trackmatch" render={() => <TrackPage />} />
+        <Route exact path="/competitions" render={() => <TrackPage />} />
       </div>
     </Router>
   );
