@@ -30,7 +30,7 @@ const userData = [
   },
   {
     id: 4,
-    artist: "Steve",
+    artist: "T.Woodz",
     image: samplePic1,
     song: "Forshizzle",
     link: "/featured-artist",

@@ -3,14 +3,18 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin: 10vh 0 0 0;
+  margin: 7vh 0 0 0;
+  font-family: "Permanent Marker", cursive;
+  border-bottom: solid 20px #212527;
+  color: #212527
 }
 
 .the-ranks-title {
   margin: 0;
-  font-size: 5vw;
-  font-family: "Futura-CondensedExtraBold", Futura, sans-serif;
-  letter-spacing: 5px;
+  font-size: 10vw;
+  /* text-decoration:underline; */
+  /* font-family: "Futura-CondensedExtraBold", Futura, sans-serif; */
+  letter-spacing: 10px;
 }
 
 .track-sort-container {
@@ -18,14 +22,14 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 55vw;
+  width: 90%;
 }
 
 .search-sort-container {
   display: flex;
   flex-direction: row;
   align-self: flex-end;
-  padding-bottom: 23px;
+  padding-bottom: 38px;
   height: 5.5vh;
 }
 
@@ -97,7 +101,6 @@
   font-size: 1em;
   border-radius: 5px;
   outline-color: black;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   letter-spacing: 2px;
 }
 

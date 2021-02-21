@@ -4,3 +4,7 @@
   align-items: center;
   justify-content: space-between;
 }
+
+.track-page-container{
+  margin-top: 8vh;
+}
