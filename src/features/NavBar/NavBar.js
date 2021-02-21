@@ -23,7 +23,7 @@ function NavBar() {
       <Link id="logo-container" to="/">
         <img
           className="logo"
-          src="https://media.giphy.com/media/FxfVpjpQb1kwKadK9L/giphy.gif"
+          src={cappuaLogo}
           alt="logo"
         />
       </Link>
