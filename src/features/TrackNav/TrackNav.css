@@ -1,59 +1,102 @@
 .tracknav-container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  align-self: center;
-  height: 10%;
-  width: 95vw;
+  width: 100%;
+  margin: 10vh 0 0 0;
 }
 
 .the-ranks-title {
-  margin: 2.5em;
+  margin: 0;
+  font-size: 5vw;
+  font-family: "Futura-CondensedExtraBold", Futura, sans-serif;
+  letter-spacing: 5px;
 }
 
 .track-sort-container {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  width: 50vw;
+  width: 55vw;
 }
 
-.search-the-ranks-form {
+.search-sort-container{
   display: flex;
   flex-direction: row;
+  align-self:flex-end;
+  padding-bottom: 23px;
+  height: 5.5vh;
 }
 
-.search-the-ranks-button {
-  height: 3.5em;
-  border: none;
-  background-color: white;
-  color: none;
-  transition: 500ms;
-}
-
-.search-the-ranks-button:hover {
+.search-ranks-container {
+  display: flex;
+  flex-direction: row;
+  border: solid 1px black;
+  border-radius: 30px;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  transform: scale(1.15);
+  transition: 0.8s;
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3),
+    -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
+    inset 4px 4px -6px 0 rgba(0, 0, 0, 0.2);
 }
 
-.search-the-ranks {
-  height: 3.5vh;
-  width: 20vw;
-  margin: 1em;
+.search-ranks-container:hover {
+  animation: none;
+  background-color: rgba(235, 227, 227, 0.281);
+  border: solid 1px black;
 }
 
-.search-the-ranks:focus {
-  outline-color: #fdde5a;
+.search-btn:hover .fa-search {
+  color: #fdde5a;
+}
+
+.search-ranks-container:hover > .search-input {
+  width: 15vw;
+}
+
+.search-btn .fas {
+  color: black;
+  font-size: 1.5vw;
+}
+
+.search-ranks-container .search-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 0px;
+  color: black;
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.8s;
+}
+
+::placeholder {
+  color: rgb(66, 59, 63);
+  font-size: 1.3em;
 }
 
 .track-sort-dropdown {
-  height: 3.5vh;
-  width: 10vw;
+  display: flex;
+  justify-content:flex-end;
+  align-self: center;
+  text-align:start;
+  padding-left: 20px;
+  border: solid 2px black;
+  height: 4.5vh;
+  width: 7vw;
   margin: 1em;
+  font-size: 1em;
+  border-radius: 5px;
+  outline-color: black;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  letter-spacing: 2px;
 }
 
-.track-sort-dropdown:focus {
+.track-sort-dropdown:hover {
   outline-color: #fdde5a;
 }
