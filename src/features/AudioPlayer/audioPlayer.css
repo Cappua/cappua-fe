@@ -3,15 +3,16 @@
 .player {
   display: flex;
   justify-content: space-around;
-  z-index: 3;
+  /* z-index: 3; */
   align-items: center;
-  position: sticky;
+  /* position: sticky; */
   top: 1vh;
   border-radius: 25px;
   padding: 20px 0;
   margin: 2vh 1vw;
   background-color: #212527;
   box-shadow: 0px 6px 12px 0px #0000003d;
+  color: rgb(83, 83, 245)
 }
 
 .artwork {
@@ -20,8 +21,7 @@
   margin: 1vw;
 }
 
-audio {
-  cursor: url("https://img.icons8.com/color/48/000000/dog-pooping.png"), auto;
+#audio {
   width: 50%;
   outline: none;
   margin: 1vw;

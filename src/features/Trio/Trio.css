@@ -86,6 +86,8 @@
 
 .tab-container:hover .tab-btn {
   background-color: rgb(221, 215, 215);
+  cursor: url("https://img.icons8.com/material/24/000000/headphones.png"), auto;
+  /* cursor: url("https://img.icons8.com/color/48/000000/dog-pooping.png"), auto; */
   color: black;
 }
 

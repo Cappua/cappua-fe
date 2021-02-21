@@ -24,6 +24,8 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+    cursor: url("https://img.icons8.com/officel/60/000000/full-of-shit.png"), auto;
+
   outline: none;
   padding: 20px;
   align-self: flex-end;
