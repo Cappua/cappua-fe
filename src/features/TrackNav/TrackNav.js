@@ -8,15 +8,15 @@ const TrackNav = () => {
       <div className="track-sort-container">
         <h3 className="the-ranks-title">The Ranks</h3>
 
-        <div class="search-sort-container">
+        <div className="search-sort-container">
           <form className="search-ranks-container">
             <input
               type="text"
               className="search-input"
               placeholder="Search The Ranks"
             />
-            <a class="search-btn">
-              <i class="fas fa-search" />
+            <a className="search-btn">
+              <i className="fas fa-search" />
             </a>
           </form>
           <select className="track-sort-dropdown">

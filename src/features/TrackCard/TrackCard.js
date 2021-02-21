@@ -3,23 +3,15 @@ import "./TrackCard.css";
 import userData from "../../assets/_sampleData/sampeUserData";
 
 const TrackCard = () => {
-  const ordinal = (n) => {
-    var s = ["th", "st", "nd", "rd"];
-    var v = n % 100;
-    return (s[(v - 20) % 10] || s[v] || s[0]);
-  }
-
 
   const trackCards = userData.map((card) => {
-    const { id, artist, image, song, link } = card;
+    const { id, artist, image, song, link, color } = card;
 
     return (
-      <div
-        key={id}
-        className="trackcard-container"
-      >
+      <div key={id} className="trackcard-container">
         <p className="user-order">
-          <p className="trackcard-place">{id}<sup>{ordinal(id)}</sup></p>
+          <i className="fa fa-award" style={{color: `${color}`}}></i>
+
           <img src={image} className="profile-img" />
         </p>
 
