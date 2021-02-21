@@ -1,0 +1,18 @@
+.footer-container {
+  margin-top: 4vh;
+  /* border-radius: 5px; */
+  border: solid 0.1rem black;
+  display: flex;
+  font-size: 15px;
+}
+
+.footer-items {
+  display: flex;
+  flex-direction: row;
+  width: 50vw;
+  height: 2vh;
+  text-decoration: none;
+  list-style: none;
+  justify-content: space-evenly;
+  align-items: center;
+}
