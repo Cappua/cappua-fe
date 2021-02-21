@@ -21,15 +21,15 @@ function NavBar() {
   return (
     <div className="navbar-container">
       <Link id="logo-container" to="/">
-        <img
-          className="logo"
-          src={cappuaLogo}
-          alt="logo"
-        />
+        <img className="logo" src={cappuaLogo} alt="logo" />
       </Link>
       <div className="navbar-contents">
-        <Link to="/halloffame" id="hall-fame">Hall of Fame</Link>
-        <Link to="/competitions" id="competitions">Competitions</Link>
+        <Link to="/halloffame" id="hall-fame">
+          Hall of Fame
+        </Link>
+        <Link to="/competitions" id="competitions">
+          Competitions
+        </Link>
         <User />
       </div>
       <div className="menu-container">

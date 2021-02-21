@@ -1,7 +1,7 @@
 import React from "react";
 import Song from "./Song";
 import "./audioPlayer.css";
-import wutang from './wutang.mp3';
+import wutang from "./wutang.mp3";
 import sampleImageArtwork from "../../assets/wu_tang.jpg";
 
 function AudioPlayer() {

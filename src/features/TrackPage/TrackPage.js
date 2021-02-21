@@ -7,11 +7,11 @@ import "./TrackPage.css";
 
 const TrackPage = () => {
   return (
-    <div className="track-page-container">
+    <section className="track-page-container">
       <AudioPlayer />
       <TrackNav />
       <TrackCard />
-    </div>
+    </section>
   );
 };
 
