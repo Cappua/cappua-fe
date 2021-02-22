@@ -6,7 +6,6 @@ const TrackNav = () => {
     <section className="tracknav-container">
       <div className="track-sort-container">
         <h3 className="the-ranks-title">The Ranks</h3>
-
         <div className="search-sort-container">
           <form className="search-ranks-container">
             <input

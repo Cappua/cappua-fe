@@ -7,7 +7,7 @@ import sampleImageArtwork from "../../assets/wu_tang.jpg";
 function AudioPlayer() {
   return (
     <div className="player">
-      <img src={sampleImageArtwork} className="artwork" />
+      {/* <img src={sampleImageArtwork} className="artwork" /> */}
       <Song songName="Protect Ya Neck" songArtist="Wu-Tang Clan" />
       <audio id="audio" controls>
         <source src={wutang} />
