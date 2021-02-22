@@ -10,10 +10,10 @@ body {
   user-select: none;
   cursor: default;
 }
-
 .AlbumCard {
-  width: 20ch;
-  height: 20ch;
+  margin: 5vh;
+  width: 40ch;
+  height: 40ch;
   background: grey;
   border-radius: 5px;
   background-size: cover;
@@ -23,7 +23,6 @@ body {
   will-change: transform;
   border: 10px solid white;
 }
-
 .AlbumCard:hover {
   box-shadow: 0px 30px 100px -10px rgba(0, 0, 0, 0.5);
 }

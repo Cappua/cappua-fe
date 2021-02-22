@@ -17,6 +17,7 @@ const AlbumCard = () => {
     xys: [0, 0, 1],
     config: { mass: 10, tension: 250, friction: 40 },
   }));
+
   return (
     <animated.div
       class="AlbumCard"
@@ -29,5 +30,4 @@ const AlbumCard = () => {
     />
   );
 };
-
 export default AlbumCard;
