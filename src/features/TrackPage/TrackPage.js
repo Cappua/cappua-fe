@@ -11,6 +11,7 @@ const TrackPage = () => {
     <section className="track-page-container">
       <AlbumCard />
       <AudioPlayer />
+      <UploadTrack />
       <TrackNav />
       <TrackCard />
     </section>

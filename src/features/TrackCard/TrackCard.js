@@ -4,25 +4,31 @@ import userData from "../../assets/_sampleData/sampeUserData";
 import dylon from "../../assets/dylon.mp3";
 
 const TrackCard = () => {
-  const trackCards = userData.map((card, i) => {
-    const { id, artist, image, song, link, color } = card;
+  let sortedUsers = userData.sort(function (a, b) {
+    return b.votes - a.votes;
+  });
+  let trackCards = sortedUsers.map((card, i) => {
+    console.log(i);
+    const { id, artist, image, song, link, votes } = card;
 
     return (
-      <section className={`trackcard-container trackcard-container-${i}`}>
-        <div key={i} className={`trackcard trackcard-${i}`}>
+      <section key={i} className="trackcard-container">
+        <div className="trackcard trackcard">
           <p className="user-order">
+            <i className={i <= 2 ? `fa fa-award top-${i}` : ""}></i>
             <img src={image} className="profile-img" />
           </p>
-          <p className={`track-username track-username-${i}`}>
-            {song} - {artist}
-          </p>
           <div className="audio-container">
+            <p className="track-username">
+              <h1 className="track-title">{song}</h1>
+              <h1 className="track-artist">{artist}</h1>
+            </p>
             <audio className="audiotrack" controls>
               <source src={dylon} />
               Your browser does not support the <code>audio</code> element.
             </audio>
           </div>
-          <p className={`play-count play-count-${i}`}>2657</p>
+          <p className={`play-count play-count-${i}`}>{votes}</p>
         </div>
       </section>
     );

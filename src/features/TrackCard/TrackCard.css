@@ -8,22 +8,22 @@
   margin: 5vh 0;
   overflow: scroll;
 }
-
 .trackcard-container {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  align-self: center;
   align-items: center;
   padding: 1.5vh 2.5vw;
   margin: 2vh 5vw;
   box-shadow: 1px 1px 15px 5px rgba(0, 0, 0, 0.05),
     -1px -1px 15px 5px rgba(0, 0, 0, 0.05);
   width: 90%;
-  border-radius: 5px;
+  border-radius: 15px;
+  transition: 0.6s;
 }
-
 .trackcard {
-  /* font-family: "Permanent Marker", cursive; */
+  font-family: "Permanent Marker", cursive;
   padding: 0.25em 1em;
   height: 10vh;
   width: 90%;
@@ -37,7 +37,23 @@
   font-size: 1.5rem;
   font-weight: 500;
 }
-
+.track-title {
+  color: red;
+  font-size: 3rem;
+  margin: 0;
+}
+.track-artist {
+  margin: 0;
+}
+.trackcard-container:hover .track-title {
+  color: #f8d32e;
+}
+.trackcard-container:hover .track-artist {
+  color: white;
+}
+.trackcard-container:hover .track-username {
+  animation: 5s linear 0s infinite alternate move;
+}
 .user-order {
   display: flex;
   flex-direction: row;
@@ -47,29 +63,49 @@
   left: 0vw;
   margin: 0;
 }
-
 .track-username {
+  margin: 0;
+  padding: 0;
+  height: 50%;
   color: black;
-  font-size: large;
-  text-align: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 1.5rem;
+  letter-spacing: 5px;
+  text-align: center;
+  text-shadow: 0px 2px 3px black;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
 }
-
+@keyframes move {
+  0% {
+    transform: translateX(0%);
+    left: 0%;
+  }
+  100% {
+    transform: translateX(-115%);
+    left: 110%;
+  }
+}
 .profile-img {
   margin: 0.5em;
   height: 10vh;
   border-radius: 50%;
   box-shadow: 0px 2px 3px 0px #000000cb;
 }
-
 .audio-container {
-  /* position: fixed; */
-  width: 20vw;
-  justify-content: flex-end;
+  width: 40vw;
   display: flex;
+  justify-content: center;
+  flex-direction: column;
   right: 1vw;
-  bottom: 2vh;
+  /* bottom: 2vh; */
+  padding: 0;
+  overflow: hidden;
 }
-
 .audiotrack {
   border-radius: 25px;
   height: 3.5vh;
@@ -79,45 +115,33 @@
   justify-content: flex-start;
   outline: none;
 }
-
-.play-count {
-  font-size: medium;
-  font-weight: bold;
+.trackcard-container:hover {
+  background-color: rgba(31, 29, 39, 0.925);
+  width: 93%;
 }
-
-.trackcard-container-0 {
-  background-color: #fddf5d;
-}
-
-.track-username-0,
-.play-count-0 {
-  color: white;
-}
-
 .fa-award {
   text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.979);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
   font-size: 5vh;
-  position: absolute;
-  left: 1vw;
 }
-
-/* 
-.all-cards-container div:nth-child(1) {
-  color: white;
-  background-color: blue;
+.play-count {
+  font-size: 1.3em;
+  letter-spacing: 5px;
+  color: black;
+  transform: 1s;
 }
-.all-cards-container div:nth-child(2) {
-  color: white;
-  background-color: rgb(38, 38, 248);
+.top-0 {
+  color: #f7cb3a;
 }
-.all-cards-container div:nth-child(3) {
-  color: white;
-  background-color: rgb(59, 59, 245);
+.top-1 {
+  color: #aaa9ad;
 }
-.all-cards-container div:nth-child(4) {
+.top-2 {
+  color: #b08d57;
+}
+.trackcard-container:hover .play-count {
   color: white;
-  background-color: rgb(83, 83, 245);
-} */
+  font-size: 1.5em;
+}

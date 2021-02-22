@@ -1,8 +1,6 @@
-import samplePic1 from "./sampleUser1.jpg";
 import samplePic2 from "./sampleUser2.jpg";
 import samplePic3 from "./sampleUser3.jpg";
 import samplePic4 from "./mad_villan.png";
-
 const userData = [
   {
     id: 1,
@@ -10,7 +8,8 @@ const userData = [
     image: samplePic4,
     song: "Whew!",
     link: "/featured-artist",
-    color: "#D4AF37",
+    // color: "#D4AF37",
+    votes: Math.ceil(Math.random() * 100),
   },
   {
     id: 2,
@@ -18,7 +17,8 @@ const userData = [
     image: samplePic3,
     song: "Make Money Fast",
     link: "/featured-artist",
-    color: "#aaa9ad",
+    // color: "#aaa9ad",
+    votes: Math.ceil(Math.random() * 100),
   },
   {
     id: 3,
@@ -26,7 +26,8 @@ const userData = [
     image: samplePic2,
     song: "fingy cuffs",
     link: "/featured-artist",
-    color: "#b08d57",
+    // color: "#b08d57",
+    votes: Math.ceil(Math.random() * 100),
   },
   {
     id: 4,
@@ -34,7 +35,7 @@ const userData = [
     image: "https://thispersondoesnotexist.com/image",
     song: "Forshizzle",
     link: "/featured-artist",
+    votes: Math.ceil(Math.random() * 100),
   },
 ];
-
 export default userData;
