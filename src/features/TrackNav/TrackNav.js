@@ -4,10 +4,9 @@ import searchIcon from "../../assets/searchIcon.png";
 
 const TrackNav = () => {
   return (
-    <section className="tracknav-container">      
+    <section className="tracknav-container">
       <div className="track-sort-container">
         <h3 className="the-ranks-title">The Ranks</h3>
-
         <div className="search-sort-container">
           <form className="search-ranks-container">
             <input
@@ -26,8 +25,6 @@ const TrackNav = () => {
             <option value="z-a">Z-A</option>
           </select>
         </div>
-
-
       </div>
     </section>
   );
