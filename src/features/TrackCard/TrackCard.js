@@ -5,29 +5,17 @@ import userData from "../../assets/_sampleData/sampeUserData";
 import dylon from "../../assets/dylon.mp3";
 
 const TrackCard = () => {
-  const trackCards = userData.map((card) => {
+  const trackCards = userData.map((card, i) => {
     const { id, artist, image, song, link, color } = card;
 
     return (
-      <section
-        className="trackcard-container"
-        style={{
-          background: `url(${image}) no-repeat center center fixed`,
-          backgroundSize: "cover",
-        }}
-      >
-        <div
-          key={id}
-          className="trackcard"
-          style={{
-            backdropFilter: "blur(30px)",
-          }}
-        >
+      <section className={`trackcard-container trackcard-container-${i}`}>
+        <div key={i} className={`trackcard trackcard-${i}`}>
           <p className="user-order">
-            <i className={color ? `fa fa-award` : ''} style={{ color: `${color}` }}></i> 
-            
-
             <img src={image} className="profile-img" />
+          </p>
+          <p className={`track-username track-username-${i}`}>
+            {song} - {artist}
           </p>
           <div className="audio-container">
             <audio className="audiotrack" controls>
@@ -35,7 +23,7 @@ const TrackCard = () => {
               Your browser does not support the <code>audio</code> element.
             </audio>
           </div>
-          <p className="track-username">{song} - {artist}</p>
+          <p className={`play-count play-count-${i}`}>2657</p>
         </div>
       </section>
     );
