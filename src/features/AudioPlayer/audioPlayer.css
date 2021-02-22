@@ -2,17 +2,18 @@
 
 .player {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   /* z-index: 3; */
   align-items: center;
   /* position: sticky; */
   top: 1vh;
   border-radius: 25px;
-  padding: 20px 0;
+  padding: 15px 0;
   margin: 2vh 1vw;
-  background-color: #212527;
-  box-shadow: 0px 6px 12px 0px #0000003d;
-  color: rgb(83, 83, 245)
+  /* background-color: #212527; */
+  /* box-shadow: 0px 6px 12px 0px #0000003d; */
+  color: rgb(83, 83, 245);
 }
 
 .artwork {
@@ -22,38 +23,47 @@
 }
 
 #audio {
-  width: 50%;
+  width: 40vw;
   outline: none;
-  margin: 1vw;
+  margin: 2.5vh;
 }
+
 .song {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
   user-select: none;
   margin: 0 20px;
 }
 
 .song-title {
-  text-align: left;
+  width: 30vw;
+  text-align: center;
   margin: 0;
-  color: white;
-  font-family: "Permanent Marker", cursive;
+  color: black;
+  /* font-family: "Permanent Marker", cursive; */
   font-weight: normal;
-  font-size: 3.5em;
+  font-size: 2em;
 }
 
 .song-title:hover {
-  color: rgb(241, 255, 47);
+  color: #fddf5d;
 }
 
 .song-artist {
+  width: 25vw;
+  text-align: center;
   margin: 0;
-  color: white;
-  font-family: "Rock Salt", cursive;
-  font-weight: normal;
-  font-size: 1em;
+  color: black;
+  /* font-family: "Rock Salt", cursive; */
+  font-weight: bold;
+  font-size: 2em;
 }
 
 .song-artist:hover {
-  color: rgb(241, 255, 47);
+  color: #fddf5d;
 }
 
 @media screen and (max-width: 800px) {
