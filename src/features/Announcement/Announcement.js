@@ -1,5 +1,6 @@
 import React from "react";
 import "./Announcement.css";
+import { Link } from "react-router-dom";
 
 export default function Announcement() {
   return (
@@ -10,14 +11,14 @@ export default function Announcement() {
         alt="body-img"
       />
       <div className="announce-text">
-        <div className="announcement-header">
           <h2 className="header">Big company announcement</h2>
-        </div>
         <p className="announcement">
           Big company announcement or simple sub-header taking two or more
           lines.
         </p>
-        <button className="announcement-btn">Button</button>
+        <Link to="/announcement" className="announcement-btn">
+          Button
+        </Link>
       </div>
     </div>
   );
