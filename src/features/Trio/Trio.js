@@ -6,6 +6,7 @@ import { nanoid } from "nanoid";
 function Trio() {
   const trioTabs = trioData.map((tab) => {
     const { id, artist, image, song, link } = tab;
+    
     return (
       <section className="tab-container" key={nanoid()} id={id}>
         <a href={link}>
@@ -28,6 +29,7 @@ function Trio() {
       </section>
     );
   });
+
   return (
     <section className="trio-container">
       <h1 id="featured-title">- Featured Artists -</h1>
@@ -35,5 +37,4 @@ function Trio() {
     </section>
   );
 }
-
 export default Trio;
