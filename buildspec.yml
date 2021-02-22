@@ -1,0 +1,24 @@
+version: 0.2 
+
+phases: 
+  install:
+    commands:
+    #install Node 15
+    - echo Installing Node 15...
+    - curl -fsSL https://rpm.nodesource.com/setup_current.x | bash -
+  pre_build: 
+    commands:
+    #install dependencies 
+    -echo Installing dependencies...
+    - npm
+  build: 
+    commands:
+      - echo Testing...
+      - npm test
+      - echo Building... 
+      - npm run build
+artifacts: 
+  files: 
+    -"**.*"
+  discard-paths: no
+  base-directory: dist
