@@ -16,9 +16,11 @@
 }
 
 .body-title {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: "Permanent Marker", cursive;
+
+  /* font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif; */
   font-weight: 100;
-  word-spacing: 20px;
+  word-spacing: 5px;
   letter-spacing: 5px;
   color: rgb(73, 72, 72);
 }
@@ -31,7 +33,7 @@
 }
 
 .winner-name:after {
-  content: " -";
+  /* content: " -"; */
 }
 
 .month {

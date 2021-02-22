@@ -1,14 +1,13 @@
 .announce-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding: 2em;
   width: fit-content;
 }
 .announce-image {
-  height: 45vh;
+  height: 55vh;
   width: 40vw;
-  margin-left: 2vw;
   border-radius: 10px;
 }
 .announce-text {
@@ -16,25 +15,8 @@
   flex-direction: column;
   justify-content: space-evenly;
   text-align: left;
-  width: 35%;
+  width: 45%;
 }
-
-.announcement-btn {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  outline: none;
-  padding: 20px;
-  align-self: flex-end;
-  text-align: center;
-  width: fit-content;
-  font-size: 2vh;
-  color: white;
-  background-color: rgba(31, 29, 39, 0.925);
-  border-radius: 5px;
-}
-
 .header {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-weight: 100;
@@ -49,9 +31,32 @@
   font-size: 2.5vw;
 }
 
+.announcement-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: url("https://img.icons8.com/officel/60/000000/full-of-shit.png"), auto;
+  box-shadow: 0px 6px 12px 0px #0000003d;
+  outline: none;
+  padding: 15px;
+  align-self: flex-end;
+  text-align: center;
+  text-decoration: none;
+  width: fit-content;
+  font-size: 2vh;
+  color: white;
+  background-color: rgba(31, 29, 39, 0.925);
+  border-radius: 5px;
+}
+
 @media screen and (max-width: 1145px) {
+  .announce-image {
+    height: 45vh;
+    margin: 0vh 1.5vw;
+  }
   .header {
-    font-size: 3.7vw;
+    font-size: 3.7vh;
     margin: 0;
   }
 
@@ -61,7 +66,8 @@
 
   .announcement-btn {
     width: fit-content;
-    height: 5vh;
+    height: 3vh;
+    font-size: 1.5vh;
   }
 }
 
@@ -72,9 +78,9 @@
   }
 
   .announce-image {
-    height: 25vh;
+    height: 45vh;
     width: 45vw;
-    margin-left: 1.5vw;
+    margin: 0vh 1.5vw;
     border-radius: 10px;
   }
 
@@ -84,16 +90,21 @@
   }
 
   .announcement {
-    font-size: 2vh;
+    font-size: 1.7vh;
   }
 
   .announcement-btn {
-    height: 5vh;
-    font-size: 1.5vh;
+    height: 1vh;
+    font-size: 1.3vh;
   }
 }
 
 @media screen and (max-width: 656px) {
+  .announce-image {
+    height: 40vh;
+    margin: 0vh 1.5vw;
+    border-radius: 10px;
+  }
   .header {
     font-size: 4.5vw;
     margin: 0;
@@ -104,7 +115,7 @@
     padding-right: 10px;
   }
   .announcement-btn {
-    height: 3vh;
+    height: 1vh;
     font-size: 1vh;
   }
 }

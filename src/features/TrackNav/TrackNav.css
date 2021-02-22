@@ -1,59 +1,101 @@
 .tracknav-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  align-self: center;
-  height: 10%;
-  width: 95vw;
+  margin: 7vh 0 0 0;
+  font-family: "Permanent Marker", cursive;
+  border-bottom: solid 20px #212527;
+  color: #212527;
 }
 
 .the-ranks-title {
-  margin: 2.5em;
+  margin: 0;
+  font-size: 10vw;
+  letter-spacing: 10px;
 }
 
 .track-sort-container {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  width: 50vw;
+  width: 98%;
 }
 
-.search-the-ranks-form {
+.search-sort-container {
   display: flex;
   flex-direction: row;
+  align-self: flex-end;
+  padding-bottom: 38px;
+  height: 7vh;
 }
 
-.search-the-ranks-button {
-  height: 3.5em;
-  border: none;
-  background-color: white;
-  color: none;
-  transition: 500ms;
-}
-
-.search-the-ranks-button:hover {
+.search-ranks-container {
+  display: flex;
+  flex-direction: row;
+  border: solid 1px black;
+  border-radius: 35px;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  transform: scale(1.15);
+  transition: 0.8s;
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3),
+    -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
+    inset 4px 4px -6px 0 rgba(0, 0, 0, 0.2);
 }
 
-.search-the-ranks {
-  height: 3.5vh;
-  width: 20vw;
-  margin: 1em;
+.search-ranks-container:hover {
+  animation: none;
+  background-color: rgba(235, 227, 227, 0.281);
+  border: solid 1px black;
 }
 
-.search-the-ranks:focus {
-  outline-color: #fdde5a;
+.search-ranks-container:hover > .search-input {
+  width: 15vw;
+}
+
+.search-btn .fas {
+  color: black;
+  font-size: 1.5vw;
+}
+
+.search-ranks-container .search-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 0px;
+  color: black;
+  font-family: "Permanent Marker", cursive;
+  font-weight: 500;
+  font-size: 1.3em;
+  transition: 0.8s;
+}
+
+::placeholder {
+  color: rgba(66, 66, 63, 0.377);
+  font-size: 1.1em;
+  font-weight: lighter;
 }
 
 .track-sort-dropdown {
-  height: 3.5vh;
-  width: 10vw;
-  margin: 1em;
+  display: flex;
+  justify-content: flex-end;
+  align-self: center;
+  text-align: start;
+  padding-left: 20px;
+  border: solid 1px black;
+  height: 6.5vh;
+  width: 9vw;
+  margin: 4vh;
+  font-size: 1em;
+  border-radius: 5px;
+  outline-color: black;
+  letter-spacing: 5px;
 }
 
-.track-sort-dropdown:focus {
+.track-sort-dropdown:hover {
   outline-color: #fdde5a;
 }

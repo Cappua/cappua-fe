@@ -6,7 +6,7 @@ const UploadTrack = () => {
   return (
     <div className="upload-track-container">
       {/* <input className="file-upload" type="file" accept="audio/*" /> */}
-      <label for="file-upload" className="file-upload">
+      <label htmlFor="file-upload" className="file-upload">
         <p className="file-upload-button-text">Upload Your Track</p>
         <img src={uploadIcon} className="file-upload-icon" />
       </label>

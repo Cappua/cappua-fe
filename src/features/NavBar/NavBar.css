@@ -4,24 +4,31 @@
   align-self: center;
 }
 
-@media screen and (min-width: 1110px) {
-  .navbar-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    align-self: center;
-    box-shadow: 0px 6px 12px 0px #0000003d;
-    top: 0;
-    width: 100vw;
-    height: 7em;
-    background-color: white;
-    z-index: 3;
-    padding: 0;
-    margin: 0;
-  }
+.navbar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  align-self: center;
+  box-shadow: 0px 6px 12px 0px #0000003d;
+  top: 0;
+  width: 100vw;
+  height: 7em;
+  background-color: white;
+  z-index: 3;
+  padding: 0;
+  margin: 0;
+}
 
+#hall-fame{
+  cursor:url("https://img.icons8.com/dotty/60/ffa500/trophy.png"), auto;
+}
+#competitions{
+  cursor:url("https://img.icons8.com/ios/50/fc2342/battle.png"), auto;
+}
+
+@media screen and (min-width: 1110px) {
   .menu-container {
     display: none;
   }
@@ -51,24 +58,8 @@
     color: white;
   }
 }
-  
-@media screen and (max-width: 1109px) {
-  .navbar-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-self: center;
-    position: sticky;
-    box-shadow: 0px 6px 12px 0px #0000003d;
-    top: 0;
-    padding: 0;
-    margin: 0;
-    width: 100vw;
-    height: 7em;
-    background-color: white;
-    z-index: 3;
-  }
 
+@media screen and (max-width: 1109px) {
   .navbar-contents {
     display: none;
   }
