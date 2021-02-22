@@ -9,6 +9,7 @@ import AlbumCard from "../AlbumCard/AlbumCard.js";
 const TrackPage = () => {
   return (
     <section className="track-page-container">
+      <AlbumCard />
       <AudioPlayer />
       <TrackNav />
       <TrackCard />
