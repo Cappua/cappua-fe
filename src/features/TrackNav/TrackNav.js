@@ -1,6 +1,5 @@
 import React from "react";
 import "./TrackNav.css";
-import searchIcon from "../../assets/searchIcon.png";
 
 const TrackNav = () => {
   return (

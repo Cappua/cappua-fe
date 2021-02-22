@@ -1,7 +1,6 @@
 import React from "react";
 import "./TrackCard.css";
 import userData from "../../assets/_sampleData/sampeUserData";
-// import AudioPlayer from "../AudioPlayer/AudioPlayer";
 import dylon from "../../assets/dylon.mp3";
 
 const TrackCard = () => {

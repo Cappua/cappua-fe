@@ -1,7 +1,6 @@
 import React from "react";
 import "./audioPlayer.css";
 
-
 function Song(props) {
   const { songName, songArtist } = props;
   return (

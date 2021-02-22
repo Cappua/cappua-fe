@@ -8,12 +8,11 @@ import AlbumCard from "../AlbumCard/AlbumCard.js";
 
 const TrackPage = () => {
   return (
-    <div className="track-page-container">
-      <AlbumCard />
+    <section className="track-page-container">
       <AudioPlayer />
       <TrackNav />
       <TrackCard />
-    </div>
+    </section>
   );
 };
 

@@ -75,7 +75,7 @@
   color: rgb(156, 5, 5);
 }
 
-#tab-song:hover {
+.tab-container:hover #tab-song {
   color: red;
 }
 
@@ -88,6 +88,7 @@
   font-size: 1vw;
   border: 0;
   margin: 0;
+  box-shadow: 0px 6px 12px 0px #0000003d;
 }
 
 .tab-container:hover .tab-btn {
