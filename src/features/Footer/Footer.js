@@ -7,7 +7,7 @@ function Footer() {
     <section className="footer-container">
       <div className="footer-items">
         <Link to="/about">About</Link>
-        <Link to="/legal">Legal</Link>
+        <Link to="/developers">Developers</Link>
         <Link to="/contact">Contact</Link>
       </div>
       <div className="footer-items">
