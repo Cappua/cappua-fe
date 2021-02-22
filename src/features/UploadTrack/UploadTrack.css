@@ -1,36 +1,109 @@
 .upload-track-container {
   height: 30vh;
-  width: 50vw;
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 
-.file-upload-button-text {
-  color: white;
-  font-size: 2.5vh;
-}
-
-.file-upload {
+.upload-track-form {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* .upload-input {
+  border: none;
+  outline: none;
   width: 15vw;
-  padding: 1em;
-  border: #fdde5a;
   background-color: #fdde5a;
-  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 50%;
+} */
+
+/* .upload-icon {
+  height: 15px;
+} */
+#upload-icon {
+  font-size: 50px;
+}
+
+.upload-input {
+  background-color: #fdde5a;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 1em;
+  font-size: 1.25em;
+  margin: 2em;
+  border-radius: 50px;
   box-shadow: 0px 6px 12px 0px #0000003d;
-  transition: 500ms;
+  transition: 0.6s;
 }
 
-.file-upload:hover {
+.upload-input {
+  font-weight: bolder;
+}
+
+.submit-button {
+  color: white;
+  background-color: #328e44;
+  border: none;
+  outline: none;
+  height: 10vh;
+  width: 15vw;
+  border-radius: 10px;
+  display: flex;
+  font-size: 1.25em;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 6px 12px 0px #0000003d;
+  transition: 3s;
+  margin: 0 2em;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.green-fill {
+  height: 100%;
+  width: 100%;
+  animation: load 3.5s;
+  background-color: #328e44;
+  opacity: 1;
+  left: -100px;
+  z-index: -1;
+}
+
+/* @keyframes load {
+  0% {
+    transform: translateX(-150px);
+  }
+  100% {
+    transform: translateX(150px);
+  }
+} */
+
+.upload-input:hover,
+.submit-button:hover {
+  transform: scale(1.1);
   cursor: pointer;
-  transform: scale(1.03);
 }
 
-.file-upload-icon {
-  height: 4vh;
+.disabled {
+  background-color: #222527;
+  color: white;
+  opacity: 0.15;
+  cursor: not-allowed;
+  pointer-events: none;
+  font-size: 1.25em;
+  font-weight: bolder;
+  animation: none;
 }
