@@ -1,15 +1,13 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import { Provider } from 'react-redux';
-import store from './app/store';
-import App from './App';
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
-  const { getByText } = render(
-    <Provider store={store}>
-      <App />
-    </Provider>
+test("renders learn react link", () => {
+  render(<App />);
+
+  const cappua = screen.getByText(
+    "Cappua is a place where artists lyrically fight to the death"
   );
 
-  expect(getByText(/learn/i)).toBeInTheDocument();
+  expect(cappua).toBeInTheDocument();
 });
