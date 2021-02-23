@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./Theme.css";
-// import themeData from "../../assets/_sampleData/themeData";
 
 function Theme() {
   const getMonth = () => {

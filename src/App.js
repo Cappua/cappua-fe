@@ -4,7 +4,6 @@ import NavBar from "./features/NavBar/NavBar.js";
 import Banner from "./features/Banner/Banner.js";
 import Body from "./features/Body/Body.js";
 import Trio from "./features/Trio/Trio.js";
-import Login from "./features/Login/Login.js";
 import Announcement from "./features/Announcement/Announcement.js";
 import TrackPage from "./features/TrackPage/TrackPage.js";
 import AudioPlayer from "./features//AudioPlayer/AudioPlayer.js";
@@ -29,8 +28,6 @@ function App() {
             </>
           )}
         />
-        <Route exact path="/login" render={() => <Login />} />
-        <Route exact path="/trackmatch" render={() => <TrackPage />} />
         <Route exact path="/competitions" render={() => <TrackPage />} />
       </div>
       <Footer />

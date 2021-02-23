@@ -1,6 +1,3 @@
-import samplePic2 from "./sampleUser2.jpg";
-import samplePic3 from "./sampleUser3.jpg";
-import samplePic4 from "./mad_villan.png";
 const userData = [
   {
     id: 1,
