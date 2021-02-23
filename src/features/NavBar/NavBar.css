@@ -21,13 +21,6 @@
   margin: 0;
 }
 
-#hall-fame{
-  cursor:url("https://img.icons8.com/dotty/60/ffa500/trophy.png"), auto;
-}
-#competitions{
-  cursor:url("https://img.icons8.com/ios/50/fc2342/battle.png"), auto;
-}
-
 @media screen and (min-width: 1110px) {
   .menu-container {
     display: none;

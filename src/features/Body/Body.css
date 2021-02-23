@@ -17,8 +17,6 @@
 
 .body-title {
   font-family: "Permanent Marker", cursive;
-
-  /* font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif; */
   font-weight: 100;
   word-spacing: 5px;
   letter-spacing: 5px;
@@ -30,10 +28,6 @@
   font-size: 7vw;
   font-style: italic;
   margin: 0;
-}
-
-.winner-name:after {
-  /* content: " -"; */
 }
 
 .month {
