@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./UploadTrack.css";
 import axios from "axios";
-import uploadIcon from "../../assets/uploadIcon.png";
 
 const UploadTrack = () => {
   const [file, setFile] = useState(null);
@@ -42,7 +41,8 @@ const UploadTrack = () => {
         className="upload-track-form"
         onSubmit={(event) => {
           handleSubmit(event);
-        }}>
+        }}
+      >
         <label htmlFor="uploader" className="upload-input">
           <i className="fas fa-arrow-circle-up" id="upload-icon" />
         </label>
@@ -58,7 +58,7 @@ const UploadTrack = () => {
         />
 
         <button className={file ? "submit-button" : "submit-button disabled"}>
-          {/* <div className={file ? "green-fill" : "green-fill disabled"}></div> */}
+          {/* <div className={file ? "green-fill" : "hidden"}>Submit</div> */}
           Submit
         </button>
       </form>

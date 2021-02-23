@@ -37,42 +37,24 @@
   font-size: 1.5rem;
   font-weight: 500;
 }
-.track-title {
-  color: red;
-  font-size: 3rem;
-  margin: 0;
-}
-.track-artist {
-  margin: 0;
-}
-.trackcard-container:hover .track-title {
-  color: #f8d32e;
-}
-.trackcard-container:hover .track-artist {
-  color: white;
-}
-.trackcard-container:hover .track-username {
-  animation: 5s linear 0s infinite alternate move;
-}
+
 .user-order {
   display: flex;
   flex-direction: row;
-  width: 10%;
   justify-content: center;
-  align-items: center;
-  left: 0vw;
-  margin: 0;
+  width: 5%;
 }
+
 .track-username {
   margin: 0;
-  padding: 0;
+  padding-bottom: 15px;
   height: 50%;
   color: black;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: baseline;
-  font-size: 1.5rem;
+  font-size: 2rem;
   letter-spacing: 5px;
   text-align: center;
   text-shadow: 0px 2px 3px black;
@@ -80,29 +62,55 @@
   -moz-background-clip: text;
   background-clip: text;
 }
-@keyframes move {
-  0% {
-    transform: translateX(0%);
-    left: 0%;
+
+.track-title {
+  color: rgb(223, 9, 9);
+  font-size: 90%;
+  margin: 0;
+}
+.track-artist {
+  font-size: 70%;
+  text-shadow: 0px 2px 3px white;
+  margin: 0;
+}
+
+.trackcard-container:hover .track-title {
+  color: red;
+}
+.trackcard-container:hover .track-artist {
+  color: white;
+  text-shadow: 0px 2px 3px black;
+}
+.trackcard-container:hover .track-username {
+  animation: loopText 10s infinite linear;
+}
+
+@keyframes loopText {
+  from {
+    transform: translateX(90%);
   }
-  100% {
-    transform: translateX(-115%);
-    left: 110%;
+  to {
+    transform: translateX(-85%);
   }
 }
+
 .profile-img {
   margin: 0.5em;
   height: 10vh;
   border-radius: 50%;
   box-shadow: 0px 2px 3px 0px #000000cb;
 }
+
+.trackcard-container:hover .profile-img {
+  box-shadow: 0px 1px 10px 0px white;
+}
+
 .audio-container {
-  width: 40vw;
+  width: 60%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   right: 1vw;
-  /* bottom: 2vh; */
   padding: 0;
   overflow: hidden;
 }
@@ -129,9 +137,28 @@
 .play-count {
   font-size: 1.3em;
   letter-spacing: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 10%;
+  align-items: baseline;
   color: black;
   transform: 1s;
 }
+.trackcard-container:hover .votes {
+  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.979);
+
+  color: white;
+  font-size: 1.1em;
+}
+
+.trackcard-container:hover .vote-icon {
+  color: white;
+  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.979);
+
+  font-size: 1.1em;
+}
+
 .top-0 {
   color: #f7cb3a;
 }
@@ -140,8 +167,4 @@
 }
 .top-2 {
   color: #b08d57;
-}
-.trackcard-container:hover .play-count {
-  color: white;
-  font-size: 1.5em;
 }

@@ -1,0 +1,47 @@
+.theme {
+  position: relative;
+  width: 50vw;
+  height: 50vh;
+  padding: 0;
+  margin-top: 7vh;
+  text-align: left;
+}
+#month-theme {
+  margin: 0vh 1vw;
+  font-size: 4em;
+  padding: 0px;
+  letter-spacing: 3px;
+  font-weight: lighter;
+  text-shadow: 0px 2px 3px white;
+  font-family: "Permanent Marker", cursive;
+}
+
+#genre-themes {
+  font-weight: lighter;
+  font-size: 2em;
+  margin: 10px;
+  display: flex;
+}
+
+#remaining-days {
+  display: flex;
+  margin: 10px;
+  flex-direction: row;
+  justify-content: flex-start;
+  font-weight: lighter;
+  align-items: baseline;
+  font-size: 2em;
+}
+
+#days {
+  margin: 0 0.3vw;
+  font-size: 1em;
+  font-weight: bold;
+  color: rgb(156, 5, 5);
+}
+
+#directions {
+  font-size: 1em;
+  margin-top: 2vh;
+  text-align: center;
+}
