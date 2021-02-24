@@ -19,7 +19,6 @@ const TrackCards = () => {
     }
   }, [data]);
 
-  console.log(tracks);
   let trackCards = tracks.map((card, i) => {
     const { user, artist, audioPath, title, voteCount } = card;
     return (
