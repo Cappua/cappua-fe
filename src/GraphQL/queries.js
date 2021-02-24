@@ -20,25 +20,44 @@ export const GET_ALL_VERSES = gql`
 `;
 
 export const GET_VERSES_BY_COMPETITION = gql`
-  query competition(id:id) {
-    id
-    trackPath
-    month
-    year
-    description
-    genre
-    rules 
-    verses {
+  query($id: String!, $userId: String!) {
+    competition(id: $id) {
       id
-      audioPath
-      title
-      upvoted
-      voteCount
-      user{
+      trackPath
+      month
+      year
+      description
+      genre
+      rules
+      verses {
         id
-        name
-        image
+        audioPath
+        title
+        upvoted(userId: $usesrId)
+        voteCount
+        user {
+          id
+          name
+          image
+        }
       }
     }
   }
-`
+`;
+
+export const GET_ALL_COMPETITIONS = gql`
+  query {
+    competitions {
+      id
+      trackPath
+      month
+      year
+      description
+      genre
+      rules
+      verses {
+        verseType
+      }
+    }
+  }
+`;
