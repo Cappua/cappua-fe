@@ -8,7 +8,7 @@
   margin: 5vh 0;
   overflow: scroll;
 }
-.trackcard-container {
+.trackcards-container {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -22,7 +22,7 @@
   border-radius: 15px;
   transition: 0.6s;
 }
-.trackcard {
+.trackcards {
   font-family: "Permanent Marker", cursive;
   padding: 0.25em 1em;
   height: 10vh;
@@ -74,14 +74,14 @@
   margin: 0;
 }
 
-.trackcard-container:hover .track-title {
+.trackcards-container:hover .track-title {
   color: red;
 }
-.trackcard-container:hover .track-artist {
+.trackcards-container:hover .track-artist {
   color: white;
   text-shadow: 0px 2px 3px black;
 }
-.trackcard-container:hover .track-username {
+.trackcards-container:hover .track-username {
   animation: loopText 10s infinite linear;
 }
 
@@ -101,7 +101,7 @@
   box-shadow: 0px 2px 3px 0px #000000cb;
 }
 
-.trackcard-container:hover .profile-img {
+.trackcards-container:hover .profile-img {
   box-shadow: 0px 1px 10px 0px white;
 }
 
@@ -123,7 +123,7 @@
   justify-content: flex-start;
   outline: none;
 }
-.trackcard-container:hover {
+.trackcards-container:hover {
   background-color: rgba(31, 29, 39, 0.925);
   width: 93%;
 }
@@ -145,13 +145,13 @@
   color: black;
   transform: 1s;
 }
-.trackcard-container:hover .votes {
+.trackcards-container:hover .votes {
   text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.979);
   color: white;
   font-size: 1.1em;
 }
 
-.trackcard-container:hover .vote-icon {
+.trackcards-container:hover .vote-icon {
   color: white;
   text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.979);
   font-size: 1.1em;

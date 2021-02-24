@@ -8,32 +8,36 @@ import Announcement from "./features/Announcement/Announcement.js";
 import TrackPage from "./features/TrackPage/TrackPage.js";
 import AudioPlayer from "./features//AudioPlayer/AudioPlayer.js";
 import Footer from "./features/Footer/Footer";
-import Winners from './features/Winners/Winners'
+import Winners from "./features/Winners/Winners";
 import "./App.css";
+import { ApolloProvider } from "@apollo/client";
+import { errorLink, client } from "./ApolloClient/apolloClient.js";
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <NavBar />
-        <Route
-          exact
-          path="/"
-          render={() => (
-            <>
-              <Banner />
-              <Body />
-              <AudioPlayer />
-              <Trio />
-              <Announcement />
-            </>
-          )}
-        />
-        <Route exact path="/competitions" render={() => <TrackPage />} />
-        <Route exact path="/winners" render={() => <Winners />} />
-      </div>
-      {/* <Footer /> */}
-    </Router>
+    <ApolloProvider client={client}>
+      <Router>
+        <div className="App">
+          <NavBar />
+          <Route
+            exact
+            path="/"
+            render={() => (
+              <>
+                <Banner />
+                <Body />
+                <AudioPlayer />
+                <Trio />
+                <Announcement />
+              </>
+            )}
+          />
+          <Route exact path="/competitions" render={() => <TrackPage />} />
+          <Route exact path="/winners" render={() => <Winners />} />
+        </div>
+        {/* <Footer /> */}
+      </Router>
+    </ApolloProvider>
   );
 }
 
