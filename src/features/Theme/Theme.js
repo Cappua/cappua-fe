@@ -39,9 +39,9 @@ function Theme() {
       return 0.5 - Math.random();
     });
     return (
-      <h3 id="genre-themes">
+      <div id="genre-themes">
         This month's theme is {randomize[0]}, {randomize[1]}, and {randomize[2]}.
-      </h3>
+      </div>
     );
   };
 
@@ -54,7 +54,7 @@ function Theme() {
       <div id="remaining-days">
         There are {getRemainingDays()} day's remaining in this competition.
       </div>
-      {/* <div id="directions">Listen to the featured beat and submit yours down below!</div> */}
+      <div id="directions">Listen to the featured beat and submit yours down below!</div>
     </section>
   );
 }

@@ -1,0 +1,375 @@
+.winners-page {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  width: 100%;
+  // background: linear-gradient(#434343, #3d3d3d);
+  // background-color: rgb(31, 29, 39);
+  background: linear-gradient(145deg, #1e1e22, #1f1f21);
+
+  z-index: 4;
+}
+
+.winners-page header {
+  color: white;
+  font-size: 8vw;
+  text-align: center;
+  align-self: center;
+  display: flex;
+  letter-spacing: 4px;
+  flex-direction: column;
+  border-radius: 5px;
+  margin: 10vh 1vw 1vh 1vw;
+  width: 99vw;
+  font-family: "Permanent Marker", cursive;
+  text-shadow: 4px 4px 3px #f5ae14;
+}
+
+header b {
+  color: goldenrod;
+  text-shadow: 4px 4px 3px white;
+  letter-spacing: 20px;
+  width: 100%;
+  font-size: 20.7vw;
+  margin: 0;
+  padding: 0;
+}
+
+.winners-page section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.winner-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-self: center;
+  align-items: center;
+  color: black;
+  width: 90%;
+  margin: 4vh 0;
+  border-radius: 15px;
+  height: fit-content;
+  // background-color: rgba(102, 101, 101, 0.712);
+  // background-color: rgba(31, 29, 39, 0.925);
+  // box-shadow: 0px 6px 12px 0px #ffffffaf;
+  background: linear-gradient(145deg, #1e1e22, #1f1f21);
+  box-shadow: 8px 8px 16px #3c3c41,
+    -8px -8px 16px #27272b;
+}
+
+
+.winner {
+  overflow-y: scroll;
+  height: 65vh;
+}
+
+.winner-stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-self: center;
+  margin: 2em;
+}
+
+.winner-rank {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 80%;
+}
+
+.winner-banner {
+  display: flex;
+  border-radius: 15px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: flex-start;
+  width: 90%;
+  margin-top: 2vh;
+}
+
+.medallion {
+  position: static;
+  left: -4vw;
+  top: -3vh;
+  font-size: 15vh;
+  width: 10%;
+  text-shadow: 0px 2px 3px rgb(255, 255, 255);
+}
+
+.winner-artist {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column-reverse;
+  // color: black;
+  color: white;
+  text-align: center;
+  font-family: "Permanent Marker", cursive;
+  // text-shadow: 0px 2px 3px rgb(252, 196, 76);
+  // text-shadow: 0px 2px 3px rgb(255, 255, 255);
+  text-shadow: 4px 4px 3px goldenrod;
+
+  // color: rgba(31, 29, 39, 0.925);
+  font-size: 7vw;
+  font-style: italic;
+  margin: 0;
+
+}
+
+.winner-img {
+  width: 30vw;
+  border-radius: 15px;
+  height: 100%;
+  box-shadow: 0px 6px 12px 0px #fffffff1;
+}
+
+.winner-description {
+  font-size: 2em;
+  height: 28vh;
+  width: 50vw;
+  padding: 1vw;
+  margin: 5vh 2vw 0 0;
+  overflow-y: scroll;
+  color: white;
+  // background-color: rgba(31, 29, 39, 0.925);
+  border-radius: 15px;
+  // box-shadow: 0px 6px 12px 0px #ffffffaf;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .5);
+  box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+.winner-audio {
+  display: flex;
+  justify-content: flex-start;
+  align-self: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 1vw;
+  overflow: hidden;
+  // background-color: rgba(31, 29, 39, 0.925);
+  background: linear-gradient(145deg, #1e1e22, #1f1f21);
+  border-radius: 25px;
+  margin: 6vh 2vw 6vh 2vw;
+  // box-shadow: 0px 6px 12px 0px #ffffffaf;
+  box-shadow: 8px 8px 16px #3c3c41,
+    -8px -8px 16px #27272b;
+
+}
+
+.winner-track-container {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+}
+
+.winning-track-details {
+  font-family: "Permanent Marker", cursive;
+  margin: 0;
+  padding-bottom: 15px;
+  height: 50%;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: baseline;
+  font-size: 2rem;
+  letter-spacing: 5px;
+  text-align: center;
+  width: 70vw;
+  // overflow: hidden;
+  text-shadow: 0px 2px 3px black;
+}
+
+.winners-icon {
+  height: 10vw;
+  border-radius: 50%;
+  margin: .5vw;
+  box-shadow: 0px 2px 3px 0px #ffffffcb;
+}
+
+.winning-track-title {
+  color: rgb(223, 9, 9);
+  font-size: 3vw;
+  margin: 0;
+  text-shadow: 0px 2px 3px rgb(255, 255, 255);
+}
+
+.winning-track-artist {
+  font-size: 2vw;
+  margin: 0;
+  text-shadow: 0px 6px 12px 0px #000000af;
+}
+
+.winners-audiotrack {
+  border-radius: 25px;
+  height: 3.5vh;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+  outline: none;
+  margin: 2vh 0;
+}
+
+// .winner-track-container:hover .winning-track-details {
+//   animation: loopTrack 10s infinite linear;
+// }
+
+@keyframes loopTrack {
+  from {
+    transform: translateX(90%);
+  }
+  to {
+    transform: translateX(-85%);
+  }
+}
+
+// .winners-play-count {
+//   font-size: 1.3em;
+//   letter-spacing: 5px;
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-around;
+//   width: 10%;
+//   align-items: baseline;
+//   color: black;
+//   transform: 1s;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
+$color: (main: #c9a04e,
+  minor: #f7f6f2,
+  bg: #1a202e,
+);
+$particles: 50;
+$width: 500;
+$height: 300;
+$gravityY: 150;
+$frequency: infinite;
+
+$box-shadow: ();
+$box-shadow2: ();
+
+@for $i from 0 through $particles {
+  $box-shadow: $box-shadow,
+    random($width)-$width / 2 + px random($height)-$height / 1.2 + px hsl(random(360), 100, 50);
+  $box-shadow2: $box-shadow2, 0 0 #fff;
+}
+
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+
+  @-ms-keyframes #{$animationName} {
+    @content;
+  }
+
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+@mixin animation-delay($settings) {
+  -moz-animation-delay: $settings;
+  -webkit-animation-delay: $settings;
+  -o-animation-delay: $settings;
+  -ms-animation-delay: $settings;
+  animation-delay: $settings;
+}
+
+@mixin animation-duration($settings) {
+  -moz-animation-duration: $settings;
+  -webkit-animation-duration: $settings;
+  -o-animation-duration: $settings;
+  -ms-animation-duration: $settings;
+  animation-duration: $settings;
+}
+
+@mixin animation($settings) {
+  -moz-animation: $settings;
+  -webkit-animation: $settings;
+  -o-animation: $settings;
+  -ms-animation: $settings;
+  animation: $settings;
+}
+
+@mixin transform($settings) {
+  transform: $settings;
+  -moz-transform: $settings;
+  -webkit-transform: $settings;
+  -o-transform: $settings;
+  -ms-transform: $settings;
+}
+
+.firework {
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  z-index: 5;
+}
+
+.firework>.before,
+.firework>.after {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  box-shadow: $box-shadow2;
+  @include animation-delay((0.5s, 0.5s, 0.5s));
+  @include animation((1s bang ease-out 1s $frequency backwards,
+      1s gravity ease-in 1s $frequency backwards,
+      5s position linear 1s $frequency backwards));
+}
+
+.firework>.after {
+  @include animation-delay((1s, 1s, 1s));
+  @include animation-duration((1s, 1s, 6s));
+}
+
+@include keyframes(bang) {
+  to {
+    box-shadow: $box-shadow;
+  }
+}
+
+@include keyframes(gravity) {
+  to {
+    @include transform(translateY($gravityY + px));
+    opacity: 0;
+  }
+}
