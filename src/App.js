@@ -8,6 +8,7 @@ import Announcement from "./features/Announcement/Announcement.js";
 import TrackPage from "./features/TrackPage/TrackPage.js";
 import AudioPlayer from "./features//AudioPlayer/AudioPlayer.js";
 import Footer from "./features/Footer/Footer";
+import Winners from './features/Winners/Winners'
 import "./App.css";
 
 function App() {
@@ -29,8 +30,9 @@ function App() {
           )}
         />
         <Route exact path="/competitions" render={() => <TrackPage />} />
+        <Route exact path="/winners" render={() => <Winners />} />
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </Router>
   );
 }

@@ -2,22 +2,11 @@ import React from "react";
 import "./TrackCard.css";
 import userData from "../../assets/_sampleData/sampeUserData";
 import dylon from "../../assets/dylon.mp3";
-import { useRef } from "react";
 
 const TrackCard = () => {
-  let voteRef = useRef();
-  let sortedUsers = userData.sort(function (a, b) {
+  let sortedUsers = userData.sort((a, b) => {
     return b.votes - a.votes;
   });
-  let upVote = (trackId) => {
-    sortedUsers.find((user) => {
-      if (user.id === trackId) {
-        return voteRef.current = user.votes + 1;
-      } else {
-        console.log("no user with that id");
-      }
-    });
-  }
   let trackCards = sortedUsers.map((card, i) => {
     const { id, artist, image, song, link, votes } = card;
     return (
@@ -38,14 +27,9 @@ const TrackCard = () => {
             </audio>
           </div>
           <div className="play-count">
-            <h1 className="votes" id={id} ref={voteRef}>
+            <h1 className="votes" id={id}>
               {votes}
             </h1>
-            <i
-              className="fas fa-long-arrow-alt-up vote-icon"
-              id={id}
-              onClick={upVote({id})}
-            ></i>
           </div>
         </div>
       </section>
