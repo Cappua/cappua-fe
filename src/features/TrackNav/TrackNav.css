@@ -13,6 +13,11 @@
   margin: 0;
   font-size: 7vw;
   letter-spacing: 10px;
+  text-shadow: 0px 2px 3px rgb(252, 196, 76);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+
 }
 .track-sort-container {
   display: flex;
