@@ -15,9 +15,10 @@ const UploadTrack = () => {
     const formData = new FormData();
 
     formData.append("audio", file);
-    formData.append("month", 1);
-    formData.append("year", 2021);
-    formData.append("type", "track");
+    formData.append("user_id", 1);
+    formData.append("competition_id", 1);
+    formData.append("type", "verse");
+    formData.append("title", "Best Friend");
 
     axios({
       method: "post",
@@ -41,8 +42,7 @@ const UploadTrack = () => {
         className="upload-track-form"
         onSubmit={(event) => {
           handleSubmit(event);
-        }}
-      >
+        }}>
         <label htmlFor="uploader" className="upload-input">
           <i className="fas fa-arrow-circle-up" id="upload-icon" />
         </label>
