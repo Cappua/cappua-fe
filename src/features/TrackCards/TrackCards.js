@@ -15,23 +15,31 @@ const TrackCards = () => {
         data.verses.sort(function (a, b) {
           return b.votes - a.votes;
         });
-      setTracks(sortedTracks);
+      setTracks(data.verses);
     }
   }, [data]);
 
+  console.log(tracks);
   let trackCards = tracks.map((card, i) => {
-    const { id, artist, image, audioPath, link, votes } = card;
+    const { user, artist, audioPath, title, voteCount } = card;
     return (
       <section key={i} className="trackcards-container">
         <div className="trackcards">
           <p className="user-order">
             <i className={i <= 2 ? `fa fa-award top-${i}` : ""}></i>
-            <img src={image} className="profile-img" />
+            <img
+              src={
+                user.image
+                  ? user.image
+                  : "https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg"
+              }
+              className="profile-img"
+            />
           </p>
           <div className="audio-container">
             <div className="track-username">
-              <h1 className="track-title">{audioPath}</h1>
-              <h1 className="track-artist">{artist}</h1>
+              <h1 className="track-title">{title}</h1>
+              <h1 className="track-artist">{user.name}</h1>
             </div>
             <audio className="audiotrack" controls>
               <source
@@ -41,10 +49,10 @@ const TrackCards = () => {
             </audio>
           </div>
           <div className="play-count">
-            <h1 className="votes" id={id}>
-              {votes}
+            <h1 className="votes" id={user.id}>
+              {voteCount}
             </h1>
-            <i className="fas fa-long-arrow-alt-up vote-icon" id={id}></i>
+            <i className="fas fa-long-arrow-alt-up vote-icon" id={user.id}></i>
           </div>
         </div>
       </section>
