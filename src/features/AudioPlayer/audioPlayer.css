@@ -8,6 +8,7 @@
   align-self: center;
   top: 1vh;
   width: 90%;
+  height: 15vh;
   border-radius: 25px;
   padding: 20px 0;
   margin: 2vh 0vw;
@@ -33,7 +34,7 @@
   text-align: left;
   margin: 0;
   color: white;
-  font-family: "Permanent Marker", cursive;
+  font-family: "Permanent Marker";
   font-weight: normal;
   font-size: 3.5em;
 }

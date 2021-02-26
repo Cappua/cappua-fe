@@ -11,7 +11,7 @@ const TrackPage = () => {
   return (
     <section className="track-page-container">
       <div className="theme-container">
-        <AlbumCard />
+        {/* <AlbumCard /> */}
         <Theme />
       </div>
       <AudioPlayer />
