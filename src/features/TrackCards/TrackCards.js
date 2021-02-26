@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "./TrackCards.css";
 import { useQuery } from "@apollo/client";
 import { GET_ALL_VERSES } from "../../GraphQL/queries.js";
-// import { LensOutlined } from "@material-ui/icons";
 
 const TrackCards = () => {
   const [tracks, setTracks] = useState([]);

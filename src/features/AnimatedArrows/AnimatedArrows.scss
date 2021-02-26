@@ -1,10 +1,9 @@
-
 .scroll-prompt {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin:0 0 5vh 0;
+    margin: 0 0 5vh 0;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -14,7 +13,7 @@
     .scroll-prompt-arrow-container {
         animation-name: bounce;
         animation-duration: 1.5s;
-        animation-iteration-count:6;
+        animation-iteration-count: 6;
     }
 
     .scroll-prompt-arrow {
