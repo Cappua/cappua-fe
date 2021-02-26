@@ -5,9 +5,8 @@ import UploadTrack from "../UploadTrack/UploadTrack.js";
 import AudioPlayer from "../AudioPlayer/AudioPlayer.js";
 import Theme from "../Theme/Theme.js";
 import "./Competition.css";
-import AlbumCard from "../AlbumCard/AlbumCard.js";
 
-const TrackPage = () => {
+const Competition = () => {
   return (
     <section className="track-page-container">
       <div className="theme-container">
@@ -22,4 +21,4 @@ const TrackPage = () => {
   );
 };
 
-export default TrackPage;
+export default Competition;
