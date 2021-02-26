@@ -1,15 +1,16 @@
 import React from "react";
 import "./Trio.css";
-import trioData from "../../Utilities/trioData";
+import trioData from "../../assets/_sampleData/trioData";
 import { nanoid } from "nanoid";
+import { Link } from "react-router-dom";
 
 function Trio() {
   const trioTabs = trioData.map((tab) => {
     const { id, artist, image, song, link } = tab;
-    
+
     return (
       <section className="tab-container" key={nanoid()} id={id}>
-        <a href={link}>
+        <a className="tab-img-container" href={link}>
           <img
             className="tab-img"
             src={image}
@@ -22,9 +23,11 @@ function Trio() {
           <h1 id="tab-vote">Vote on the beat!</h1>
           <h2 id="tab-artist">{artist}</h2>
           <h3 id="tab-song">{song}</h3>
-          <button className="tab-btn" href={link}>
-            Listen Here
-          </button>
+          <Link to={link}>
+            <button className="tab-btn" href={link}>
+              Listen Here
+            </button>
+          </Link>
         </div>
       </section>
     );
@@ -32,7 +35,7 @@ function Trio() {
 
   return (
     <section className="trio-container">
-      <h1 id="featured-title">- Featured Artists -</h1>
+      {/* <h1 id="featured-title">- Featured Artists -</h1> */}
       <section className="featured-artists">{trioTabs}</section>
     </section>
   );
