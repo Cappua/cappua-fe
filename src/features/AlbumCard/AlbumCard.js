@@ -1,5 +1,5 @@
 import React from "react";
-// import ReactDOM from "react-dom";
+import cappuaLogo from "../../assets/cappualogo.png";
 import { useSpring, animated } from "react-spring";
 import "./AlbumCard.css";
 import albumArtSample from "../../assets/wu_tang.jpg";
@@ -19,17 +19,17 @@ const AlbumCard = () => {
   }));
 
   return (
-    // <div className="albumcard-container">
+    <div className="albumcard-container">
       <animated.div
         className="AlbumCard"
         onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
         onMouseLeave={() => set({ xys: [0, 0, 1] })}
         style={{
           transform: props.xys.interpolate(trans),
-          backgroundImage: `url(${albumArtSample})`,
+          backgroundImage: `url(${cappuaLogo})`,
         }}
       />
-    // </div>
+    </div>
   );
 };
 export default AlbumCard;
