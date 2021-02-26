@@ -59,23 +59,14 @@ header b {
   width: 25vw;
   height: 35vh;
   border-radius: 15px;
-  /* background: linear-gradient(145deg, #1e1e22, #1f1f21); */
-  /* background-color: #1c2530; */
   box-shadow: 0px 6px 12px 0px #0000003d;
-  /* background-color: rgb(16, 16, 24); */
     background-color: #212527;
 
   transition: 0.5s;
 }
 
 .contender-container:hover {
-  /* background: #ad9c90; */
-  /* background: #b6533e; */
-  /* background: black; */
-  /* background: #2a2e3a; */
-  /* background-color: #21222e; */
   transform: scale(1.05);
-  /* box-shadow: 0px 6px 12px 0px #21222e; */
 }
 
 .contender-container:hover .play-holder {
@@ -165,13 +156,13 @@ header b {
 
 .contender-track {
   /* font-size: 1.1vw; */
-  font-size: calc(4rem +1.1vw);
+  font-size: calc(.5rem + .8vw);
   color: rgba(255, 255, 255, 0.884);
 }
 
 .contender-artist {
   color: rgba(255, 255, 255, 0.658);
-  font-size: calc(4rem +1.1vw);
+  font-size: calc(.5rem + .5vw);
   /* font-size: 1vw; */
 }
 
