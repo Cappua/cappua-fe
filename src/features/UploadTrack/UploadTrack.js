@@ -4,7 +4,15 @@ import axios from "axios";
 
 const UploadTrack = () => {
   const [file, setFile] = useState(null);
-
+  const getRemainingDays = () => {
+    let date = new Date();
+    let time = new Date(date.getTime());
+    time.setMonth(date.getMonth() + 1);
+    time.setDate(0);
+    let days =
+      time.getDate() > date.getDate() ? time.getDate() - date.getDate() : 0;
+    return <div id="days">{days}</div>;
+  };
   const handleChange = (event) => {
     setFile(event.target.files[0]);
   };
@@ -37,32 +45,45 @@ const UploadTrack = () => {
   };
 
   return (
-    <div className="upload-track-container">
-      <form
-        className="upload-track-form"
-        onSubmit={(event) => {
-          handleSubmit(event);
-        }}>
-        <label htmlFor="uploader" className="upload-input">
-          <i className="fas fa-arrow-circle-up" id="upload-icon" />
-        </label>
-
-        <input
-          id="uploader"
-          style={{ visibility: "hidden", height: "0", width: "0" }}
-          type="file"
-          onChange={(event) => {
-            handleChange(event);
+    <>
+      <div id="remaining-days">
+        There are {getRemainingDays()} day's remaining in this competition.
+      </div>
+      <div id="directions">
+        Listen to the featured beat and submit your verse!
+      </div>
+      <div className="upload-track-container">
+        <form
+          className="upload-track-form"
+          onSubmit={(event) => {
+            handleSubmit(event);
           }}
-          accept=".mp3,audio/*"
-        />
+        >
+          <div className="download-track-container">
+            <a id="download-link" href="" download>
+              <i className="fas fa-arrow-circle-down down" id="icon" />
+            </a>
+          </div>
+          <label htmlFor="uploader" className="upload-input">
+            <i className="fas fa-arrow-circle-up up" id="icon" />
+          </label>
 
+          <input
+            id="uploader"
+            style={{ visibility: "hidden", height: "0", width: "0" }}
+            type="file"
+            onChange={(event) => {
+              handleChange(event);
+            }}
+            accept=".mp3,audio/*"
+          />
+        </form>
         <button className={file ? "submit-button" : "submit-button disabled"}>
-          {/* <div className={file ? "green-fill" : "hidden"}>Submit</div> */}
           Submit
         </button>
-      </form>
-    </div>
+        {/* </form> */}
+      </div>
+    </>
   );
 };
 

@@ -1,0 +1,89 @@
+#first {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+#first-place-winner {
+  width: 90%;
+  margin-bottom: 0vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#winner-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 4vh;
+}
+
+#winner-info-container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: safe;
+}
+
+#winner-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: flex-start;
+  max-height: 40vh;
+  width: 80%;
+}
+
+#medallion {
+  font-size: 15vh;
+  text-shadow: 0px 3px 1px rgb(0, 0, 0);
+}
+#artist-song {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-family: "Permanent Marker";
+  font-weight: 100;
+  word-spacing: 4px;
+  width: 100%;
+  height: 100%;
+  letter-spacing: 3px;
+  color: rgb(73, 72, 72);
+  text-align: right;
+}
+
+#first-place-song {
+  margin: 0;
+  color: rgb(54, 53, 53);
+  font-size: 4rem;
+  text-shadow: 4px 4px 4px #f5ae14;
+}
+
+#first-place-artist {
+  margin: 0;
+  font-size: 1vw;
+  font-family: "Rock Salt", cursive;
+  letter-spacing: 0.5vw;
+  word-spacing: 1vw;
+  text-align: right;
+  font-weight: lighter;
+}
+
+#winner-details {
+  font-size: 1.6em;
+  height: 90%;
+  max-height: 14.5vw;
+  width: 90%;
+  margin: 4vh 2vw 0 0;
+  overflow-y: scroll;
+  text-align: left;
+  color: black;
+  border-radius: 15px;
+}
+
+#winner-image {
+  height: 45vh;
+  width: 40vw;
+  border-radius: 10px;
+}

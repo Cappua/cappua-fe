@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./TrackCards.css";
 import { useQuery } from "@apollo/client";
 import { GET_ALL_VERSES } from "../../GraphQL/queries.js";
+import AlbumCard from "../AlbumCard/AlbumCard.js";
 
 const TrackCards = () => {
   const [tracks, setTracks] = useState([]);
@@ -55,7 +56,18 @@ const TrackCards = () => {
       </section>
     );
   });
+if(trackCards.length === 0){
+  return (
+    <section id="no-tracks-message">
+      <h1>Currently, there are no tracks uploaded to this competition yet.</h1>
+
+      <h2 id="motiv"> Be the first!</h2>
+      {/* <AlbumCard /> */}
+    </section>
+  );
+}else{
   return <section className="all-cards-container">{trackCards}</section>;
+}
 };
 
 export default TrackCards;

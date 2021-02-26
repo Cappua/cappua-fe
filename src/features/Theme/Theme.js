@@ -1,6 +1,7 @@
-import React, { Component } from "react";
-import "./Theme.css";
+import React from "react";
+import AlbumCard from "../AlbumCard/AlbumCard.js";
 
+import "./Theme.css";
 function Theme() {
   const getMonth = () => {
     let date = new Date();
@@ -47,14 +48,16 @@ function Theme() {
 
   return (
     <section to="/theme" className="theme">
+      {/* <AlbumCard /> */}
       <h1 id="month-theme">{getMonth()}'s Competition</h1>
-      <h2 id="genre-themes">
-        {getGenres()}
-      </h2>
-      <div id="remaining-days">
+      <h2 id="genre-themes">{getGenres()}</h2>
+
+      {/* <div id="remaining-days">
         There are {getRemainingDays()} day's remaining in this competition.
       </div>
-      <div id="directions">Listen to the featured beat and submit yours down below!</div>
+      <div id="directions">
+        Listen to the featured beat and submit yours down below!
+      </div> */}
     </section>
   );
 }

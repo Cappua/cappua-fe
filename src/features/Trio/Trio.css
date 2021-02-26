@@ -9,11 +9,12 @@
 
 #featured-title {
   font-size: 7vw;
-  font-family: "Permanent Marker", cursive;
+  font-family: "Permanent Marker";
   font-weight: 100;
   word-spacing: 20px;
   letter-spacing: 10px;
   color: rgb(73, 72, 72);
+  text-align: center;
   margin: 10vh 0 5vh 0;
 }
 
@@ -33,7 +34,7 @@
   text-align: center;
   box-shadow: 0px 6px 12px 0px #0000003d;
   height: 60vh;
-  font-family: "Permanent Marker", cursive;
+  font-family: "Permanent Marker";
   border-radius: 15px;
   width: 24vw;
   padding: 10px;
@@ -47,9 +48,8 @@
 
 .tab-img {
   width: 15vw;
-  border-radius: 150px;
-  box-shadow: 0px 6px 12px 0px #0000003d;
 }
+
 #tab-vote {
   font-family: "Roboto Mono", monospace;
   font-size: 1.3em;
@@ -71,8 +71,28 @@
   color: rgb(156, 5, 5);
 }
 
-.tab-container:hover .tab-img {
+.tab-img-container {
+  overflow: hidden;
+  height: 45%;
+  width: 15vw;
+  border-radius: 150px;
+  box-shadow: 0px 6px 12px 0px #0000003d;
+}
+.tab-container:hover .tab-img-container {
   box-shadow: 1px 1px 12px 0px white;
+}
+.tab-container:hover .tab-img {
+  transform-origin: center center;
+  animation: grow 20s infinite linear;
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
 }
 .tab-container:hover #tab-song {
   color: #f8d32e;
@@ -97,11 +117,12 @@
   font-size: 1vw;
   border: 0;
   margin: 0;
+  outline: none;
   box-shadow: 0px 6px 12px 0px #0000003d;
 }
 .tab-container:hover .tab-btn {
   background-color: rgb(221, 215, 215);
-  cursor: url("https://img.icons8.com/material/24/ff0404/headphones.png"), auto;
+  cursor: url("https://img.icons8.com/material/24/000000/headphones.png"), auto;
   color: black;
 }
 @media screen and (max-width: 1500px) {
@@ -168,7 +189,6 @@
   #featured-title {
     font-size: 6vw;
     font-family: "Permanent Marker", cursive;
-    /* font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif; */
     font-weight: 100;
     word-spacing: 20px;
     letter-spacing: 5px;

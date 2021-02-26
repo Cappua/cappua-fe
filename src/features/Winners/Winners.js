@@ -1,33 +1,50 @@
 import React from "react";
-import "./Winners.scss";
+import "./Winners.css";
 import userData from "../../assets/_sampleData/sampeUserData";
-import dylon from "../../assets/dylon.mp3";
+import Trio from "../Trio/Trio.js";
+import AudioPlayer from "../AudioPlayer/AudioPlayer.js";
+import FirstPlace from "../FirstPlace/FirstPlace.js";
 
 function Winners() {
-  const getMonth = () => {
+  const getPreviousMonth = () => {
     let date = new Date();
-    let month = date.toLocaleString("default", { month: "long" });
-    return month;
+    date.setMonth(date.getMonth() - 1);
+    const previousMonth = date.toLocaleString("default", { month: "long" });
+    return previousMonth;
   };
+
+  let ordinal = (n) => {
+    var s = ["th", "st", "nd", "rd"];
+    var v = n % 100;
+    return n + (s[(v - 20) % 10] || s[v] || s[0]);
+  };
+
   let sortedUsers = userData.sort((a, b) => {
     return b.votes - a.votes;
   });
-  sortedUsers = [sortedUsers[0], sortedUsers[1], sortedUsers[2]];
+  sortedUsers = [sortedUsers[1], sortedUsers[2]];
   let winners = sortedUsers.map((card, i) => {
     const { id, artist, image, song, link, votes } = card;
     return (
-      <section key={i} className="winner-container">
-        {/* <div class="firework">
-          <div class="before"></div>
-          <div class="after"></div>
-        </div> */}
-        <div className="winner">
+      <div key={i} className="contender-container">
+        <div className="medallion-holder">
+          <i className={`fa fa-award top-${i +1} medallion`}></i>
+        </div>
+        <div className="play-holder">
+          <h1 className="ordinal">{ordinal(i + 2)}</h1>
+          <i class="fa fa-play play-button" />
+        </div>
+        <div className="username-holder">
+          <div className="contender-track">{song}</div>
+          <div className="contender-artist">by {artist}</div>
+        </div>
+        {/* <div className="winner">
           <div className="winner-stats">
             <div className="winner-rank">
               <div className="winner-banner">
-                <div class="firework">
-                  <div class="before"></div>
-                  <div class="after"></div>
+                <div className="firework">
+                  <div className="before"></div>
+                  <div className="after"></div>
                 </div>
                 <i className={`fa fa-award top-${i} medallion`}></i>
                 <h1 className="winner-artist">{artist}</h1>
@@ -49,12 +66,12 @@ function Winners() {
             </div>
 
             <div>
-              <img src={image} className="winner-img" />
+              <img src={image} className="winner-img" alt={artist}/>
             </div>
           </div>
           <div className="winner-audio">
             <div>
-              <img src={image} className="winners-icon" />
+              <img src={image} className="winners-icon" alt={artist}/>
             </div>
             <div className="winner-track-container">
               <div className="winning-track-details">
@@ -67,16 +84,20 @@ function Winners() {
               </audio>
             </div>
           </div>
-        </div>
-      </section>
+    </div> */}
+      </div>
     );
   });
+
   return (
     <div className="winners-page">
       <header>
-        {getMonth()}'s Competition<b>Winners</b>
+        {getPreviousMonth()}'s Competition<b>Winners</b>
       </header>
-      <section>{winners}</section>
+      <FirstPlace />
+      <AudioPlayer />
+      <h1 id="runner-ups-title">Runner Ups</h1>
+      <section id="runner-ups">{winners}</section>
     </div>
   );
 }
