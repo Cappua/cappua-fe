@@ -16,9 +16,9 @@ body {
   left: -2vw;
 } */
 .AlbumCard {
-  margin: 5vh;
-  width: 40ch;
-  height: 40ch;
+  margin: 10vh;
+  width: 60ch;
+  height: 60ch;
   background: grey;
   border-radius: 5px;
   background-size: cover;
