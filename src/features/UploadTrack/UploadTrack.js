@@ -46,6 +46,12 @@ const UploadTrack = () => {
 
   return (
     <>
+      <div id="remaining-days">
+        There are {getRemainingDays()} day's remaining in this competition.
+      </div>
+      <div id="directions">
+        Listen to the featured beat and submit your verse!
+      </div>
       <div className="upload-track-container">
         <form
           className="upload-track-form"
@@ -53,8 +59,13 @@ const UploadTrack = () => {
             handleSubmit(event);
           }}
         >
+          <div className="download-track-container">
+            <a id="download-link" href="" download>
+              <i className="fas fa-arrow-circle-down down" id="icon" />
+            </a>
+          </div>
           <label htmlFor="uploader" className="upload-input">
-            <i className="fas fa-arrow-circle-up" id="upload-icon" />
+            <i className="fas fa-arrow-circle-up up" id="icon" />
           </label>
 
           <input
@@ -66,18 +77,11 @@ const UploadTrack = () => {
             }}
             accept=".mp3,audio/*"
           />
-
-          <button className={file ? "submit-button" : "submit-button disabled"}>
-            {/* <div className={file ? "green-fill" : "hidden"}>Submit</div> */}
-            Submit
-          </button>
         </form>
-      </div>
-      <div id="remaining-days">
-        There are {getRemainingDays()} day's remaining in this competition.
-      </div>
-      <div id="directions">
-        Listen to the featured beat and submit your verse!
+        <button className={file ? "submit-button" : "submit-button disabled"}>
+          Submit
+        </button>
+        {/* </form> */}
       </div>
     </>
   );
