@@ -1,7 +1,6 @@
 import React from "react";
 import userData from "../../assets/_sampleData/sampeUserData";
 import "./FirstPlace.css";
-import AudioPlayer from "../AudioPlayer/AudioPlayer.js";
 
 function FirstPlace() {
   let sortedUsers = userData.sort((a, b) => {
@@ -43,7 +42,6 @@ function FirstPlace() {
             alt="body-img"
           />
         </div>
-        {/* <AudioPlayer /> */}
       </section>
     );
   });
