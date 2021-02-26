@@ -24,6 +24,8 @@
   justify-content: space-around;
   margin: 0vh 0vh 10vh 0vh;
   text-decoration: none;
+  height: 65vh;
+  width: 100%;
 }
 
 .tab-container {
@@ -46,38 +48,43 @@
   color: white;
 }
 
+.tab-img-container {
+  display: inline-block;
+  position: relative;
+  max-width: 15vw;
+  max-height: 25vh;
+  min-height: 15vh;
+  min-width: 5vw;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0px 6px 12px 0px #0000003d;
+}
+
 .tab-img {
-  width: 15vw;
+  width: 100%;
+  height: 100%;
 }
 
 #tab-vote {
   font-family: "Roboto Mono", monospace;
-  font-size: 1.3em;
+  font-size: 1vw;
   font-weight: lighter;
   margin: 1.8vh 0;
 }
 #tab-artist {
-  font-size: 2em;
   font-size: 2vw;
   letter-spacing: 5px;
   margin-bottom: 0;
 }
 
 #tab-song {
-  font-size: 1.8em;
+  font-size: 1.8vw;
   letter-spacing: 1px;
   padding: 1vh 2.5vw 2.5vh;
   margin-top: 0;
   color: rgb(156, 5, 5);
 }
 
-.tab-img-container {
-  overflow: hidden;
-  height: 45%;
-  width: 15vw;
-  border-radius: 150px;
-  box-shadow: 0px 6px 12px 0px #0000003d;
-}
 .tab-container:hover .tab-img-container {
   box-shadow: 1px 1px 12px 0px white;
 }
@@ -151,7 +158,7 @@
     align-items: center;
     text-align: center;
     box-shadow: 0px 6px 12px 0px #0000003d;
-    height: 50vh;
+    height: 60vh;
     border-radius: 15px;
     width: 24vw;
     padding: 10px;
@@ -199,7 +206,7 @@
     height: fit-content;
   }
   .tab-container {
-    height: 30vh;
+    height: 50vh;
   }
   #tab-song {
     font-size: 0.7em;

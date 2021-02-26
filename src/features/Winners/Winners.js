@@ -1,9 +1,9 @@
 import React from "react";
 import "./Winners.css";
 import userData from "../../assets/_sampleData/sampeUserData";
-import Trio from "../Trio/Trio.js";
 import AudioPlayer from "../AudioPlayer/AudioPlayer.js";
 import FirstPlace from "../FirstPlace/FirstPlace.js";
+import AnimatedArrows from '../AnimatedArrows/AnimatedArrows.js';
 
 function Winners() {
   const getPreviousMonth = () => {
@@ -32,7 +32,7 @@ function Winners() {
         </div>
         <div className="play-holder">
           <h1 className="ordinal">{ordinal(i + 2)}</h1>
-          <i class="fa fa-play play-button" />
+          <i className="fa fa-play play-button" />
         </div>
         <div className="username-holder">
           <div className="contender-track">{song}</div>
@@ -93,10 +93,11 @@ function Winners() {
     <div className="winners-page">
       <header>
         {getPreviousMonth()}'s Competition<b>Winners</b>
+        <AnimatedArrows />
       </header>
       <FirstPlace />
       <AudioPlayer />
-      <h1 id="runner-ups-title">Runner Ups</h1>
+      <h1 id="runner-ups-title">- Runner Ups -</h1>
       <section id="runner-ups">{winners}</section>
     </div>
   );

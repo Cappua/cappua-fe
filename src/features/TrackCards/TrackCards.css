@@ -6,7 +6,6 @@
   align-items: center;
   justify-content: space-between;
   margin: 5vh 0;
-  overflow: scroll;
 }
 .trackcards-container {
   display: flex;
@@ -18,19 +17,17 @@
   margin: 2vh 5vw;
   box-shadow: 1px 1px 15px 5px rgba(0, 0, 0, 0.05),
     -1px -1px 15px 5px rgba(0, 0, 0, 0.05);
-  width: 90%;
+  width: 100%;
   border-radius: 15px;
   transition: 0.6s;
 }
 .trackcards {
-  font-family: "Permanent Marker";
   padding: 0.25em 1em;
   height: 10vh;
   width: 90%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border-radius: 5px;
   align-items: center;
   margin: 1vh;
   color: black;
@@ -57,29 +54,24 @@
   font-size: 2rem;
   letter-spacing: 5px;
   text-align: center;
-  text-shadow: 0px 2px 3px black;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
 }
 
 .track-title {
-  color: rgb(223, 9, 9);
-  font-size: 90%;
+  font-weight: 200;
+  font-size: 85%;
   margin: 0;
 }
 .track-artist {
   font-size: 70%;
-  text-shadow: 0px 2px 3px white;
+  font-weight: lighter;
   margin: 0;
 }
 
 .trackcards-container:hover .track-title {
-  color: red;
+  color: white;
 }
 .trackcards-container:hover .track-artist {
   color: white;
-  text-shadow: 0px 2px 3px black;
 }
 .trackcards-container:hover .track-username {
   animation: loopText 10s infinite linear;
@@ -94,19 +86,32 @@
   }
 }
 
-.profile-img {
-  margin: 0.5em;
-  height: 10vh;
+.profile-img-container {
+  display: inline-block;
+  position: relative;
+  max-width: 8vw;
+  min-height: 12vh;
+  min-width: 8vw;
+  overflow: hidden;
   border-radius: 50%;
-  box-shadow: 0px 2px 3px 0px #000000cb;
+  box-shadow: 0px 6px 12px 0px #0000003d;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
 }
 
 .trackcards-container:hover .profile-img {
-  box-shadow: 0px 1px 10px 0px white;
+  transform-origin: center center;
+  animation: grow 20s infinite linear;
+}
+.trackcards-container:hover .profile-img-container {
+  box-shadow: 1px 1px 12px 0px white;
 }
 
 .audio-container {
-  width: 60%;
+  width: 70%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -115,28 +120,31 @@
   overflow: hidden;
 }
 .audiotrack {
-  border-radius: 25px;
   height: 3.5vh;
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
   outline: none;
 }
 .trackcards-container:hover {
   background-color: rgba(31, 29, 39, 0.925);
-  width: 93%;
+  transform: scale(1.05);
 }
 .fa-award {
   text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.979);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
-  font-size: 5vh;
+  font-size: 6vh;
+}
+
+.invisible {
+  visibility: hidden;
 }
 .play-count {
-  font-size: 1.3em;
+  font-size: 1.2vw;
   letter-spacing: 5px;
+  font-weight: lighter;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -152,9 +160,10 @@
 }
 
 .trackcards-container:hover .vote-icon {
+  transition: 1s;
   color: white;
   text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.979);
-  font-size: 1.1em;
+  font-size: 1.5em;
 }
 
 .top-0 {
@@ -174,7 +183,6 @@
   margin: 5vh 0 10vh;
 }
 #no-tracks-message h1 {
-  /* font-family: "Permanent Marker", cursive; */
   font-size: 2.5vw;
   letter-spacing: 0.1vw;
   font-weight: lighter;

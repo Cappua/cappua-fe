@@ -2,7 +2,6 @@ import React from "react";
 import cappuaLogo from "../../assets/cappualogo.png";
 import { useSpring, animated } from "react-spring";
 import "./AlbumCard.css";
-import albumArtSample from "../../assets/wu_tang.jpg";
 
 const calc = (x, y) => [
   -(y - window.innerHeight / 2) / 20,
@@ -19,7 +18,9 @@ const AlbumCard = () => {
   }));
 
   return (
-    <div className="albumcard-container">
+    <div
+      className="albumcard-container"
+    >
       <animated.div
         className="AlbumCard"
         onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}

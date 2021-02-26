@@ -5,4 +5,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-repeat: repeat;
+  background: rgba(31, 29, 39, 0.925);
+  background-size: 5%;
+  filter: none;
 }

@@ -4,7 +4,7 @@ import TrackNav from "../TrackNav/TrackNav.js";
 import UploadTrack from "../UploadTrack/UploadTrack.js";
 import AudioPlayer from "../AudioPlayer/AudioPlayer.js";
 import Theme from "../Theme/Theme.js";
-import "./TrackPage.css";
+import "./Competition.css";
 import AlbumCard from "../AlbumCard/AlbumCard.js";
 
 const TrackPage = () => {

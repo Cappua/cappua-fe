@@ -40,7 +40,7 @@ const userData = [
     artist: "Lil Bliu",
     image:
       "https://avatars.githubusercontent.com/u/67594471?s=400&u=3737b7d418d97898c046e63543b1382dd61676e4&v=4",
-    song: "Left The Gucci Store",
+    song: "Choppa Helicopta",
     link: "/featured-artist",
     votes: Math.ceil(Math.random() * 100),
   },

@@ -5,7 +5,7 @@ import Banner from "./features/Banner/Banner.js";
 import Body from "./features/Body/Body.js";
 import Trio from "./features/Trio/Trio.js";
 import Announcement from "./features/Announcement/Announcement.js";
-import TrackPage from "./features/TrackPage/TrackPage.js";
+import Competition from "./features/Competition/Competition.js";
 import AudioPlayer from "./features//AudioPlayer/AudioPlayer.js";
 import Winners from "./features/Winners/Winners";
 import "./App.css";
@@ -43,7 +43,7 @@ function App() {
               </>
             )}
           />
-          <Route exact path="/competitions" render={() => <TrackPage />} />
+          <Route exact path="/competitions" render={() => <Competition />} />
           <Route exact path="/winners" render={() => <Winners />} />
         </CompetitionContext.Provider>
       )}
