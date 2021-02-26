@@ -1,20 +1,19 @@
 .theme {
-  position: relative;
-  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   height: 50%;
   padding: 0;
-  margin-top: 7vh;
-  text-align: left;
+  margin: 6vh 0 3vh;
+  text-align: center;
 }
 #month-theme {
   margin: 0vh 1vw;
-  font-size: 4em;
-  padding: 0px;
-  letter-spacing: 3px;
+  font-size: 8vw;
+  letter-spacing: 4px;
   font-weight: lighter;
-  text-shadow: 0px 2px 3px white;
-  font-family: "Permanent Marker", cursive;
-  text-shadow: 0px 2px 3px rgb(252, 196, 76);
+  text-shadow: 4px 4px 4px #f5ae14;
+  font-family: "Permanent Marker";
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
@@ -22,9 +21,10 @@
 
 #genre-themes {
   font-weight: lighter;
-  font-size: 2em;
-  margin: 10px;
+  font-size: 6.5vw;
+  margin: 2vh 20px;
   display: flex;
+  width: 90vw;
 }
 
 #remaining-days {
@@ -32,20 +32,19 @@
   margin: 10px;
   flex-direction: row;
   justify-content: flex-start;
-  font-weight: lighter;
   align-items: baseline;
-  font-size: 2em;
+  font-size: 3vw;
 }
 
 #days {
-  margin: 0 0.3vw;
-  font-size: 1em;
+  margin: 4vh 0.3vw;
+  padding: 0 1vw;
+  font-size: 3vw;
   font-weight: bold;
   color: rgb(156, 5, 5);
 }
 
 #directions {
-  font-size: 1em;
-  margin-top: 2vh;
+  font-size: 2.5vw;
   text-align: center;
 }

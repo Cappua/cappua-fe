@@ -13,11 +13,10 @@
   margin: 0;
   font-size: 7vw;
   letter-spacing: 10px;
-  text-shadow: 0px 2px 3px rgb(252, 196, 76);
+  text-shadow: 4px 4px 4px #f5ae14;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
-
 }
 .track-sort-container {
   display: flex;
@@ -50,8 +49,7 @@
 }
 .search-ranks-container:hover {
   animation: none;
-  background-color: rgba(235, 227, 227, 0.281);
-  border: solid 1px black;
+  border: solid 1 black;
 }
 .search-ranks-container:hover > .search-input {
   width: 15vw;
@@ -66,8 +64,7 @@
   outline: none;
   width: 0px;
   color: black;
-  font-family: "Permanent Marker", cursive;
-  font-weight: 500;
+  /* font-weight: 300; */
   font-size: 1.3em;
   transition: 0.8s;
 }

@@ -1,13 +1,19 @@
 @import url("https://fonts.googleapis.com/css?family=Permanent+Marker%7CRock+Salt");
+ 
+#player-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
 .player {
   display: flex;
   justify-content: space-around;
-  /* z-index: 3; */
   align-items: center;
-  /* position: sticky; */
-  align-self: center;
-  top: 1vh;
+  flex-direction: row;
   width: 90%;
+  height: 15vh;
   border-radius: 25px;
   padding: 20px 0;
   margin: 2vh 0vw;
@@ -33,7 +39,7 @@
   text-align: left;
   margin: 0;
   color: white;
-  font-family: "Permanent Marker", cursive;
+  font-family: "Permanent Marker";
   font-weight: normal;
   font-size: 3.5em;
 }
