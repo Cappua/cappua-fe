@@ -4,7 +4,7 @@ import "./audioPlayer.css";
 import wutang from "./wutang.mp3";
 import { CompetitionContext } from "../../CompetitionContext";
 
-function AudioPlayer() {
+const AudioPlayer = () => {
   const context = useContext(CompetitionContext);
 
   return (
@@ -12,12 +12,12 @@ function AudioPlayer() {
       <div className="player">
         <Song songName="Protect Ya Neck" songArtist="Wu-Tang Clan" />
         <audio id="audio" controls>
-          <source src={wutang} />
+          <source src={context.competition.trackPath} />
           Your browser does not support the <code>audio</code> element.
         </audio>
       </div>
     </section>
   );
-}
+};
 
 export default AudioPlayer;
