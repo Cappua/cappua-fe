@@ -19,9 +19,9 @@ export const GET_ALL_VERSES = gql`
   }
 `;
 
-export const GET_VERSES_BY_COMPETITION = gql`
-  query($id: String!, $userId: String!) {
-    competition(id: $id) {
+export let GET_VERSES_BY_COMPETITION = gql`
+  query {
+    competition(id: 1) {
       id
       trackPath
       month
@@ -33,7 +33,7 @@ export const GET_VERSES_BY_COMPETITION = gql`
         id
         audioPath
         title
-        upvoted(userId: $usesrId)
+        upvoted(userId: 1)
         voteCount
         user {
           id
@@ -44,10 +44,32 @@ export const GET_VERSES_BY_COMPETITION = gql`
     }
   }
 `;
-
-export const GET_ALL_COMPETITIONS = gql`
+// query {
+//   competition(id: $id) {
+//     id
+//     trackPath
+//     month
+//     year
+//     description
+//     genre
+//     rules
+//     verses {
+//       id
+//       audioPath
+//       title
+//       upvoted(userId: $usesrId)
+//       voteCount
+//       user {
+//         id
+//         name
+//         image
+//       }
+//     }
+//   }
+// }
+export let GET_ALL_COMPETITIONS = gql`
   query {
-    competitions {
+    competition {
       id
       trackPath
       month
@@ -55,9 +77,7 @@ export const GET_ALL_COMPETITIONS = gql`
       description
       genre
       rules
-      verses {
-        verseType
-      }
+      verses
     }
   }
 `;
