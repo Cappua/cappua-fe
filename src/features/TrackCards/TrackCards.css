@@ -23,7 +23,7 @@
   transition: 0.6s;
 }
 .trackcards {
-  font-family: "Permanent Marker";
+  /* font-family: "Permanent Marker"; */
   padding: 0.25em 1em;
   height: 10vh;
   width: 90%;
