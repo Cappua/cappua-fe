@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Song from "./Song";
 import "./audioPlayer.css";
 import wutang from "./wutang.mp3";
+import { CompetitionContext } from "../../CompetitionContext";
 
 function AudioPlayer() {
+  const context = useContext(CompetitionContext);
+
   return (
     <div className="player">
       <Song songName="Protect Ya Neck" songArtist="Wu-Tang Clan" />
