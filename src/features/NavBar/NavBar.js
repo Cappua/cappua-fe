@@ -25,7 +25,7 @@ function NavBar() {
       </Link>
       <div className="navbar-contents">
         <Link to="/halloffame" id="hall-fame">
-          Hall of Fame
+          Olympus
         </Link>
         <Link to="/competitions" id="competitions">
           Competitions
