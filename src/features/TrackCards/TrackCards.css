@@ -6,7 +6,6 @@
   align-items: center;
   justify-content: space-between;
   margin: 5vh 0;
-  overflow: scroll;
 }
 .trackcards-container {
   display: flex;
@@ -56,15 +55,11 @@
   font-size: 2rem;
   letter-spacing: 5px;
   text-align: center;
-  text-shadow: 0px 2px 3px black;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
 }
 
 .track-title {
-  font-weight: lighter;
-  font-size: 90%;
+  font-weight: 200;
+  font-size: 85%;
   margin: 0;
 }
 .track-artist {
@@ -75,11 +70,9 @@
 
 .trackcards-container:hover .track-title {
   color: white;
-  /* text-shadow: 0px 2px 3px black; */
 }
 .trackcards-container:hover .track-artist {
   color: white;
-  /* text-shadow: 0px 2px 3px black; */
 }
 .trackcards-container:hover .track-username {
   animation: loopText 10s infinite linear;
@@ -96,7 +89,7 @@
 
 .profile-img {
   margin: 0.5em;
-  height: 10vh;
+  height: 13vh;
   border-radius: 50%;
   box-shadow: 0px 2px 3px 0px #000000cb;
 }
@@ -135,8 +128,9 @@
   font-size: 5vh;
 }
 .play-count {
-  font-size: 1.3em;
+  font-size: 1.2vw;
   letter-spacing: 5px;
+  font-weight: lighter;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -152,9 +146,10 @@
 }
 
 .trackcards-container:hover .vote-icon {
+  transition: 1s;
   color: white;
   text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.979);
-  font-size: 1.1em;
+  font-size: 1.5em;
 }
 
 .top-0 {
