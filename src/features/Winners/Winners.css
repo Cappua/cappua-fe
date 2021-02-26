@@ -7,13 +7,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: black;
+  color:  #212527;;
   text-align: center;
-  align-self: center;
-  display: flex;
+  /* align-self: center; */
   font-size: 8vw;
   letter-spacing: 4px;
-  flex-direction: column;
   border-radius: 5px;
   margin: 6vh 1vw;
   padding: 0;
@@ -26,21 +24,36 @@ header b {
   color: goldenrod;
   text-shadow: 4px 4px 3px rgb(0, 0, 0);
   letter-spacing: 20px;
-    /* font-family: "Rock Salt", cursive; */
   width: 100%;
   font-size: 20.7vw;
   margin: 0;
   padding: 0;
 }
 
-#all-winners {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 10vh;
+#runner-ups-title {
+  font-family: "Permanent Marker", cursive;
+  font-size: 10vw;
+  text-align: center;
+  margin: 10vh 0 4vh;
+  letter-spacing: 2vw;
+  word-spacing: 3vw;
+    color:  #212527;
+    font-weight: lighter;
+  text-decoration: underline;
+  text-shadow: 4px 4px 4px #f5ae14;
 }
 
-.winner-container {
+#runner-ups {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5vh 5vw;
+}
+
+/* ------2ND &&  3RD PLACE CONTENDERS display------ */
+
+.contender-container {
   display: flex;
   flex-direction: column;
   width: 25vw;
@@ -49,11 +62,13 @@ header b {
   /* background: linear-gradient(145deg, #1e1e22, #1f1f21); */
   /* background-color: #1c2530; */
   box-shadow: 0px 6px 12px 0px #0000003d;
-  background-color: rgb(16, 16, 24);
+  /* background-color: rgb(16, 16, 24); */
+    background-color: #212527;
+
   transition: 0.5s;
 }
 
-.winner-container:hover {
+.contender-container:hover {
   /* background: #ad9c90; */
   /* background: #b6533e; */
   /* background: black; */
@@ -63,20 +78,20 @@ header b {
   /* box-shadow: 0px 6px 12px 0px #21222e; */
 }
 
-.winner-container:hover .play-holder {
+.contender-container:hover .play-holder {
   color: white;
   text-shadow: 2px 1px 2px #21222e;
   transform: scale(1.2);
 }
 
-/* .winner-container:hover .winner-track {
+/* .contender-container:hover .winner-track {
   color: black;
 }
 
-.winner-container:hover .winner-artist {
+.contender-container:hover .winner-artist {
   color: black;
 } */
-/* .winner-container:hover .medallion {
+/* .contender-container:hover .medallion {
   transform: scale(1.2);
 } */
 .medallion-holder {
@@ -104,7 +119,7 @@ header b {
   color: white;
   text-align: center;
   width: 100%;
-  text-shadow: 1px 4px 1px rgb(255, 209, 2);
+  text-shadow: 1px 4px 1px palevioletred;
 }
 
 .play-button {
@@ -113,22 +128,23 @@ header b {
 }
 
 .ordinal {
-  font-size: 6vh;
   letter-spacing: 20px;
   font-weight: lighter;
   color: white;
   transition: 1s;
-  text-shadow: 0px 1px 1px rgb(27, 27, 27);
+  text-shadow: 0px 3px 1px palevioletred;
+  mix-blend-mode: hard-light;
+  font-size: calc(4rem +10vw);
 }
 
-.play-holder:hover {
-  transform: scale(1.3);
+.play-button:hover {
+  transform: scale(1.2);
 }
 
-.winner-container:hover .play-button {
-  display: contents;
+.contender-container:hover .play-button {
+  display: flex;
 }
-.winner-container:hover .ordinal {
+.contender-container:hover .ordinal {
   display: none;
 }
 
@@ -147,14 +163,16 @@ header b {
   font-weight: lighter;
 }
 
-.winner-track {
-  font-size: 1.1vw;
+.contender-track {
+  /* font-size: 1.1vw; */
+  font-size: calc(4rem +1.1vw);
   color: rgba(255, 255, 255, 0.884);
 }
 
-.winner-artist {
+.contender-artist {
   color: rgba(255, 255, 255, 0.658);
-  font-size: 1vw;
+  font-size: calc(4rem +1.1vw);
+  /* font-size: 1vw; */
 }
 
 /* // .winners-page {

@@ -2,6 +2,8 @@ import React from "react";
 import "./Winners.css";
 import userData from "../../assets/_sampleData/sampeUserData";
 import Trio from "../Trio/Trio.js";
+import AudioPlayer from "../AudioPlayer/AudioPlayer.js";
+import FirstPlace from "../FirstPlace/FirstPlace.js";
 
 function Winners() {
   const getPreviousMonth = () => {
@@ -10,29 +12,31 @@ function Winners() {
     const previousMonth = date.toLocaleString("default", { month: "long" });
     return previousMonth;
   };
-    let ordinal = (n) => {
+
+  let ordinal = (n) => {
     var s = ["th", "st", "nd", "rd"];
     var v = n % 100;
     return n + (s[(v - 20) % 10] || s[v] || s[0]);
-  }
+  };
+
   let sortedUsers = userData.sort((a, b) => {
     return b.votes - a.votes;
   });
-  sortedUsers = [sortedUsers[0], sortedUsers[1], sortedUsers[2]];
+  sortedUsers = [sortedUsers[1], sortedUsers[2]];
   let winners = sortedUsers.map((card, i) => {
     const { id, artist, image, song, link, votes } = card;
     return (
-      <div key={i} className="winner-container">
+      <div key={i} className="contender-container">
         <div className="medallion-holder">
-          <i className={`fa fa-award top-${i} medallion`}></i>
+          <i className={`fa fa-award top-${i +1} medallion`}></i>
         </div>
         <div className="play-holder">
-          <h1 className="ordinal">{ordinal(i + 1)}</h1>
+          <h1 className="ordinal">{ordinal(i + 2)}</h1>
           <i class="fa fa-play play-button" />
         </div>
         <div className="username-holder">
-          <div className="winner-track">{song}</div>
-          <div className="winner-artist">by {artist}</div>
+          <div className="contender-track">{song}</div>
+          <div className="contender-artist">by {artist}</div>
         </div>
         {/* <div className="winner">
           <div className="winner-stats">
@@ -84,13 +88,16 @@ function Winners() {
       </div>
     );
   });
+
   return (
     <div className="winners-page">
       <header>
         {getPreviousMonth()}'s Competition<b>Winners</b>
       </header>
-      <Trio />
-      <section id="all-winners">{winners}</section>
+      <FirstPlace />
+      <AudioPlayer />
+      <h1 id="runner-ups-title">Runner Ups</h1>
+      <section id="runner-ups">{winners}</section>
     </div>
   );
 }

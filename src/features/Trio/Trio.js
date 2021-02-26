@@ -35,7 +35,7 @@ function Trio() {
 
   return (
     <section className="trio-container">
-      {/* <h1 id="featured-title">- Featured Artists -</h1> */}
+      <h1 id="featured-title">- Featured Artists -</h1>
       <section className="featured-artists">{trioTabs}</section>
     </section>
   );

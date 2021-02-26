@@ -27,7 +27,6 @@ function App() {
                 <Banner />
                 <Body />
                 <AudioPlayer />
-                <h1 id="featured-title">- Featured Artists -</h1>
                 <Trio />
                 <Announcement />
               </>

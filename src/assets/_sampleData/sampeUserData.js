@@ -22,7 +22,7 @@ const userData = [
     artist: "Yung Sage",
     image:
       "https://avatars.githubusercontent.com/u/65799246?s=400&u=67367b4bf3eb0785908f7b7892abcc67efdf458c&v=4",
-    song: "All I Got Is G's On Me",
+    song: "Gr8 $uces$$",
     link: "/featured-artist",
     votes: Math.ceil(Math.random() * 100),
   },
@@ -49,7 +49,7 @@ const userData = [
     artist: "King Nicoli",
     image:
       "https://avatars.githubusercontent.com/u/68172332?s=400&u=8b0b3766e31ff6be0d1dea0a8591483dc1bdd870&v=4",
-    song: "Bury Me In The Louis Store",
+    song: "Bankin In BitCoin",
     link: "/featured-artist",
     votes: Math.ceil(Math.random() * 100),
   },
