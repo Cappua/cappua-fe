@@ -25,15 +25,21 @@ const TrackCards = () => {
       <section key={i} className="trackcards-container">
         <div className="trackcards">
           <p className="user-order">
-            <i className={i <= 2 ? `fa fa-award top-${i}` : ""}></i>
-            <img
-              src={
-                user.image
-                  ? user.image
-                  : "https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg"
+            <i
+              className={
+                i <= 2 ? `fa fa-award top-${i}` : "fa fa-award invisible"
               }
-              className="profile-img"
             />
+            <div className="profile-img-container">
+              <img
+                src={
+                  user.image
+                    ? user.image
+                    : "https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg"
+                }
+                className="profile-img"
+              />
+            </div>
           </p>
           <div className="audio-container">
             <div className="track-username">
