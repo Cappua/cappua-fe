@@ -1,24 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./TrackCards.css";
-import userData from "../../assets/_sampleData/sampeUserData";
-import dylon from "../../assets/dylon.mp3";
-import { useQuery, gql } from "@apollo/client";
+import { useQuery } from "@apollo/client";
 import { GET_ALL_VERSES } from "../../GraphQL/queries.js";
 
 const TrackCards = () => {
-  const [tracks, setTracks] = useState([]);
-  const { error, loading, data } = useQuery(GET_ALL_VERSES);
-
-  useEffect(() => {
-    if (data) {
-      const sortedTracks = () =>
-        data.verses.sort(function (a, b) {
-          return b.votes - a.votes;
-        });
-      setTracks(data.verses);
-    }
-  }, [data]);
-
   let trackCards = tracks.map((card, i) => {
     const { user, artist, audioPath, title, voteCount } = card;
     return (
