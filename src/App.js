@@ -12,9 +12,11 @@ import "./App.css";
 import { useQuery } from "@apollo/client";
 import { CompetitionContext } from "./CompetitionContext";
 import { GET_VERSES_BY_COMPETITION } from "./GraphQL/queries";
+import Error from "./features/Error/Error";
+import Loading from "./features/Loading/Loading";
 
 function App() {
-  const [competition, setCompetition] = useState([]);
+  const [competition, setCompetition] = useState(null);
   const { error, loading, data } = useQuery(GET_VERSES_BY_COMPETITION);
 
   useEffect(() => {
@@ -22,28 +24,30 @@ function App() {
   }, [data]);
 
   return (
-    <CompetitionContext.Provider value={competition}>
-      <div className="App">
-        <NavBar />
-        <Route
-          exact
-          path="/"
-          render={() => (
-            <>
-              <Banner />
-              <Body />
-              <AudioPlayer />
-              <Trio />
-              <Announcement />
-            </>
-          )}
-        />
-        <Route exact path="/competitions" render={() => <TrackPage />} />
-        <Route exact path="/winners" render={() => <Winners />} />
-      </div>
-
-      {/* <Footer /> */}
-    </CompetitionContext.Provider>
+    <div className="App">
+      {error && <Error />}
+      {loading && <Loading />}
+      {competition && (
+        <CompetitionContext.Provider value={competition}>
+          <NavBar />
+          <Route
+            exact
+            path="/"
+            render={() => (
+              <>
+                <Banner />
+                <Body />
+                <AudioPlayer />
+                <Trio />
+                <Announcement />
+              </>
+            )}
+          />
+          <Route exact path="/competitions" render={() => <TrackPage />} />
+          <Route exact path="/winners" render={() => <Winners />} />
+        </CompetitionContext.Provider>
+      )}
+    </div>
   );
 }
 
