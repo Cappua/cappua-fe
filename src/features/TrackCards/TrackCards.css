@@ -23,7 +23,6 @@
   transition: 0.6s;
 }
 .trackcards {
-  /* font-family: "Permanent Marker"; */
   padding: 0.25em 1em;
   height: 10vh;
   width: 90%;
@@ -64,22 +63,23 @@
 }
 
 .track-title {
-  color: rgb(223, 9, 9);
+  font-weight: lighter;
   font-size: 90%;
   margin: 0;
 }
 .track-artist {
   font-size: 70%;
-  text-shadow: 0px 2px 3px white;
+  font-weight: lighter;
   margin: 0;
 }
 
 .trackcards-container:hover .track-title {
-  color: red;
+  color: white;
+  /* text-shadow: 0px 2px 3px black; */
 }
 .trackcards-container:hover .track-artist {
   color: white;
-  text-shadow: 0px 2px 3px black;
+  /* text-shadow: 0px 2px 3px black; */
 }
 .trackcards-container:hover .track-username {
   animation: loopText 10s infinite linear;
@@ -174,7 +174,6 @@
   margin: 5vh 0 10vh;
 }
 #no-tracks-message h1 {
-  /* font-family: "Permanent Marker", cursive; */
   font-size: 2.5vw;
   letter-spacing: 0.1vw;
   font-weight: lighter;

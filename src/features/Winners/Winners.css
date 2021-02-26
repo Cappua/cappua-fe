@@ -1,6 +1,7 @@
-.winners-page {
-  /* background-color: #1c2530; */
-  /* background-color: #21222e; */
+.winners-page{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .winners-page header {
@@ -13,9 +14,9 @@
   font-size: 8vw;
   letter-spacing: 4px;
   border-radius: 5px;
-  margin: 6vh 1vw;
+  margin: 3vh 1vw 0;
   padding: 0;
-  width: 98vw;
+  /* width: 98vw; */
   font-family: "Permanent Marker";
   text-shadow: 4px 4px 4px #f5ae14;
 }
@@ -31,7 +32,15 @@ header b {
 }
 
 #runner-ups-title {
-  font-family: "Permanent Marker", cursive;
+  font-size: 10vw;
+  font-family: "Permanent Marker";
+  font-weight: 100;
+  word-spacing: 20px;
+  letter-spacing: 10px;
+  color: rgb(73, 72, 72);
+  text-align: center;
+  margin: 10vh 0 5vh 0;
+  /* font-family: "Permanent Marker", cursive;
   font-size: 10vw;
   text-align: center;
   margin: 10vh 0 4vh;
@@ -40,8 +49,8 @@ header b {
     color:  #212527;
     font-weight: lighter;
   text-decoration: underline;
-  text-shadow: 4px 4px 4px #f5ae14;
-}
+  text-shadow: 4px 4px 4px #f5ae14;*/
+} 
 
 #runner-ups {
   display: flex;
@@ -156,7 +165,7 @@ header b {
 
 .contender-track {
   /* font-size: 1.1vw; */
-  font-size: calc(.5rem + .8vw);
+  font-size: calc(.7rem + .8vw);
   color: rgba(255, 255, 255, 0.884);
 }
 
