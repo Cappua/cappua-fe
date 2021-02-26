@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./TrackCards.css";
 import { useQuery } from "@apollo/client";
 import { GET_ALL_VERSES } from "../../GraphQL/queries.js";
-import AlbumCard from "../AlbumCard/AlbumCard.js";
+// import { LensOutlined } from "@material-ui/icons";
 
 const TrackCards = () => {
   const [tracks, setTracks] = useState([]);
@@ -10,12 +10,13 @@ const TrackCards = () => {
 
   useEffect(() => {
     if (data) {
-      const sortedTracks = () =>
-        data.verses.sort(function (a, b) {
-          return b.votes - a.votes;
+      const sortTracks = () =>
+        data.verses.sort((a, b) => {
+          return b.voteCount - a.voteCount;
         });
       setTracks(data.verses);
     }
+    console.table(tracks);
   }, [data]);
 
   let trackCards = tracks.map((card, i) => {
@@ -56,18 +57,20 @@ const TrackCards = () => {
       </section>
     );
   });
-if(trackCards.length === 0){
-  return (
-    <section id="no-tracks-message">
-      <h1>Currently, there are no tracks uploaded to this competition yet.</h1>
+  if (trackCards.length === 0) {
+    return (
+      <section id="no-tracks-message">
+        <h1>
+          Currently, there are no tracks uploaded to this competition yet.
+        </h1>
 
-      <h2 id="motiv"> Be the first!</h2>
-      {/* <AlbumCard /> */}
-    </section>
-  );
-}else{
-  return <section className="all-cards-container">{trackCards}</section>;
-}
+        <h2 id="motiv"> Be the first!</h2>
+        {/* <AlbumCard /> */}
+      </section>
+    );
+  } else {
+    return <section className="all-cards-container">{trackCards}</section>;
+  }
 };
 
 export default TrackCards;
