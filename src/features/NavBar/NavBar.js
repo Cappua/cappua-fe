@@ -24,7 +24,7 @@ function NavBar() {
         <img className="logo" src={cappuaLogo} alt="logo" />
       </Link>
       <div className="navbar-contents">
-        <Link to="/halloffame" id="hall-fame">
+        <Link to="/olympus" id="hall-fame">
           Olympus
         </Link>
         <Link to="/competitions" id="competitions">
@@ -37,7 +37,7 @@ function NavBar() {
         <div className="sidenav" ref={navRef}>
           <div id="sidenav-container">
             <div id="sidenav-contents">
-              <Link to="/halloffame">Hall of Fame</Link>
+              <Link to="/olympus">Olympus</Link>
               <Link to="/competitions">Competitions</Link>
               <User />
             </div>

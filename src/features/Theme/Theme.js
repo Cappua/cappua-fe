@@ -7,16 +7,6 @@ function Theme() {
     let month = date.toLocaleString("default", { month: "long" });
     return month;
   };
-  const getRemainingDays = () => {
-    let date = new Date();
-    let time = new Date(date.getTime());
-    time.setMonth(date.getMonth() + 1);
-    time.setDate(0);
-    let days =
-      time.getDate() > date.getDate() ? time.getDate() - date.getDate() : 0;
-    return <div id="days">{days}</div>;
-  };
-
   const getGenres = () => {
     const genres = [
       "Hip-Hop",

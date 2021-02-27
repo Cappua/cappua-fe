@@ -1,5 +1,6 @@
 import React from "react";
 import "./Body.css";
+import { Link } from "react-router-dom";
 
 function Body() {
   const getPreviousMonth = () => {
@@ -17,7 +18,7 @@ function Body() {
         </div>
         <p className="winner-details">
           With his long range flow and lyrical layups, J Murray is your January
-          champion.
+          champion. <Link id="read-more"to="/winners">Read More...</Link>
         </p>
       </div>
       <img

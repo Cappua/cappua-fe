@@ -11,8 +11,18 @@ const UploadTrack = () => {
     time.setDate(0);
     let days =
       time.getDate() > date.getDate() ? time.getDate() - date.getDate() : 0;
-    return <div id="days">{days}</div>;
+      return(<div id="days">{days}</div>);
+    // if (days > 1) {
+    //   return `There are ${
+    //     <div id="days">{days}</div>
+    //   } day's remaining in this competition`
+    // } else {
+    //   return `There is ${
+    //     <div id="days">1</div>
+    //   } day remaining in this competition`;
+    // }
   };
+  
   const handleChange = (event) => {
     setFile(event.target.files[0]);
   };
@@ -46,9 +56,7 @@ const UploadTrack = () => {
 
   return (
     <>
-      <div id="remaining-days">
-        There are {getRemainingDays()} day's remaining in this competition.
-      </div>
+      <div id="remaining-days">There are {getRemainingDays()} days remaining in this competition.</div>
       <div id="directions">
         Listen to the featured beat and submit your verse!
       </div>
