@@ -23,7 +23,7 @@ const TrackCards = () => {
     return (
       <section key={i} className="trackcards-container">
         <div className="trackcards">
-          <p className="user-order">
+          <div className="user-order">
             <i
               className={
                 i <= 2 ? `fa fa-award top-${i}` : "fa fa-award invisible"
@@ -39,7 +39,7 @@ const TrackCards = () => {
                 className="profile-img"
               />
             </div>
-          </p>
+          </div>
           <div className="audio-container">
             <div className="track-username">
               <h1 className="track-title">{title}</h1>
