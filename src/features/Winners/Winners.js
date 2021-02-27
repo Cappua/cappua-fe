@@ -4,6 +4,7 @@ import userData from "../../assets/_sampleData/sampeUserData";
 import AudioPlayer from "../AudioPlayer/AudioPlayer.js";
 import FirstPlace from "../FirstPlace/FirstPlace.js";
 import AnimatedArrows from '../AnimatedArrows/AnimatedArrows.js';
+import SoundWave from '../SoundWave/SoundWave';
 
 function Winners() {
   const getPreviousMonth = () => {
@@ -26,19 +27,29 @@ function Winners() {
   let winners = sortedUsers.map((card, i) => {
     const { id, artist, image, song, link, votes } = card;
     return (
-      <div key={i} className="contender-container">
-        <div className="medallion-holder">
-          <i className={`fa fa-award top-${i +1} medallion`}></i>
+      <section>
+        <div key={i} className="contender-container">
+          <div className="medallion-holder">
+            <i className={`fa fa-award top-${i + 1} medallion`}></i>
+          </div>
+          <div className="play-holder">
+            <h1 className="ordinal">{ordinal(i + 2)}</h1>
+            <i className="fa fa-play play-button" />
+          </div>
+          <div className="username-holder">
+            <div>
+              <div className="contender-track">{song}</div>
+              <div className="contender-artist">by {artist}</div>
+            </div>
+          </div>
         </div>
-        <div className="play-holder">
-          <h1 className="ordinal">{ordinal(i + 2)}</h1>
-          <i className="fa fa-play play-button" />
+        <div className="contender-votes">
+          {/* <SoundWave /> */}
+
+          {votes}
+          <i class="fas fa-heart"></i>
         </div>
-        <div className="username-holder">
-          <div className="contender-track">{song}</div>
-          <div className="contender-artist">by {artist}</div>
-        </div>
-      </div>
+      </section>
     );
   });
 

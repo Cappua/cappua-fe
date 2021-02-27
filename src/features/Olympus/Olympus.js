@@ -77,7 +77,6 @@ function Olympus() {
             name="checkbox"
           />
           <label htmlFor="february">February</label>
-          <div className=".separator"></div>
           <div className="olympus">
             {janTracks}
             {febTracks}

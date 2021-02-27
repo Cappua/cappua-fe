@@ -51,12 +51,6 @@
     margin-top: 10vh;
 }
 
-.seperator {
-    width: 100%;
-    background-color: #212527;
-    height: 2vh;
-}
-
 [type="radio"]:checked,
 [type="radio"]:not(:checked) {
     position: absolute;
@@ -122,6 +116,7 @@
 
 
 .olympus {
+    border-top:solid 4px #212527;
     margin: 3vh 0 10vh;
     align-self: center;
     display: flex;
