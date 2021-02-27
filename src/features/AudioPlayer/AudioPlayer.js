@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import Song from "./Song";
 import "./audioPlayer.css";
-import wutang from "./wutang.mp3";
 import { CompetitionContext } from "../../CompetitionContext";
 
 const AudioPlayer = () => {

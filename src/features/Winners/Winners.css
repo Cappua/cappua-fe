@@ -1,4 +1,4 @@
-.winners-page{
+.winners-page {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -8,15 +8,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color:  #212527;;
+  color: #212527;
   text-align: center;
-  /* align-self: center; */
   font-size: 8vw;
   letter-spacing: 4px;
   border-radius: 5px;
   margin: 3vh 1vw 0;
   padding: 0;
-  /* width: 98vw; */
   font-family: "Permanent Marker";
   text-shadow: 4px 4px 4px #f5ae14;
 }
@@ -25,6 +23,7 @@ header b {
   color: goldenrod;
   text-shadow: 4px 4px 3px rgb(0, 0, 0);
   letter-spacing: 20px;
+  line-height: 300px;
   width: 100%;
   font-size: 20.7vw;
   margin: 0;
@@ -39,7 +38,8 @@ header b {
   letter-spacing: 10px;
   color: rgb(73, 72, 72);
   text-align: center;
-  margin: 10vh 0 5vh 0;
+  margin: 13vh 0 5vh 0;
+  line-height: 150px;
   /* font-family: "Permanent Marker", cursive;
   font-size: 10vw;
   text-align: center;
@@ -50,14 +50,14 @@ header b {
     font-weight: lighter;
   text-decoration: underline;
   text-shadow: 4px 4px 4px #f5ae14;*/
-} 
+}
 
 #runner-ups {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  margin: 5vh 5vw;
+  margin: 5vh 5vw 15vh;
 }
 
 /* ------2ND &&  3RD PLACE CONTENDERS display------ */
@@ -69,7 +69,7 @@ header b {
   height: 35vh;
   border-radius: 15px;
   box-shadow: 0px 6px 12px 0px #0000003d;
-    background-color: #212527;
+  background-color: #212527;
 
   transition: 0.5s;
 }
@@ -84,16 +84,6 @@ header b {
   transform: scale(1.2);
 }
 
-/* .contender-container:hover .winner-track {
-  color: black;
-}
-
-.contender-container:hover .winner-artist {
-  color: black;
-} */
-/* .contender-container:hover .medallion {
-  transform: scale(1.2);
-} */
 .medallion-holder {
   height: 30%;
   display: flex;
@@ -153,358 +143,38 @@ header b {
   width: 95%;
   height: 30%;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content:flex-end;
   font-weight: lighter;
   text-align: right;
   padding-right: 1.5vw;
+  z-index:0;
   padding-bottom: 1vh;
   font-family: "Open Sans", sans-serif;
   font-weight: lighter;
 }
 
 .contender-track {
-  /* font-size: 1.1vw; */
-  font-size: calc(.7rem + .8vw);
+  font-size: calc(0.7rem + 0.8vw);
   color: rgba(255, 255, 255, 0.884);
 }
 
 .contender-artist {
   color: rgba(255, 255, 255, 0.658);
-  font-size: calc(.5rem + .5vw);
-  /* font-size: 1vw; */
+  font-size: calc(0.5rem + 0.5vw);
 }
 
-/* // .winners-page {
-//   display: flex;
-//   align-self: center;
-//   flex-direction: row;
-//   width: 100%;
-//   background: linear-gradient(145deg, #1e1e22, #1f1f21);
-//   z-index: 4;
-// }
+.contender-votes {
+  width: 95%;
+  margin: 1vh;
+  display: flex;
+  font-size: 3vh;
+  flex-direction: row;
+  justify-content: flex-end;
+}
 
-// .winners-page header {
-//   color: white;
-//   text-align: center;
-//   align-self: center;
-//   display: flex;
-//   font-size: 8vw;
-//   letter-spacing: 4px;
-//   flex-direction: column;
-//   border-radius: 5px;
-//   margin: 10vh 1vw 1vh 1vw;
-//   width: 99vw;
-//   font-family: "Permanent Marker", cursive;
-//   text-shadow: 4px 4px 4px #f5ae14;
-// }
-
-// header b {
-//   color: goldenrod;
-//   text-shadow: 4px 4px 3px rgb(0, 0, 0);
-//   letter-spacing: 20px;
-//   width: 100%;
-//   font-size: 20.7vw;
-//   margin: 0;
-//   padding: 0;
-// }
-
-// .winners-page section {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-around;
-//   margin: 5vh 0;
-// }
-
-// .winner-container {
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: space-evenly;
-//   align-self: center;
-//   align-items: center;
-//   color: black;
-//   width: 90%;
-//   margin: 4vh 0;
-//   border-radius: 15px;
-//   height: fit-content;
-//   background: linear-gradient(145deg, #1e1e22, #1f1f21);
-//   box-shadow: 8px 8px 16px #3c3c41,
-//     -8px -8px 16px #27272b;
-// }
-
-// .winner {
-//   overflow-y: scroll;
-//   height: 60vh;
-//   margin: 1vh;
-// }
-
-// .winner-stats {
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: space-around;
-//   align-self: center;
-//   margin: 2em;
-// }
-
-// .winner-rank {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-evenly;
-//   height: 80%;
-// }
-
-// .winner-banner {
-//   display: flex;
-//   border-radius: 15px;
-//   flex-direction: row;
-//   justify-content: space-between;
-//   align-self: flex-start;
-//   width: 90%;
-//   margin-top: 2vh;
-// }
-
-// .medallion {
-//   position: static;
-//   left: -4vw;
-//   top: -3vh;
-//   font-size: 15vh;
-//   width: 10%;
-//   text-shadow: 0px 6px 1px rgb(255, 255, 255);
-// }
-
-// .winner-artist {
-//   width: 100%;
-//   height: fit-content;
-//   display: flex;
-//   flex-direction: column-reverse;
-//   color: white;
-//   text-align: center;
-//   font-family: "Permanent Marker", cursive;
-//   text-shadow: 4px 4px 3px goldenrod;
-//   font-size: 7vw;
-//   font-style: italic;
-//   margin: 0;
-// }
-
-// .winner-img {
-//   width: 30vw;
-//   border-radius: 15px;
-//   height: 100%;
-//   box-shadow: 0px 3px 12px 0px #000000f1;
-// }
-
-// .winner-description {
-//   font-size: 2em;
-//   height: 28vh;
-//   width: 50vw;
-//   padding: 1vw;
-//   margin: 5vh 2vw 0 0;
-//   overflow-y: scroll;
-//   color: white;
-//   border-radius: 15px;
-// }
-
-// ::-webkit-scrollbar {
-//   -webkit-appearance: none;
-//   width: 7px;
-// }
-
-// ::-webkit-scrollbar-thumb {
-//   border-radius: 4px;
-//   background-color: rgba(0, 0, 0, .5);
-//   box-shadow: 0 0 1px rgba(255, 255, 255, .5);
-// }
-
-// .winner-audio {
-//   display: flex;
-//   justify-content: flex-start;
-//   align-self: center;
-//   align-items: center;
-//   flex-direction: row;
-//   padding: 1vw;
-//   overflow: hidden;
-//   background-color: rgb(40, 39, 43);
-//   border-radius: 25px;
-//   margin: 6vh 2vw 6vh 2vw;
-//   box-shadow: 0px 2px 10px 0px #ffffffaf;
-// }
-
-// .winner-track-container {
-//   display: flex;
-//   flex-direction: column;
-//   width: 95%;
-// }
-
-// .winning-track-details {
-//   font-family: "Permanent Marker", cursive;
-//   margin: 0;
-//   padding-bottom: 15px;
-//   height: 50%;
-//   color: white;
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: space-evenly;
-//   align-items: baseline;
-//   font-size: 2rem;
-//   letter-spacing: 5px;
-//   text-align: center;
-//   width: 70vw;
-//   text-shadow: 0px 2px 3px black;
-// }
-
-// .winners-icon {
-//   height: 10vw;
-//   border-radius: 50%;
-//   margin: .5vw;
-//   box-shadow: 1px 1px 12px 0px white;
-// }
-
-// .winning-track-title {
-//   color: rgb(223, 9, 9);
-//   font-size: 3vw;
-//   margin: 0;
-//   text-shadow: 0px 2px 3px rgb(255, 255, 255);
-// }
-
-// .winning-track-artist {
-//   font-size: 2vw;
-//   margin: 0;
-//   text-shadow: 4px 4px 3px #f5ae14;
-// }
-
-// .winners-audiotrack {
-//   border-radius: 25px;
-//   height: 3.5vh;
-//   width: 90%;
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: center;
-//   align-self: center;
-//   outline: none;
-//   margin: 2vh 0;
-// }
-
-// // .winner-track-container:hover .winning-track-details {
-// //   animation: loopTrack 10s infinite linear;
-// // }
-
-// @keyframes loopTrack {
-//   from {
-//     transform: translateX(90%);
-//   }
-
-//   to {
-//     transform: translateX(-85%);
-//   }
-// }
-
-// @import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
-// $color: (main: #c9a04e,
-//   minor: #f7f6f2,
-//   bg: #1a202e,
-// );
-// $particles: 50;
-// $width: 500;
-// $height: 300;
-// $gravityY: 150;
-// $frequency: infinite;
-
-// $box-shadow: ();
-// $box-shadow2: ();
-
-// @for $i from 0 through $particles {
-//   $box-shadow: $box-shadow,
-//     random($width)-$width / 2 + px random($height)-$height / 1.2 + px hsl(random(360), 100, 50);
-//   $box-shadow2: $box-shadow2, 0 0 #fff;
-// }
-
-// @mixin keyframes($animationName) {
-//   @-webkit-keyframes #{$animationName} {
-//     @content;
-//   }
-
-//   @-moz-keyframes #{$animationName} {
-//     @content;
-//   }
-
-//   @-o-keyframes #{$animationName} {
-//     @content;
-//   }
-
-//   @-ms-keyframes #{$animationName} {
-//     @content;
-//   }
-
-//   @keyframes #{$animationName} {
-//     @content;
-//   }
-// }
-
-// @mixin animation-delay($settings) {
-//   -moz-animation-delay: $settings;
-//   -webkit-animation-delay: $settings;
-//   -o-animation-delay: $settings;
-//   -ms-animation-delay: $settings;
-//   animation-delay: $settings;
-// }
-
-// @mixin animation-duration($settings) {
-//   -moz-animation-duration: $settings;
-//   -webkit-animation-duration: $settings;
-//   -o-animation-duration: $settings;
-//   -ms-animation-duration: $settings;
-//   animation-duration: $settings;
-// }
-
-// @mixin animation($settings) {
-//   -moz-animation: $settings;
-//   -webkit-animation: $settings;
-//   -o-animation: $settings;
-//   -ms-animation: $settings;
-//   animation: $settings;
-// }
-
-// @mixin transform($settings) {
-//   transform: $settings;
-//   -moz-transform: $settings;
-//   -webkit-transform: $settings;
-//   -o-transform: $settings;
-//   -ms-transform: $settings;
-// }
-
-// .firework {
-//   transform: translate(-50%, -50%);
-//   width: 10px;
-//   height: 10px;
-//   z-index: 5;
-// }
-
-// .firework>.before,
-// .firework>.after {
-//   width: 5px;
-//   height: 5px;
-//   border-radius: 50%;
-//   box-shadow: $box-shadow2;
-//   @include animation-delay((0.5s, 0.5s, 0.5s));
-//   @include animation((1s bang ease-out 1s $frequency backwards,
-//       1s gravity ease-in 1s $frequency backwards,
-//       5s position linear 1s $frequency backwards));
-// }
-
-// .firework>.after {
-//   @include animation-delay((1s, 1s, 1s));
-//   @include animation-duration((1s, 1s, 6s));
-// }
-
-// @include keyframes(bang) {
-//   to {
-//     box-shadow: $box-shadow;
-//   }
-// }
-
-// @include keyframes(gravity) {
-//   to {
-//     @include transform(translateY($gravityY + px));
-//     opacity: 0;
-//   }
-// } */
+.heart-icon {
+  color: rgb(156, 5, 5);
+  margin-left: 1.1vw;
+}

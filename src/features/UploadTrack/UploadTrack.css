@@ -35,10 +35,6 @@
   cursor: pointer;
 }
 
-/* .download-track-container:hover .down {
-  visibility:hidden
-} */
-
 #download-link {
   color: white;
   border-radius: 50px;

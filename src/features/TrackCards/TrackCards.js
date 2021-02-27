@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "./TrackCards.css";
 import { useQuery } from "@apollo/client";
 import { GET_ALL_VERSES } from "../../GraphQL/queries.js";
-// import { LensOutlined } from "@material-ui/icons";
 
 const TrackCards = () => {
   const [tracks, setTracks] = useState([]);
@@ -24,7 +23,7 @@ const TrackCards = () => {
     return (
       <section key={i} className="trackcards-container">
         <div className="trackcards">
-          <p className="user-order">
+          <div className="user-order">
             <i
               className={
                 i <= 2 ? `fa fa-award top-${i}` : "fa fa-award invisible"
@@ -40,7 +39,7 @@ const TrackCards = () => {
                 className="profile-img"
               />
             </div>
-          </p>
+          </div>
           <div className="audio-container">
             <div className="track-username">
               <h1 className="track-title">{title}</h1>
@@ -57,7 +56,9 @@ const TrackCards = () => {
             <h1 className="votes" id={user.id}>
               {voteCount}
             </h1>
-            <i className="fas fa-long-arrow-alt-up vote-icon" id={user.id}></i>
+            <i class="fas fa-heart vote-icon" id={user.id}></i>
+
+            {/* <i className="fas fa-long-arrow-alt-up vote-icon" id={user.id}></i> */}
           </div>
         </div>
       </section>
@@ -71,7 +72,6 @@ const TrackCards = () => {
         </h1>
 
         <h2 id="motiv"> Be the first!</h2>
-        {/* <AlbumCard /> */}
       </section>
     );
   } else {

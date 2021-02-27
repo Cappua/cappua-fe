@@ -14,6 +14,7 @@ import { CompetitionContext } from "./CompetitionContext";
 import { GET_VERSES_BY_COMPETITION } from "./GraphQL/queries";
 import Error from "./features/Error/Error";
 import Loading from "./features/Loading/Loading";
+import Olympus from './features/Olympus/Olympus';
 
 function App() {
   const [competition, setCompetition] = useState(null);
@@ -43,6 +44,8 @@ function App() {
               </>
             )}
           />
+          <Route exact path="/olympus" render={() => <Olympus />} />
+
           <Route exact path="/competitions" render={() => <Competition />} />
           <Route exact path="/winners" render={() => <Winners />} />
         </CompetitionContext.Provider>

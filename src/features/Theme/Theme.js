@@ -1,5 +1,4 @@
 import React from "react";
-import AlbumCard from "../AlbumCard/AlbumCard.js";
 
 import "./Theme.css";
 function Theme() {
@@ -8,16 +7,6 @@ function Theme() {
     let month = date.toLocaleString("default", { month: "long" });
     return month;
   };
-  const getRemainingDays = () => {
-    let date = new Date();
-    let time = new Date(date.getTime());
-    time.setMonth(date.getMonth() + 1);
-    time.setDate(0);
-    let days =
-      time.getDate() > date.getDate() ? time.getDate() - date.getDate() : 0;
-    return <div id="days">{days}</div>;
-  };
-
   const getGenres = () => {
     const genres = [
       "Hip-Hop",
@@ -48,16 +37,8 @@ function Theme() {
 
   return (
     <section to="/theme" className="theme">
-      {/* <AlbumCard /> */}
       <h1 id="month-theme">{getMonth()}'s Competition</h1>
       <h2 id="genre-themes">{getGenres()}</h2>
-
-      {/* <div id="remaining-days">
-        There are {getRemainingDays()} day's remaining in this competition.
-      </div>
-      <div id="directions">
-        Listen to the featured beat and submit yours down below!
-      </div> */}
     </section>
   );
 }

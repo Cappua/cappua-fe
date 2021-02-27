@@ -4,6 +4,7 @@ import userData from "../../assets/_sampleData/sampeUserData";
 import AudioPlayer from "../AudioPlayer/AudioPlayer.js";
 import FirstPlace from "../FirstPlace/FirstPlace.js";
 import AnimatedArrows from '../AnimatedArrows/AnimatedArrows.js';
+import SoundWave from '../SoundWave/SoundWave';
 
 function Winners() {
   const getPreviousMonth = () => {
@@ -26,66 +27,29 @@ function Winners() {
   let winners = sortedUsers.map((card, i) => {
     const { id, artist, image, song, link, votes } = card;
     return (
-      <div key={i} className="contender-container">
-        <div className="medallion-holder">
-          <i className={`fa fa-award top-${i +1} medallion`}></i>
-        </div>
-        <div className="play-holder">
-          <h1 className="ordinal">{ordinal(i + 2)}</h1>
-          <i className="fa fa-play play-button" />
-        </div>
-        <div className="username-holder">
-          <div className="contender-track">{song}</div>
-          <div className="contender-artist">by {artist}</div>
-        </div>
-        {/* <div className="winner">
-          <div className="winner-stats">
-            <div className="winner-rank">
-              <div className="winner-banner">
-                <div className="firework">
-                  <div className="before"></div>
-                  <div className="after"></div>
-                </div>
-                <i className={`fa fa-award top-${i} medallion`}></i>
-                <h1 className="winner-artist">{artist}</h1>
-              </div>
-              <div className="winner-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-                rhoncus rutrum risus eget efficitur. Nullam dignissim erat
-                mollis tristique placerat. Nunc fermentum nisi justo, sit amet
-                vestibulum ante bibendum non. Cras molestie fringilla ex, vel
-                porttitor nisi rhoncus non. Aliquam eu nunc nec turpis semper
-                malesuada quis sit amet odio.istique placerat. Nunc fermentum
-                nisi justo, sit amet vestibulum ante bibendum non. Cras molestie
-                fringilla ex, vel porttitor nisi rhoncus non. Aliquam eu nunc
-                nec turpis semper malesuada quis sit amet odio.istique placerat.
-                Nunc fermentum nisi justo, sit amet vestibulum ante bibendum
-                non. Cras molestie fringilla ex, vel porttitor nisi rhoncus non.
-                Aliquam eu nunc nec turpis semper malesuada quis sit amet odio.
-              </div>
+      <section>
+        <div key={i} className="contender-container">
+          <div className="medallion-holder">
+            <i className={`fa fa-award top-${i + 1} medallion`}></i>
+          </div>
+          <div className="play-holder">
+            <h1 className="ordinal">{ordinal(i + 2)}</h1>
+            <i className="fa fa-play play-button" />
+          </div>
+          <div className="username-holder">
+            <div>
+              <div className="contender-track">{song}</div>
+              <div className="contender-artist">by {artist}</div>
             </div>
+          </div>
+        </div>
+        <div className="contender-votes">
+          {/* <SoundWave /> */}
 
-            <div>
-              <img src={image} className="winner-img" alt={artist}/>
-            </div>
-          </div>
-          <div className="winner-audio">
-            <div>
-              <img src={image} className="winners-icon" alt={artist}/>
-            </div>
-            <div className="winner-track-container">
-              <div className="winning-track-details">
-                <h1 className="winning-track-title">{song}</h1>
-                <h1 className="winning-track-artist">{artist}</h1>
-              </div>
-              <audio className="winners-audiotrack" controls>
-                <source src={dylon} />
-                Your browser does not support the <code>audio</code> element.
-              </audio>
-            </div>
-          </div>
-    </div> */}
-      </div>
+          {votes}
+          <i class="fas fa-heart heart-icon"></i>
+        </div>
+      </section>
     );
   });
 
