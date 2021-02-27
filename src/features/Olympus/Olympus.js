@@ -47,39 +47,44 @@ function Olympus() {
   });
 
   return (
-    <div className="wrapper">
-      <div className="olympus-container">
-        <input
-          className="checkbox-all"
-          id="all"
-          type="radio"
-          name="checkbox"
-        //   checked
-        />
-        <label htmlFor="all">all</label>
+    <section id="hall-of-fame">
+      <header id="olympus-title">
+        Hall Of Fame<b>Olympus</b>
+      </header>
+      <div className="wrapper">
+        <div className="olympus-container">
+          <input
+            className="checkbox-all"
+            id="all"
+            type="radio"
+            name="checkbox"
+            //   checked
+          />
+          <label htmlFor="all">all</label>
 
-        <input
-          className="checkbox-january"
-          id="january"
-          type="radio"
-          name="checkbox"
-        />
-        <label htmlFor="january">January</label>
+          <input
+            className="checkbox-january"
+            id="january"
+            type="radio"
+            name="checkbox"
+          />
+          <label htmlFor="january">January</label>
 
-        <input
-          className="checkbox-february"
-          id="february"
-          type="radio"
-          name="checkbox"
-        />
-        <label htmlFor="february">February</label>
-        <div className=".separator"></div>
-        <div className="olympus">
-          {janTracks}
-          {febTracks}
+          <input
+            className="checkbox-february"
+            id="february"
+            type="radio"
+            name="checkbox"
+          />
+          <label htmlFor="february">February</label>
+          <div className=".separator"></div>
+          <div className="olympus">
+            {janTracks}
+            {febTracks}
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
