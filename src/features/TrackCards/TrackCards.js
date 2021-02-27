@@ -70,7 +70,6 @@ const TrackCards = () => {
         </h1>
 
         <h2 id="motiv"> Be the first!</h2>
-        {/* <AlbumCard /> */}
       </section>
     );
   } else {
