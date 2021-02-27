@@ -47,7 +47,7 @@ function Winners() {
           {/* <SoundWave /> */}
 
           {votes}
-          <i class="fas fa-heart"></i>
+          <i class="fas fa-heart heart-icon"></i>
         </div>
       </section>
     );
