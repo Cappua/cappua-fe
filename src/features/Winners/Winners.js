@@ -3,8 +3,8 @@ import "./Winners.css";
 import userData from "../../assets/_sampleData/sampeUserData";
 import AudioPlayer from "../AudioPlayer/AudioPlayer.js";
 import FirstPlace from "../FirstPlace/FirstPlace.js";
-import AnimatedArrows from '../AnimatedArrows/AnimatedArrows.js';
-import SoundWave from '../SoundWave/SoundWave';
+import AnimatedArrows from "../AnimatedArrows/AnimatedArrows.js";
+import SoundWave from "../SoundWave/SoundWave";
 
 function Winners() {
   const getPreviousMonth = () => {
@@ -47,7 +47,7 @@ function Winners() {
           {/* <SoundWave /> */}
 
           {votes}
-          <i class="fas fa-heart heart-icon"></i>
+          <i className="fas fa-heart heart-icon"></i>
         </div>
       </section>
     );
