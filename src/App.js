@@ -23,8 +23,6 @@ function App() {
   const userValue = { userInfo, setUserInfo };
   const { error, loading, data } = useQuery(GET_VERSES_BY_COMPETITION);
 
-  console.log(userValue);
-
   useEffect(() => {
     setCompetition(data);
   }, [data]);

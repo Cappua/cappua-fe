@@ -9,7 +9,7 @@ import "./Competition.css";
 
 const Competition = () => {
   const user = useContext(UserContext);
-  console.log(user);
+
   return (
     <section className="track-page-container">
       <div className="theme-container">
