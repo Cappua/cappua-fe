@@ -10,10 +10,9 @@ body {
   user-select: none;
   cursor: default;
 }
-
 .AlbumCard {
-  width: 60ch;
-  height: 60ch;
+  width: 57ch;
+  height: 42ch;
   background: grey;
   border-radius: 5px;
   background-position: center center;
@@ -21,13 +20,12 @@ body {
   transition: box-shadow 0.5s;
   will-change: transform;
   border: 10px solid white;
-    -webkit-filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 }
 .AlbumCard:hover {
   box-shadow: 0px 30px 100px -10px rgba(0, 0, 0, 0.5);
 }
-
 .albumcard-container {
   display: flex;
   flex-direction: column;

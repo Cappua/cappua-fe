@@ -7,13 +7,15 @@ import { Auth0Provider } from "@auth0/auth0-react";
 import { ApolloProvider } from "@apollo/client";
 import { errorLink, client } from "./ApolloClient/apolloClient.js";
 
+const domain = process.env.REACT_APP_AUTH0_DOMAIN;
+const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
+
 ReactDOM.render(
   <ApolloProvider client={client}>
     <Auth0Provider
-      domain="dev-e23-u4dy.us.auth0.com"
-      clientId="9yOyW6Kmq0X9uU3a6IvfYOTPzzS6StBX"
-      redirectUri={window.location.origin}
-    >
+      domain={domain}
+      clientId={clientId}
+      redirectUri={window.location.origin}>
       <React.StrictMode>
         <Router>
           <App />
