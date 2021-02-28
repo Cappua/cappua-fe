@@ -3,7 +3,6 @@
   height: fit-content;
   align-self: center;
 }
-
 .navbar-container {
   display: flex;
   flex-direction: row;
@@ -20,7 +19,6 @@
   padding: 0;
   margin: 0;
 }
-
 @media screen and (min-width: 1110px) {
   .menu-container {
     display: none;
@@ -51,12 +49,10 @@
     color: white;
   }
 }
-
 @media screen and (max-width: 1109px) {
   .navbar-contents {
     display: none;
   }
-
   .logo {
     align-self: center;
     width: 18em;
@@ -88,7 +84,7 @@
     top: 0;
     right: 0;
     transition: width 0.35s;
-    background-color: #e2edee;
+    background-color: #000000c2;
     overflow-x: hidden;
     border-left: solid 1px black;
     display: inline-block;
@@ -111,13 +107,12 @@
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 1.8vh;
-    color: black;
+    color: white;
     display: block;
     transition: 0.3s;
     width: 100%;
     height: 25%;
   }
-
   .sidenav a:hover {
     color: rgba(249, 140, 112, 1);
     background-color: white;

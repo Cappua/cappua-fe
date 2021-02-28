@@ -4,16 +4,18 @@ import { Link } from "react-router-dom";
 import { useRef, useState } from "react";
 import "./NavBar.css";
 import cappuaLogo from "../../assets/cappualogo.png";
-
 function NavBar() {
   let navRef = useRef();
+  let navIconRef = useRef();
   const [open, setOpen] = useState(false);
   const toggleMenu = () => {
     if (open) {
       navRef.current.style.width = "0";
+      navIconRef.current.style.color = "black";
       setOpen(false);
     } else {
       navRef.current.style.width = "25%";
+      navIconRef.current.style.color = "whitesmoke";
       setOpen(true);
     }
   };
@@ -33,7 +35,12 @@ function NavBar() {
         <User />
       </div>
       <div className="menu-container">
-        <i className="fas fa-bars" id="nav-icon" onClick={toggleMenu} />
+        <i
+          className="fas fa-bars"
+          id="nav-icon"
+          ref={navIconRef}
+          onClick={toggleMenu}
+        />
         <div className="sidenav" ref={navRef}>
           <div id="sidenav-container">
             <div id="sidenav-contents">

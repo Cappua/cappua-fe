@@ -56,7 +56,7 @@ const TrackCards = () => {
             <h1 className="votes" id={user.id}>
               {voteCount}
             </h1>
-            <i class="fas fa-heart vote-icon" id={user.id}></i>
+            <i className="fas fa-heart vote-icon" id={user.id}></i>
 
             {/* <i className="fas fa-long-arrow-alt-up vote-icon" id={user.id}></i> */}
           </div>

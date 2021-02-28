@@ -5,9 +5,10 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  align-self: center;
   margin-top: 3vh;
+  width: 90%;
 }
-
 .banner {
   border-radius: 5px;
   font-weight: 100;
@@ -16,6 +17,7 @@
   right: 5vw;
   display: flex;
   text-align: center;
+  align-items:center;
   padding: 2.3vw;
   font-size: 4vw;
   width: 70%;
@@ -23,13 +25,11 @@
   letter-spacing: 5px;
   color: rgb(73, 72, 72);
 }
-
 @media screen and (max-width: 1680px) {
   .banner {
     font-size: 3.5vw;
   }
 }
-
 @media screen and (max-width: 1290px) {
   .banner-container {
     padding: 1vh 2vw 0;
@@ -40,9 +40,9 @@
   .banner {
     padding: 2vw;
     margin: 0.5vh;
+    /* width: 70%; */
   }
 }
-
 @media screen and (max-width: 889px) {
   .banner-container {
     display: none;
