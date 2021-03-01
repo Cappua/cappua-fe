@@ -43,7 +43,7 @@ const Body = () => {
               With his long range flow and lyrical layups, {""}
               {sortedTrack.user.name} is your January champion.
               <Link id="read-more" to="/winners">
-                Read More...
+                {" "}Read More...
               </Link>
             </p>
           </div>
