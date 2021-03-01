@@ -51,9 +51,9 @@
 .tab-img-container {
   display: inline-block;
   position: relative;
-  max-width: 15vw;
-  max-height: 25vh;
-  min-height: 15vh;
+  max-width: 13vw;
+  max-height: 26vh;
+  min-height: 26vh;
   min-width: 5vw;
   overflow: hidden;
   border-radius: 50%;
