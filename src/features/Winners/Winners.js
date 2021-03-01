@@ -1,12 +1,32 @@
-import React from "react";
 import "./Winners.css";
-import userData from "../../assets/_sampleData/sampeUserData";
 import AudioPlayer from "../AudioPlayer/AudioPlayer.js";
 import FirstPlace from "../FirstPlace/FirstPlace.js";
 import AnimatedArrows from "../AnimatedArrows/AnimatedArrows.js";
 import SoundWave from "../SoundWave/SoundWave";
+import React, { useEffect, useState } from "react";
+import { useQuery } from "@apollo/client";
+import { GET_ALL_VERSES } from "../../GraphQL/queries.js";
 
 function Winners() {
+  const [tracks, setTracks] = useState(null);
+  const [contenders, setContenders] = useState([]);
+  const { error, loading, data } = useQuery(GET_ALL_VERSES);
+
+  useEffect(() => {
+    if (data) {
+      setTracks(data.verses);
+    }
+  }, [data]);
+
+  useEffect(() => {
+    if (tracks) {
+      let sorted = tracks.slice().sort((a, b) => {
+        return b.voteCount - a.voteCount;
+      });
+      setContenders([sorted[1], sorted[2]]);
+    }
+  }, [tracks]);
+
   const getPreviousMonth = () => {
     let date = new Date();
     date.setMonth(date.getMonth() - 1);
@@ -20,15 +40,12 @@ function Winners() {
     return n + (s[(v - 20) % 10] || s[v] || s[0]);
   };
 
-  let sortedUsers = userData.sort((a, b) => {
-    return b.votes - a.votes;
-  });
-  sortedUsers = [sortedUsers[1], sortedUsers[2]];
-  let winners = sortedUsers.map((card, i) => {
-    const { id, artist, image, song, link, votes } = card;
+  let winners = contenders.map((card, i) => {
+    const { user, artist, audioPath, title, voteCount } = card;
+
     return (
-      <section>
-        <div key={i} className="contender-container">
+      <section key={i}>
+        <div className="contender-container">
           <div className="medallion-holder">
             <i className={`fa fa-award top-${i + 1} medallion`}></i>
           </div>
@@ -38,16 +55,18 @@ function Winners() {
           </div>
           <div className="username-holder">
             <div>
-              <div className="contender-track">{song}</div>
-              <div className="contender-artist">by {artist}</div>
+              <div className="contender-track">{title}</div>
+              <div className="contender-artist">by {user.name}</div>
             </div>
           </div>
         </div>
         <div className="contender-votes">
-          {/* <SoundWave /> */}
-
-          {votes}
-          <i className="fas fa-heart heart-icon"></i>
+          <img className="contender-icon" src={user.image}></img>
+          <SoundWave />
+          <div className="vote-count">
+            <i className="fas fa-heart heart-icon"></i>
+            {voteCount}
+          </div>
         </div>
       </section>
     );

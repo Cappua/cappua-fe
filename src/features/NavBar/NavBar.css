@@ -50,6 +50,10 @@
   }
 }
 @media screen and (max-width: 1109px) {
+  .auth0 {
+    background-color: whitesmoke;
+    width: 50%;
+  }
   .navbar-contents {
     display: none;
   }
@@ -84,7 +88,7 @@
     top: 0;
     right: 0;
     transition: width 0.35s;
-    background-color: #000000c2;
+    background-color: #000000e8;
     overflow-x: hidden;
     border-left: solid 1px black;
     display: inline-block;
@@ -101,21 +105,20 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 40%;
+    height: 50%;
   }
   .sidenav a {
-    padding: 8px 8px 8px 32px;
+    padding: 8px 8px;
     text-decoration: none;
-    font-size: 1.8vh;
+    font-size: 2.5vh;
     color: white;
     display: block;
     transition: 0.3s;
     width: 100%;
-    height: 25%;
   }
   .sidenav a:hover {
-    color: rgba(249, 140, 112, 1);
-    background-color: white;
-    text-decoration: underline;
+    color: black;
+    background-color: whitesmoke;
+    font-weight: 300;
   }
 }

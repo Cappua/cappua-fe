@@ -1,0 +1,51 @@
+.error-page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-repeat: repeat;
+  background: rgba(31, 29, 39, 0.925);
+  background-size: 50%;
+  filter: none;
+  background-image:url(https://i.imgur.com/6EOytpC.gif);
+}
+.error {
+  z-index: 2;
+  background-color: white;
+  border-radius: 5px;
+  font-weight: 400;
+  left: 5vw;
+  right: 5vw;
+  padding: 2.3vw;
+  font-size: 4vw;
+  width: 30%;
+  height: 10%;
+  box-shadow: 0px 6px 12px 0px #0000003d;
+  letter-spacing: 5px;
+  color: rgb(73, 72, 72);
+}
+@media screen and (max-width: 1680px) {
+  .error {
+    font-size: 3.5vw;
+  }
+}
+@media screen and (max-width: 1290px) {
+  .error-page {
+    padding: 1vh 2vw 0;
+    height: 17vh;
+    width: 100%;
+    margin: 2vh 0 0;
+  }
+  .error {
+    padding: 2vw;
+    margin: 0.5vh;
+  }
+}
+@media screen and (max-width: 889px) {
+  .error-page {
+    display: none;
+  }
+}

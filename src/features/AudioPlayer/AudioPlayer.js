@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import Song from "./Song";
 import "./audioPlayer.css";
 import { CompetitionContext } from "../../CompetitionContext";

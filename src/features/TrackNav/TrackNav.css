@@ -3,9 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  /* margin: 4vh 0 0 0; */
   font-family: "Permanent Marker", cursive;
-  /* border-bottom: solid 20px #212527; */
   color: #212527;
   width: 100%;
 }
@@ -18,14 +16,6 @@
   color: rgb(73, 72, 72);
   text-align: center;
   margin: 5vh 0 0 0;
-  /* margin: 10vh 0 5vh 0; */
-  /* margin: 0;
-  font-size: 7vw;
-  letter-spacing: 10px;
-  text-shadow: 4px 4px 4px #f5ae14;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text; */
 }
 .track-sort-container {
   display: flex;
@@ -37,7 +27,7 @@
 .search-sort-container {
   display: flex;
   flex-direction: row;
-  height: 7vh;
+  height: 7.5vh;
 }
 .search-ranks-container {
   display: flex;
