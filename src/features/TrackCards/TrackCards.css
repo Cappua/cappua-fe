@@ -89,9 +89,9 @@
 .profile-img-container {
   display: inline-block;
   position: relative;
-  max-width: 8vw;
-  min-width: 8vw;
-  /* min-height: 12vh; */
+  max-width: 7vw;
+  min-width: 7vw;
+  min-height: 14vh;
   overflow: hidden;
   border-radius: 50%;
   box-shadow: 0px 6px 12px 0px #0000003d;
