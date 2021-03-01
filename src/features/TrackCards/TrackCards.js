@@ -51,7 +51,7 @@ const TrackCards = () => {
             </div>
             <audio className="audiotrack" controls>
               <source
-                src={`https://cappuatracks.s3-us-west-1.amazonaws.com${audioPath}`}
+                src={`http://d1nb1e3bp5hs25.cloudfront.net${audioPath}`}
               />
               Your browser does not support the <code>audio</code> element.
             </audio>

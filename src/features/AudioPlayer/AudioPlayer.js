@@ -12,7 +12,7 @@ const AudioPlayer = () => {
         <Song songName="Protect Ya Neck" songArtist="Wu-Tang Clan" />
         <audio id="audio" controls>
           <source
-            src={`https://cappuatracks.s3-us-west-1.amazonaws.com${context.trackPath}`}
+            src={`http://d1nb1e3bp5hs25.cloudfront.net${context.trackPath}`}
           />
           Your browser does not support the <code>audio</code> element.
         </audio>
