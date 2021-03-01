@@ -40,7 +40,7 @@ const Body = () => {
               <h3 className="winner-name">{sortedTrack.user.name}</h3>
             </div>
             <p className="winner-details">
-              With his long range flow and lyrical layups, {""}
+              With their long range flow and lyrical layups, {""}
               {sortedTrack.user.name} is your January champion!<br/><br/>
               <Link id="read-more" to="/winners">
                 {" "}Read More...
