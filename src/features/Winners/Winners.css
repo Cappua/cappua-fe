@@ -40,16 +40,6 @@ header b {
   text-align: center;
   margin: 13vh 0 5vh 0;
   line-height: 150px;
-  /* font-family: "Permanent Marker", cursive;
-  font-size: 10vw;
-  text-align: center;
-  margin: 10vh 0 4vh;
-  letter-spacing: 2vw;
-  word-spacing: 3vw;
-    color:  #212527;
-    font-weight: lighter;
-  text-decoration: underline;
-  text-shadow: 4px 4px 4px #f5ae14;*/
 }
 
 #runner-ups {
@@ -145,11 +135,11 @@ header b {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  justify-content:flex-end;
+  justify-content: flex-end;
   font-weight: lighter;
   text-align: right;
   padding-right: 1.5vw;
-  z-index:0;
+  z-index: 0;
   padding-bottom: 1vh;
   font-family: "Open Sans", sans-serif;
   font-weight: lighter;
@@ -171,7 +161,6 @@ header b {
   display: flex;
   font-size: 3vh;
   flex-direction: row;
-  /* justify-content: flex-end; */
   justify-content: space-between;
 }
 
@@ -181,7 +170,7 @@ header b {
   border-radius: 50%;
 }
 
-.vote-count{
+.vote-count {
   color: black;
 }
 
@@ -189,4 +178,3 @@ header b {
   color: rgb(156, 5, 5);
   margin-left: 1.1vw;
 }
-

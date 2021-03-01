@@ -102,14 +102,6 @@
   height: 100%;
 }
 
-/* .trackcards-container:hover .profile-img {
-  transform-origin: center center;
-  animation: grow 20s infinite linear;
-} */
-/* .trackcards-container:hover .profile-img-container {
-  box-shadow: 1px 1px 12px 0px white;
-} */
-
 .audio-container {
   width: 70%;
   display: flex;
@@ -161,7 +153,7 @@
 
 .vote-icon {
   color: rgb(151, 144, 144);
-  height:fit-content;
+  height: fit-content;
 }
 .trackcards-container:hover .vote-icon {
   transition: 1s;
@@ -170,7 +162,7 @@
   font-size: 2.3vw;
 }
 
-.vote-icon:hover{
+.vote-icon:hover {
   color: red;
 }
 
