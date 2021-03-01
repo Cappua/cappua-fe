@@ -58,7 +58,7 @@ const Olympus =() => {
             id="all"
             type="radio"
             name="checkbox"
-            //   checked
+              checked=""
           />
           <label htmlFor="all">all</label>
 

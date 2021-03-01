@@ -55,7 +55,6 @@ const FirstPlace = () => {
             <img
               id="winner-image"
               src={sortedTrack.user.image}
-              // src="https://thispersondoesnotexist.com/image"
               alt="winner-img"
             />
           </div>

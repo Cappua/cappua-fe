@@ -49,9 +49,7 @@ const Body = () => {
           </div>
           <img
             className="body-image"
-            // src={"https://picsum.photos/1000?" + Math.random()}
             src={sortedTrack.user.image}
-            // src="https://thispersondoesnotexist.com/image"
             alt="body-img"
           />
         </div>

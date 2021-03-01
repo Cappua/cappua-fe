@@ -13,7 +13,6 @@ const Competition = () => {
   return (
     <section className="track-page-container">
       <div className="theme-container">
-        {/* <AlbumCard /> */}
         <Theme />
       </div>
       <AudioPlayer />
