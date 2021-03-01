@@ -36,11 +36,11 @@ const Body = () => {
         <div className="body-container">
           <div className="body-text">
             <div className="body-title">
-              <h2 className="winner-name">{sortedTrack.user.name}</h2>
-              <h3 className="month"> {getPreviousMonth()}'s Winner</h3>
+              <h3 className="month">{getPreviousMonth()}'s Winner</h3>
+              <h3 className="winner-name">{sortedTrack.user.name}</h3>
             </div>
             <p className="winner-details">
-              With his long range flow and lyrical layups,
+              With his long range flow and lyrical layups, {""}
               {sortedTrack.user.name} is your January champion.
               <Link id="read-more" to="/winners">
                 Read More...

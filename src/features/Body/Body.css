@@ -12,27 +12,36 @@
   justify-content: space-around;
   text-align: left;
   margin-left: 5vw;
-  width: 60%;
+  width: 50%;
 }
 
 .body-title {
   font-family: "Permanent Marker", cursive;
   font-weight: 100;
-  word-spacing: 5px;
-  letter-spacing: 5px;
+  /* word-spacing: 5px;
+  letter-spacing: 5px; */
   color: rgb(73, 72, 72);
 }
 
 .winner-name {
-  color: rgb(54, 53, 53);
+  /* color: rgb(54, 53, 53); */
   font-size: 6vw;
-  font-style: italic;
+  /* font-style: italic; */
+
   margin: 0;
+  line-height: 100px;
+  letter-spacing: .5vw;
+  word-spacing: 1vw;
+  color: goldenrod;
+  text-shadow: 4px 4px 3px rgb(0, 0, 0);
 }
 
 .month {
-  font-size: 3vw;
+  font-size: 4vw;
   margin: 0;
+  /* letter-spacing: 5px; */
+  color: #212527;
+  /* text-shadow: 4px 4px 4px #f5ae14;  */
 }
 
 .winner-details {
