@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Route } from "react-router-dom";
 import NavBar from "./features/NavBar/NavBar.js";
 import Banner from "./features/Banner/Banner.js";
@@ -12,6 +12,7 @@ import "./App.css";
 import { useQuery } from "@apollo/client";
 import { CompetitionContext } from "./CompetitionContext";
 import UserContext from "./UserContext";
+import MonthContext from "./MonthContext";
 import { GET_ALL_COMPETITIONS } from "./GraphQL/queries";
 import Error from "./features/Error/Error";
 import Loading from "./features/Loading/Loading";
@@ -20,9 +21,13 @@ import Olympus from "./features/Olympus/Olympus";
 function App() {
   const [competition, setCompetition] = useState(null);
   const [userInfo, setUserInfo] = useState(null);
-  const [currentMonth, setCurrentMonth] = useState(null)
+  const [currentMonth, setCurrentMonth] = useState(null);
   const userValue = { userInfo, setUserInfo };
   const { error, loading, data } = useQuery(GET_ALL_COMPETITIONS);
+
+  useEffect(() => {
+    setCurrentMonth(new Date().getMonth() + 1);
+  }, []);
 
   useEffect(() => {
     if (data) {
@@ -34,29 +39,35 @@ function App() {
     <div className="App">
       {error && <Error />}
       {loading && <Loading />}
-      {competition && (
-        <UserContext.Provider value={userValue}>
-          <CompetitionContext.Provider value={competition}>
-            <NavBar />
-            <Route
-              exact
-              path="/"
-              render={() => (
-                <>
-                  <Banner />
-                  <Body />
-                  <AudioPlayer />
-                  <Trio />
-                  <Announcement />
-                </>
-              )}
-            />
-            <Route exact path="/olympus" render={() => <Olympus />} />
+      {competition && currentMonth && (
+        <MonthContext.Provider value={currentMonth}>
+          <UserContext.Provider value={userValue}>
+            <CompetitionContext.Provider value={competition}>
+              <NavBar />
+              <Route
+                exact
+                path="/"
+                render={() => (
+                  <>
+                    <Banner />
+                    <Body />
+                    <AudioPlayer />
+                    <Trio />
+                    <Announcement />
+                  </>
+                )}
+              />
+              <Route exact path="/olympus" render={() => <Olympus />} />
 
-            <Route exact path="/competitions" render={() => <Competition />} />
-            <Route exact path="/winners" render={() => <Winners />} />
-          </CompetitionContext.Provider>
-        </UserContext.Provider>
+              <Route
+                exact
+                path="/competitions"
+                render={() => <Competition />}
+              />
+              <Route exact path="/winners" render={() => <Winners />} />
+            </CompetitionContext.Provider>
+          </UserContext.Provider>
+        </MonthContext.Provider>
       )}
     </div>
   );
