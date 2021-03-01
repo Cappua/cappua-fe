@@ -68,11 +68,11 @@ const UploadTrack = () => {
           }}
         >
           <div className="download-track-container">
-            <a id="download-link" href="" download>
+            <a id="download-link" href="" title="Download" download>
               <i className="fas fa-arrow-circle-down down" id="icon" />
             </a>
           </div>
-          <label htmlFor="uploader" className="upload-input">
+          <label htmlFor="uploader" className="upload-input" title="Upload">
             <i className="fas fa-arrow-circle-up up" id="icon" />
           </label>
 
@@ -86,7 +86,7 @@ const UploadTrack = () => {
             accept=".mp3,audio/*"
           />
         </form>
-        <button className={file ? "submit-button" : "submit-button disabled"}>
+        <button className={file ? "submit-button" : "submit-button disabled"} title="Submit">
           Submit
         </button>
         {/* </form> */}
