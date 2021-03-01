@@ -12,7 +12,7 @@ import "./App.css";
 import { useQuery } from "@apollo/client";
 import { CompetitionContext } from "./CompetitionContext";
 import UserContext from "./UserContext";
-import { GET_VERSES_BY_COMPETITION } from "./GraphQL/queries";
+import { GET_ALL_COMPETITIONS } from "./GraphQL/queries";
 import Error from "./features/Error/Error";
 import Loading from "./features/Loading/Loading";
 import Olympus from "./features/Olympus/Olympus";
@@ -20,11 +20,14 @@ import Olympus from "./features/Olympus/Olympus";
 function App() {
   const [competition, setCompetition] = useState(null);
   const [userInfo, setUserInfo] = useState(null);
+  const [currentMonth, setCurrentMonth] = useState(null)
   const userValue = { userInfo, setUserInfo };
-  const { error, loading, data } = useQuery(GET_VERSES_BY_COMPETITION);
+  const { error, loading, data } = useQuery(GET_ALL_COMPETITIONS);
 
   useEffect(() => {
-    setCompetition(data);
+    if (data) {
+      setCompetition(data.competitions[0]);
+    }
   }, [data]);
 
   return (

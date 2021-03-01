@@ -5,13 +5,16 @@ import { CompetitionContext } from "../../CompetitionContext";
 
 const AudioPlayer = () => {
   const context = useContext(CompetitionContext);
+  console.log(context.trackPath);
 
   return (
     <section id="player-container">
       <div className="player">
         <Song songName="Protect Ya Neck" songArtist="Wu-Tang Clan" />
         <audio id="audio" controls>
-          <source src={context.competition.trackPath} />
+          <source
+            src={`https://cappuatracks.s3-us-west-1.amazonaws.com${context.trackPath}`}
+          />
           Your browser does not support the <code>audio</code> element.
         </audio>
       </div>
