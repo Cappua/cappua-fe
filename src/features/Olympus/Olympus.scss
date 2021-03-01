@@ -1,7 +1,8 @@
-.hall-of-fame{
+.hall-of-fame {
     height: 100%;
     width: 100%;
 }
+
 #olympus-title {
     display: flex;
     flex-direction: column;
@@ -116,7 +117,7 @@
 
 
 .olympus {
-    border-top:solid 4px #212527;
+    border-top: solid 4px #212527;
     margin: 3vh 0 10vh;
     align-self: center;
     display: flex;
@@ -131,13 +132,20 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 15vw;
+    width: 60vw;
+    border-radius: 50px;
+    font-size: 4vw;
+    // width: 15vw;
     height: 20vh;
-    border-radius: 15px;
+    // border-radius: 15px;
     background-color: #212527;
     box-shadow: 6px 7px 28px 0 rgba(16, 16, 16, 0.7);
-    -webkit-transition: all 0.2s linear;
-    transition: all 0.3s linear;
+    -webkit-transition: all 3s linear;
+    transition: all 3s linear;
+}
+
+.olympus-track:hover {
+    transform: scale(1.05);
 }
 
 .olympus-track.january {
