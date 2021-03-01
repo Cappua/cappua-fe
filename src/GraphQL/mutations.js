@@ -16,8 +16,21 @@ export const LOGIN_USER = gql`
       }
     ) {
       id
-      name
       email
+      image
+      userSub
+      name
     }
   }
 `;
+
+export let UPVOTE = gql`
+  mutation CreateVote($verseId: ID!, $userId: ID!) {
+    createVote(input: { verseId: $verseId, userId: $userId }) {
+      id
+      userId
+      verseId
+    }
+  }
+`;
+
