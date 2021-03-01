@@ -39,7 +39,7 @@ function App() {
     <div className="App">
       {error && <Error />}
       {loading && <Loading />}
-      {competition && currentMonth && (
+      {competition && (
         <MonthContext.Provider value={currentMonth}>
           <UserContext.Provider value={userValue}>
             <CompetitionContext.Provider value={competition}>
