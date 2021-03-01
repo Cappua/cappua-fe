@@ -1,7 +1,7 @@
 import React from "react";
 import "./AnimatedArrows.scss";
 
-function AnimatedArrows() {
+const AnimatedArrows = () => {
   return (
       <div
         className="scroll-prompt"

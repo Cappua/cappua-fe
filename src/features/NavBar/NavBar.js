@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import { useRef, useState } from "react";
 import "./NavBar.css";
 import cappuaLogo from "../../assets/cappualogo.png";
-function NavBar() {
+
+const NavBar = () => {
   let navRef = useRef();
   let navIconRef = useRef();
   const [open, setOpen] = useState(false);
@@ -44,7 +45,7 @@ function NavBar() {
         <div className="sidenav" ref={navRef}>
           <div id="sidenav-container">
             <div id="sidenav-contents">
-              <Link to="/olympus">Olympus</Link>
+              <Link to="/olympus">Hall of Fame</Link>
               <Link to="/competitions">Competitions</Link>
               <User />
             </div>

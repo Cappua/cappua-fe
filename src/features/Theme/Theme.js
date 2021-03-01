@@ -1,7 +1,7 @@
 import React from "react";
-
 import "./Theme.css";
-function Theme() {
+
+const Theme = () => {
   const getMonth = () => {
     let date = new Date();
     let month = date.toLocaleString("default", { month: "long" });
@@ -30,7 +30,8 @@ function Theme() {
     });
     return (
       <div id="genre-themes">
-        This month's theme is {randomize[0]}, {randomize[1]}, and {randomize[2]}.
+        This month's theme is {randomize[0]}, {randomize[1]}, and {randomize[2]}
+        .
       </div>
     );
   };
@@ -41,6 +42,6 @@ function Theme() {
       <h2 id="genre-themes">{getGenres()}</h2>
     </section>
   );
-}
+};
 
 export default Theme;
