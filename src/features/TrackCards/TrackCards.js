@@ -5,20 +5,23 @@ import { GET_ALL_VERSES } from "../../GraphQL/queries.js";
 
 const TrackCards = () => {
   const [tracks, setTracks] = useState([]);
+  const [sortedTracks, setSortedTracks] = useState([]);
   const { error, loading, data } = useQuery(GET_ALL_VERSES);
 
   useEffect(() => {
     if (data) {
-      const sortTracks = () =>
-        data.verses.sort((a, b) => {
-          return b.voteCount - a.voteCount;
-        });
       setTracks(data.verses);
     }
-    console.table(tracks);
   }, [data]);
 
-  let trackCards = tracks.map((card, i) => {
+  useEffect(() => {
+    let sorted = tracks.slice().sort((a, b) => {
+      return b.voteCount - a.voteCount;
+    });
+    setSortedTracks(sorted);
+  }, [tracks.length]);
+
+  let trackCards = sortedTracks.map((card, i) => {
     const { user, artist, audioPath, title, voteCount } = card;
     return (
       <section key={i} className="trackcards-container">

@@ -26,10 +26,6 @@ const Profile = () => {
     );
   }
 
-  // useEffect(() => {
-  //   setUserInfo(user);
-  // }, []);
-
   return (
     isAuthenticated && (
       <div className="user-info-container">
