@@ -31,7 +31,7 @@ const FirstPlace = () => {
           <div id="winner-container">
             <div id="winner-info-container">
               <div id="winner-info">
-                <i className={`fa fa-award top-1`} id="medallion" />
+                <i className={`fa fa-award top-0`} id="medallion" />
                 <div id="artist-song">
                   <h2 id="first-place-song">{sortedTrack.title}</h2>
                   <h2 id="first-place-artist">by {sortedTrack.user.name}</h2>
