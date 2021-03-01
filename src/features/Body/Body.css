@@ -12,46 +12,49 @@
   justify-content: space-around;
   text-align: left;
   margin-left: 5vw;
-  width: 40%;
+  width: 50%;
 }
 
 .body-title {
   font-family: "Permanent Marker", cursive;
   font-weight: 100;
-  word-spacing: 5px;
-  letter-spacing: 5px;
   color: rgb(73, 72, 72);
 }
 
 .winner-name {
-  color: rgb(54, 53, 53);
-  font-size: 7vw;
-  font-style: italic;
+  font-size: 8vw;
   margin: 0;
+  line-height: 150px;
+  letter-spacing: 0.5vw;
+  color: goldenrod;
+  text-shadow: 4px 4px 3px rgb(0, 0, 0);
 }
 
 .month {
-  font-size: 3vw;
+  font-size: 5vw;
   margin: 0;
+  color: #212527;
 }
 
 .winner-details {
   font-size: 2vw;
 }
 
-#read-more{
+#read-more {
+  width: 100%;
+  display: flex;
+  line-height: 1px;
+  font-weight: 200;
+  justify-content: flex-end;
   text-decoration: none;
-    font-weight:150;
-    font-style: italic;
-    font-size: 1.7vw;
-    color: rgb(7, 54, 182);
-    border-bottom: solid .1vw;
+  color: rgb(7, 54, 182);
 }
 .body-image {
-  height: 45vh;
-  width: 40vw;
+  height: 50vh;
+  width: 26vw;
   margin-right: 5vw;
-  border-radius: 10px;
+  border-radius: 50%;
+  box-shadow: 1px 4px 4px #38383a;
 }
 
 @media screen and (max-width: 1455px) {

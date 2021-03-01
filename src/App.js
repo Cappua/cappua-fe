@@ -17,7 +17,7 @@ import Error from "./features/Error/Error";
 import Loading from "./features/Loading/Loading";
 import Olympus from "./features/Olympus/Olympus";
 
-function App() {
+const App = () => {
   const [competition, setCompetition] = useState(null);
   const [userInfo, setUserInfo] = useState(null);
   const userValue = { userInfo, setUserInfo };
@@ -57,6 +57,6 @@ function App() {
       )}
     </div>
   );
-}
+};
 
 export default App;

@@ -11,7 +11,7 @@ export default function Announcement() {
         alt="body-img"
       />
       <div className="announce-text">
-          <h2 className="header">Big company announcement</h2>
+        <h2 className="header">Big company announcement</h2>
         <p className="announcement">
           Big company announcement or simple sub-header taking two or more
           lines.

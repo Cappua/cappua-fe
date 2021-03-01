@@ -17,7 +17,8 @@ const AlbumCard = () => {
   return (
     <div
       className="albumcard-container"
-      style={{ backgroundImage: `url(${cappuaLogo})` }}>
+      style={{ backgroundImage: `url(${cappuaLogo})` }}
+    >
       <animated.div
         className="AlbumCard"
         onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}

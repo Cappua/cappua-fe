@@ -3,7 +3,7 @@ import { useQuery } from "@apollo/client";
 import { GET_ALL_VERSES } from "../../GraphQL/queries.js";
 import React, { useEffect, useState } from "react";
 
-function Olympus() {
+const Olympus =() => {
   const [olympus, setOlympus] = useState([]);
   const { error, loading, data } = useQuery(GET_ALL_VERSES);
   const [january, setJanuary] = useState([]);
@@ -14,16 +14,16 @@ function Olympus() {
       setOlympus(data.verses);
       setJanuary([
         data.verses[0],
-        data.verses[1],
-        data.verses[2],
-        data.verses[3],
-        data.verses[4],
+        // data.verses[1],
+        // data.verses[2],
+        // data.verses[3],
+        // data.verses[4],
       ]);
       setFebruary([
         data.verses[5],
-        data.verses[6],
-        data.verses[7],
-        data.verses[8],
+        // data.verses[6],
+        // data.verses[7],
+        // data.verses[8],
       ]);
     }
   }, [data]);
@@ -58,7 +58,7 @@ function Olympus() {
             id="all"
             type="radio"
             name="checkbox"
-            //   checked
+              checked=""
           />
           <label htmlFor="all">all</label>
 
@@ -78,8 +78,8 @@ function Olympus() {
           />
           <label htmlFor="february">February</label>
           <div className="olympus">
-            {janTracks}
             {febTracks}
+            {janTracks}
           </div>
         </div>
       </div>

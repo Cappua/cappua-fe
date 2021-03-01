@@ -12,9 +12,9 @@
   align-items: center;
 }
 
-.theme-container{
+.theme-container {
   display: flex;
   flex-direction: column;
-  align-self:center;
+  align-self: center;
   align-items: center;
 }
