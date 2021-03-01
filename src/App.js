@@ -21,7 +21,7 @@ const App = () => {
   const [competition, setCompetition] = useState(null);
   const [userInfo, setUserInfo] = useState(null);
   const userValue = { userInfo, setUserInfo };
-  const { error, loading, data } = useQuery(GET_VERSES_BY_COMPETITION);
+  let { error, loading, data } = useQuery(GET_VERSES_BY_COMPETITION);
 
   useEffect(() => {
     setCompetition(data);
@@ -49,7 +49,6 @@ const App = () => {
               )}
             />
             <Route exact path="/olympus" render={() => <Olympus />} />
-
             <Route exact path="/competitions" render={() => <Competition />} />
             <Route exact path="/winners" render={() => <Winners />} />
           </CompetitionContext.Provider>

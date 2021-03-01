@@ -3,7 +3,7 @@ import { useQuery } from "@apollo/client";
 import { GET_ALL_VERSES } from "../../GraphQL/queries.js";
 import React, { useEffect, useState } from "react";
 
-const Olympus =() => {
+const Olympus = () => {
   const [olympus, setOlympus] = useState([]);
   const { error, loading, data } = useQuery(GET_ALL_VERSES);
   const [january, setJanuary] = useState([]);
@@ -14,16 +14,9 @@ const Olympus =() => {
       setOlympus(data.verses);
       setJanuary([
         data.verses[0],
-        // data.verses[1],
-        // data.verses[2],
-        // data.verses[3],
-        // data.verses[4],
       ]);
       setFebruary([
         data.verses[5],
-        // data.verses[6],
-        // data.verses[7],
-        // data.verses[8],
       ]);
     }
   }, [data]);
@@ -32,7 +25,8 @@ const Olympus =() => {
     const { user, artist, audioPath, title, voteCount } = card;
     return (
       <div className="olympus-track january" key={user.name}>
-        {user.name}
+        <img className="olympian-img" src={user.image}></img>
+        <div>{user.name}</div>
       </div>
     );
   });
@@ -41,7 +35,8 @@ const Olympus =() => {
     const { user, artist, audioPath, title, voteCount } = card;
     return (
       <div className="olympus-track february" key={user.name}>
-        {user.name}
+        <img className="olympian-img" src={user.image}></img>
+        <div>{user.name}</div>
       </div>
     );
   });
@@ -58,7 +53,7 @@ const Olympus =() => {
             id="all"
             type="radio"
             name="checkbox"
-              checked=""
+            // checked
           />
           <label htmlFor="all">all</label>
 
@@ -85,6 +80,6 @@ const Olympus =() => {
       </div>
     </section>
   );
-}
+};
 
 export default Olympus;

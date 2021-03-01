@@ -89,7 +89,6 @@ const UploadTrack = () => {
         <button className={file ? "submit-button" : "submit-button disabled"} title="Submit">
           Submit
         </button>
-        {/* </form> */}
       </div>
     </>
   );
