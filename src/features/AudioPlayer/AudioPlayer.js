@@ -5,7 +5,6 @@ import { CompetitionContext } from "../../CompetitionContext";
 
 const AudioPlayer = () => {
   const context = useContext(CompetitionContext);
-  console.log(context.trackPath);
 
   return (
     <section id="player-container">

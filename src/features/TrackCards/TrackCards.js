@@ -1,21 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Upvote from "../../features/Upvote/Upvote";
 import "./TrackCards.css";
-import { useQuery } from "@apollo/client";
-import { GET_ALL_VERSES } from "../../GraphQL/queries.js";
+import { CompetitionContext } from "../../CompetitionContext";
 
 const TrackCards = () => {
   const [tracks, setTracks] = useState([]);
   const [sortedTracks, setSortedTracks] = useState([]);
-  const { error, loading, data } = useQuery(GET_ALL_VERSES);
-
-  console.log(data);
+  const currentCompetitionContext = useContext(CompetitionContext);
 
   useEffect(() => {
-    if (data) {
-      setTracks(data.verses);
+    if (currentCompetitionContext) {
+      setTracks(currentCompetitionContext.verses);
     }
-  }, [data]);
+  }, [currentCompetitionContext]);
 
   useEffect(() => {
     let sorted = tracks.slice().sort((a, b) => {

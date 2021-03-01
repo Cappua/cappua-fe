@@ -7,14 +7,9 @@ const Upvote = (props) => {
   const [upvote] = useMutation(UPVOTE);
   const { userInfo } = useContext(UserContext);
 
-  if (userInfo) {
-    console.log(userInfo.id);
-  }
-
   const handleUpvote = (event) => {
     const verseId = parseInt(props.verseId);
     const userId = parseInt(props.userId);
-    console.log(verseId, userId);
     upvote({ variables: { verseId: verseId, userId: userId } });
   };
 

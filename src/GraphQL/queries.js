@@ -19,8 +19,8 @@ export const GET_ALL_VERSES = gql`
   }
 `;
 
-export let GET_VERSES_BY_COMPETITION = gql`
-  query Competition($month: ID!, $userId: ID!) {
+export const GET_VERSES_BY_COMPETITION = gql`
+  query Compeition($month: Int!, $userId: Int!) {
     competition(month: $month) {
       id
       trackPath
