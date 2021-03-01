@@ -8,24 +8,24 @@ import { useQuery } from "@apollo/client";
 import { GET_ALL_VERSES } from "../../GraphQL/queries.js";
 
 function Winners() {
-    const [tracks, setTracks] = useState(null);
-    const [contenders, setContenders] = useState([]);
-    const { error, loading, data } = useQuery(GET_ALL_VERSES);
+  const [tracks, setTracks] = useState(null);
+  const [contenders, setContenders] = useState([]);
+  const { error, loading, data } = useQuery(GET_ALL_VERSES);
 
-    useEffect(() => {
-      if (data) {
-        setTracks(data.verses);
-      }
-    }, [data]);
+  useEffect(() => {
+    if (data) {
+      setTracks(data.verses);
+    }
+  }, [data]);
 
-    useEffect(() => {
-      if (tracks) {
-        let sorted = tracks.slice().sort((a, b) => {
-          return b.voteCount - a.voteCount;
-        });
-        setContenders([sorted[1], sorted[2]]);
-      }
-    }, [tracks]);
+  useEffect(() => {
+    if (tracks) {
+      let sorted = tracks.slice().sort((a, b) => {
+        return b.voteCount - a.voteCount;
+      });
+      setContenders([sorted[1], sorted[2]]);
+    }
+  }, [tracks]);
 
   const getPreviousMonth = () => {
     let date = new Date();
@@ -41,7 +41,7 @@ function Winners() {
   };
 
   let winners = contenders.map((card, i) => {
-        const { user, artist, audioPath, title, voteCount } = card;
+    const { user, artist, audioPath, title, voteCount } = card;
 
     return (
       <section key={i}>
@@ -61,10 +61,12 @@ function Winners() {
           </div>
         </div>
         <div className="contender-votes">
+          <img className="contender-icon" src={user.image}></img>
           <SoundWave />
-
-          {voteCount}
-          <i className="fas fa-heart heart-icon"></i>
+          <div className="vote-count">
+            <i className="fas fa-heart heart-icon"></i>
+            {voteCount}
+          </div>
         </div>
       </section>
     );

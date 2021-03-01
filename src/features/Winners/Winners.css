@@ -171,10 +171,22 @@ header b {
   display: flex;
   font-size: 3vh;
   flex-direction: row;
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
+  justify-content: space-between;
+}
+
+.contender-icon {
+  height: 4vh;
+  width: 2vw;
+  border-radius: 50%;
+}
+
+.vote-count{
+  color: black;
 }
 
 .heart-icon {
   color: rgb(156, 5, 5);
   margin-left: 1.1vw;
 }
+
