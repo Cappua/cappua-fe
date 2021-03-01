@@ -21,7 +21,7 @@ export const GET_ALL_VERSES = gql`
 
 export let GET_VERSES_BY_COMPETITION = gql`
   query {
-    competition(id: 1) {
+    competition(month: 3) {
       id
       trackPath
       month
