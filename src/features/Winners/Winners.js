@@ -27,8 +27,8 @@ function Winners() {
   let winners = sortedUsers.map((card, i) => {
     const { id, artist, image, song, link, votes } = card;
     return (
-      <section>
-        <div key={i} className="contender-container">
+      <section key={i}>
+        <div className="contender-container">
           <div className="medallion-holder">
             <i className={`fa fa-award top-${i + 1} medallion`}></i>
           </div>

@@ -30,7 +30,7 @@ function NavBar() {
           Hall of Fame
         </Link>
         <Link to="/competitions" id="competitions">
-          Competitions
+          Competition
         </Link>
         <User />
       </div>

@@ -10,7 +10,7 @@ function FirstPlace() {
   let winner = sortedUsers.map((card, i) => {
     const { id, artist, image, song, link, votes } = card;
     return (
-      <section id="first-place-winner">
+      <section key={i} id="first-place-winner">
         <div id="winner-container">
           <div id="winner-info-container">
             <div id="winner-info">
