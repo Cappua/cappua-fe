@@ -61,7 +61,7 @@ const UploadTrack = () => {
         Listen to the featured beat and submit your verse!
       </div>
       <div className="upload-track-container">
-        <form
+        <div
           className="upload-track-form"
           onSubmit={(event) => {
             handleSubmit(event);
@@ -85,7 +85,7 @@ const UploadTrack = () => {
             }}
             accept=".mp3,audio/*"
           />
-        </form>
+        </div>
         <button className={file ? "submit-button" : "submit-button disabled"} title="Submit">
           Submit
         </button>

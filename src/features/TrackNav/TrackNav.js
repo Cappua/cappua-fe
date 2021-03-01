@@ -7,7 +7,7 @@ const TrackNav = () => {
       <div className="track-sort-container">
         <h3 className="the-ranks-title">- The Ranks -</h3>
         <div className="search-sort-container">
-          <form className="search-ranks-container">
+          <div className="search-ranks-container">
             <input
               type="text"
               className="search-input"
@@ -16,7 +16,7 @@ const TrackNav = () => {
             <a className="search-btn">
               <i className="fas fa-search" />
             </a>
-          </form>
+          </div>
           <select className="track-sort-dropdown">
             <option value="newest">Newest</option>
             <option value="oldest">Oldest</option>
