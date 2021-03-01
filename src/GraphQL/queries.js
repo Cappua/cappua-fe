@@ -20,8 +20,8 @@ export const GET_ALL_VERSES = gql`
 `;
 
 export let GET_VERSES_BY_COMPETITION = gql`
-  query {
-    competition(id: 1) {
+  query Competition($month: ID!, $userId: ID!) {
+    competition(month: $month) {
       id
       trackPath
       month
@@ -33,7 +33,7 @@ export let GET_VERSES_BY_COMPETITION = gql`
         id
         audioPath
         title
-        upvoted(userId: 1)
+        upvoted(userId: $userId)
         voteCount
         user {
           id
@@ -47,7 +47,7 @@ export let GET_VERSES_BY_COMPETITION = gql`
 
 export let GET_ALL_COMPETITIONS = gql`
   query {
-    competition {
+    competitions {
       id
       trackPath
       month
@@ -55,7 +55,17 @@ export let GET_ALL_COMPETITIONS = gql`
       description
       genre
       rules
-      verses
+      verses {
+        id
+        audioPath
+        title
+        voteCount
+        user {
+          id
+          name
+          image
+        }
+      }
     }
   }
 `;
