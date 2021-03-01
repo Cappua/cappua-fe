@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import TrackCard from "../TrackCards/TrackCards.js";
+import TrackCards from "../TrackCards/TrackCards.js";
 import TrackNav from "../TrackNav/TrackNav.js";
 import UploadTrack from "../UploadTrack/UploadTrack.js";
 import AudioPlayer from "../AudioPlayer/AudioPlayer.js";
@@ -19,7 +19,7 @@ const Competition = () => {
       <AudioPlayer />
       <UploadTrack />
       <TrackNav />
-      <TrackCard />
+      <TrackCards />
     </section>
   );
 };
