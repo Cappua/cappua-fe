@@ -18,7 +18,7 @@ const Profile = () => {
   const [loginUser, { data }] = useMutation(LOGIN_USER);
 
   useEffect(() => {
-    if (user) {
+    if (user && isAuthenticated) {
       loginUser({
         variables: {
           emailInput: user.email,
@@ -27,9 +27,20 @@ const Profile = () => {
           nameInput: user.name,
         },
       });
-      setUserInfo(user);
     }
-  }, [user]);
+  }, [user && isAuthenticated]);
+
+  useEffect(() => {
+    if (data) {
+      setUserInfo({
+        id: data.loginUser.id,
+        email: data.loginUser.email,
+        image: data.loginUser.image,
+        sub: data.loginUser.userSub,
+        name: data.loginUser.name,
+      });
+    }
+  }, [data]);
 
   if (!isAuthenticated) {
     return (
