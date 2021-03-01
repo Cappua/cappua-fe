@@ -44,29 +44,7 @@ export let GET_VERSES_BY_COMPETITION = gql`
     }
   }
 `;
-// query {
-//   competition(id: $id) {
-//     id
-//     trackPath
-//     month
-//     year
-//     description
-//     genre
-//     rules
-//     verses {
-//       id
-//       audioPath
-//       title
-//       upvoted(userId: $usesrId)
-//       voteCount
-//       user {
-//         id
-//         name
-//         image
-//       }
-//     }
-//   }
-// }
+
 export let GET_ALL_COMPETITIONS = gql`
   query {
     competition {
