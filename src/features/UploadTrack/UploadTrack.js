@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./UploadTrack.css";
 import axios from "axios";
+import UserContext from "../../UserContext";
+import { CompetitionContext } from "../../CompetitionContext";
 
 const UploadTrack = () => {
   const [file, setFile] = useState(null);
+  const { userInfo } = useContext(UserContext);
+  const competition = useContext(CompetitionContext);
   const getRemainingDays = () => {
     let date = new Date();
     let time = new Date(date.getTime());
@@ -11,7 +15,7 @@ const UploadTrack = () => {
     time.setDate(0);
     let days =
       time.getDate() > date.getDate() ? time.getDate() - date.getDate() : 0;
-      return(<div id="days">{days}</div>);
+    return <div id="days">{days}</div>;
     // if (days > 1) {
     //   return `There are ${
     //     <div id="days">{days}</div>
@@ -22,7 +26,7 @@ const UploadTrack = () => {
     //   } day remaining in this competition`;
     // }
   };
-  
+
   const handleChange = (event) => {
     setFile(event.target.files[0]);
   };
@@ -33,10 +37,10 @@ const UploadTrack = () => {
     const formData = new FormData();
 
     formData.append("audio", file);
-    formData.append("user_id", 1);
-    formData.append("competition_id", 1);
+    formData.append("user_id", parseInt(userInfo.id));
+    formData.append("competition_id", parseInt(competition.id));
     formData.append("type", "verse");
-    formData.append("title", "Best Friend");
+    formData.append("title", file);
 
     axios({
       method: "post",
@@ -56,7 +60,9 @@ const UploadTrack = () => {
 
   return (
     <>
-      <div id="remaining-days">There are {getRemainingDays()} days remaining in this competition.</div>
+      <div id="remaining-days">
+        There are {getRemainingDays()} days remaining in this competition.
+      </div>
       <div id="directions">
         Listen to the featured beat and submit your verse!
       </div>
@@ -65,10 +71,13 @@ const UploadTrack = () => {
           className="upload-track-form"
           onSubmit={(event) => {
             handleSubmit(event);
-          }}
-        >
+          }}>
           <div className="download-track-container">
-            <a id="download-link" href="" title="Download" download>
+            <a
+              id="download-link"
+              href={`http://d1nb1e3bp5hs25.cloudfront.net${competition.trackPath}`}
+              title="Download"
+              download>
               <i className="fas fa-arrow-circle-down down" id="icon" />
             </a>
           </div>
@@ -86,7 +95,9 @@ const UploadTrack = () => {
             accept=".mp3,audio/*"
           />
         </form>
-        <button className={file ? "submit-button" : "submit-button disabled"} title="Submit">
+        <button
+          className={file ? "submit-button" : "submit-button disabled"}
+          title="Submit">
           Submit
         </button>
         {/* </form> */}
