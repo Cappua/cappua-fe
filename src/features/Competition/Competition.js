@@ -8,8 +8,6 @@ import Theme from "../Theme/Theme.js";
 import "./Competition.css";
 
 const Competition = () => {
-  const user = useContext(UserContext);
-  const competition = useContext(CompetitionContext);
 
   return (
     <section className="track-page-container">
