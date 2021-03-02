@@ -35,7 +35,7 @@ const Trio = () => {
           <h2 id="tab-artist">{user.name}</h2>
           <h3 id="tab-song">{title}</h3>
           <Link to="/competitions">
-            <button className="tab-btn">Listen Here</button>
+            <button className="tab-btn" id={i}>Listen Here</button>
           </Link>
         </div>
       </section>

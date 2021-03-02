@@ -35,6 +35,7 @@ const TrackCards = () => {
             />
             <div className="profile-img-container">
               <img
+              alt={user.name}
                 src={
                   user.image
                     ? user.image

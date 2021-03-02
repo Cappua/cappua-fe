@@ -40,6 +40,7 @@ const App = () => {
       {error && <Error />}
       {loading && <Loading />}
       {competition && (
+
         <MonthContext.Provider value={currentMonth}>
           <UserContext.Provider value={userValue}>
             <CompetitionContext.Provider value={competition}>
