@@ -9,7 +9,7 @@
 }
 #month-theme {
   margin: 0vh 1vw;
-  font-size: 8vw;
+  font-size: 5vw;
   letter-spacing: 4px;
   font-weight: lighter;
   text-shadow: 4px 4px 4px #f5ae14;
@@ -21,7 +21,7 @@
 
 #genre-themes {
   font-weight: lighter;
-  font-size: 6.5vw;
+  font-size: 4.5vw;
   margin: 2vh 20px;
   display: flex;
   width: 90vw;

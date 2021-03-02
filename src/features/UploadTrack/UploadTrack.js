@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useContext, ReactDOM } from "react";
 import "./UploadTrack.css";
 import axios from "axios";
+import UserContext from "../../UserContext";
+import { CompetitionContext } from "../../CompetitionContext";
+import displayUploadMessage from "./UploadMessage";
 
 const UploadTrack = () => {
   const [file, setFile] = useState(null);
+  const [fileName, setFileName] = useState(null);
+  const { userInfo } = useContext(UserContext);
+  const competition = useContext(CompetitionContext);
   const getRemainingDays = () => {
     let date = new Date();
     let time = new Date(date.getTime());
@@ -11,20 +17,15 @@ const UploadTrack = () => {
     time.setDate(0);
     let days =
       time.getDate() > date.getDate() ? time.getDate() - date.getDate() : 0;
-      return(<div id="days">{days}</div>);
-    // if (days > 1) {
-    //   return `There are ${
-    //     <div id="days">{days}</div>
-    //   } day's remaining in this competition`
-    // } else {
-    //   return `There is ${
-    //     <div id="days">1</div>
-    //   } day remaining in this competition`;
-    // }
+    return <div id="days">{days}</div>;
   };
-  
-  const handleChange = (event) => {
+
+  const handleFileChange = (event) => {
     setFile(event.target.files[0]);
+  };
+
+  const handleTextChange = (event) => {
+    setFileName(event.target.value);
   };
 
   const handleSubmit = (event) => {
@@ -33,10 +34,10 @@ const UploadTrack = () => {
     const formData = new FormData();
 
     formData.append("audio", file);
-    formData.append("user_id", 1);
-    formData.append("competition_id", 1);
+    formData.append("user_id", parseInt(userInfo.id));
+    formData.append("competition_id", parseInt(competition.id));
     formData.append("type", "verse");
-    formData.append("title", "Best Friend");
+    formData.append("title", fileName);
 
     axios({
       method: "post",
@@ -48,49 +49,155 @@ const UploadTrack = () => {
     })
       .then((response) => {
         console.log(response);
+        if (response.status === 200) {
+          let confirmation = window.confirm("Your file has been uploaded.");
+          if (confirmation === true) {
+            window.location.reload();
+          }
+        }
       })
       .then((error) => {
         console.log(error);
       });
   };
 
+  const displayPleaseLoginAlert = () => {
+    alert("Please login to upload your verse!");
+  };
+
   return (
-    <>
-      <div id="remaining-days">There are {getRemainingDays()} days remaining in this competition.</div>
+    <div>
+      <div id="remaining-days">
+        There are {getRemainingDays()} days remaining in this competition.
+      </div>
       <div id="directions">
         Listen to the featured beat and submit your verse!
       </div>
-      <div className="upload-track-container">
-        <div
-          className="upload-track-form"
-          onSubmit={(event) => {
-            handleSubmit(event);
-          }}
-        >
-          <div className="download-track-container">
-            <a id="download-link" href="" title="Download" download>
-              <i className="fas fa-arrow-circle-down down" id="icon" />
-            </a>
-          </div>
-          <label htmlFor="uploader" className="upload-input" title="Upload">
-            <i className="fas fa-arrow-circle-up up" id="icon" />
-          </label>
+      {userInfo && competition && (
+        <div className="upload-track-container">
+          <form
+            className="upload-track-form"
+            onSubmit={(event) => {
+              handleSubmit(event);
+            }}>
+            <div className="download-upload-container">
+              <div className="download-track-container">
+                <a
+                  id="download-link"
+                  href={`http://d1nb1e3bp5hs25.cloudfront.net${competition.trackPath}`}
+                  title="Download"
+                  download>
+                  <i className="fas fa-arrow-circle-down down" id="icon" />
+                </a>
+              </div>
+              <label htmlFor="uploader" className="upload-input" title="Upload">
+                <i className="fas fa-arrow-circle-up up" id="icon" />
+              </label>
 
-          <input
-            id="uploader"
-            style={{ visibility: "hidden", height: "0", width: "0" }}
-            type="file"
-            onChange={(event) => {
-              handleChange(event);
-            }}
-            accept=".mp3,audio/*"
-          />
+              <input
+                id="uploader"
+                style={{ visibility: "hidden", height: "0", width: "0" }}
+                type="file"
+                onChange={(event) => {
+                  handleFileChange(event);
+                }}
+                accept=".mp3,audio/*"
+              />
+            </div>
+            <div className="filename-input-container">
+              <label style={{ margin: "10px" }} htmlFor="filename-input">
+                Filename
+              </label>
+              <input
+                id="filename-input"
+                type="text"
+                placeholder="i.e. Song Name"
+                style={{
+                  outline: "none",
+                  width: "7.5vw",
+                  height: "2.5vh",
+                  margin: "0 0 2vh",
+                  border: "2px solid black",
+                  borderRadius: "5px",
+                }}
+                onChange={(event) => {
+                  handleTextChange(event);
+                }}
+              />
+            </div>
+            <button
+              onClick={displayUploadMessage}
+              className={file ? "submit-button" : "submit-button disabled"}
+              title="Submit">
+              Submit
+            </button>
+            <div id="upload-message" className="upload-message">
+              <p>Submit Your Verse Here!</p>
+            </div>
+          </form>
         </div>
-        <button className={file ? "submit-button" : "submit-button disabled"} title="Submit">
-          Submit
-        </button>
-      </div>
-    </>
+      )}
+      {!userInfo && (
+        <div className="upload-track-container">
+          <form
+            className="upload-track-form"
+            onSubmit={() => {
+              displayPleaseLoginAlert();
+            }}>
+            <div className="download-upload-container">
+              <div className="download-track-container">
+                <a
+                  id="download-link"
+                  href={`http://d1nb1e3bp5hs25.cloudfront.net${competition.trackPath}`}
+                  title="Download"
+                  download>
+                  <i className="fas fa-arrow-circle-down down" id="icon" />
+                </a>
+              </div>
+              <label htmlFor="uploader" className="upload-input" title="Upload">
+                <i className="fas fa-arrow-circle-up up" id="icon" />
+              </label>
+
+              <input
+                id="uploader"
+                style={{ visibility: "hidden", height: "0", width: "0" }}
+                type="file"
+                onChange={(event) => {
+                  handleFileChange(event);
+                }}
+                accept=".mp3,audio/*"
+              />
+            </div>
+            <div className="filename-input-container">
+              <label style={{ margin: "10px" }} htmlFor="filename-input">
+                Filename
+              </label>
+              <input
+                id="filename-input"
+                type="text"
+                placeholder="i.e. Song Name"
+                style={{
+                  outline: "none",
+                  width: "7.5vw",
+                  height: "2.5vh",
+                  margin: "0 0 2vh",
+                  border: "2px solid black",
+                  borderRadius: "5px",
+                }}
+                onChange={(event) => {
+                  handleTextChange(event);
+                }}
+              />
+            </div>
+            <button
+              className={file ? "submit-button" : "submit-button disabled"}
+              title="Submit">
+              Submit
+            </button>
+          </form>
+        </div>
+      )}
+    </div>
   );
 };
 

@@ -55,6 +55,8 @@ export let GET_ALL_COMPETITIONS = gql`
       description
       genre
       rules
+      image
+      title
       verses {
         id
         audioPath

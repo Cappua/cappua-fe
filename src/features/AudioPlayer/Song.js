@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
+import { CompetitionContext } from "../../CompetitionContext";
 import "./audioPlayer.css";
 
-function Song(props) {
-  const { songName, songArtist } = props;
+const Song = () => {
+  const competitionInfo = useContext(CompetitionContext);
+  console.log(competitionInfo);
   return (
     <div className="song">
-      <h1 className="song-title">{songName}</h1>
-      <h2 className="song-artist">{songArtist}</h2>
+      <h1 className="song-title">{competitionInfo.title}</h1>
+      <h2 className="song-artist">{competitionInfo.genre}</h2>
     </div>
   );
-}
+};
 
 export default Song;
