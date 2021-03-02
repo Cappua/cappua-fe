@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import Upvote from "../../features/Upvote/Upvote";
 import "./TrackCards.css";
-import { useQuery } from "@apollo/client";
-import { GET_ALL_VERSES } from "../../GraphQL/queries.js";
+import { CompetitionContext } from "../../CompetitionContext";
 
 const TrackCards = () => {
   const [tracks, setTracks] = useState([]);
   const [sortedTracks, setSortedTracks] = useState([]);
-  const { error, loading, data } = useQuery(GET_ALL_VERSES);
+  const currentCompetitionContext = useContext(CompetitionContext);
 
   useEffect(() => {
-    if (data) {
-      setTracks(data.verses);
+    if (currentCompetitionContext) {
+      setTracks(currentCompetitionContext.verses);
     }
-  }, [data]);
+  }, [currentCompetitionContext]);
 
   useEffect(() => {
     let sorted = tracks.slice().sort((a, b) => {
@@ -22,9 +22,10 @@ const TrackCards = () => {
   }, [tracks.length]);
 
   let trackCards = sortedTracks.map((card, i) => {
-    const { user, artist, audioPath, title, voteCount } = card;
+    const { user, id, audioPath, title, voteCount } = card;
+
     return (
-      <section key={i} className="trackcards-container">
+      <section key={i} id={id} className="trackcards-container">
         <div className="trackcards">
           <div className="user-order">
             <i
@@ -51,7 +52,7 @@ const TrackCards = () => {
             </div>
             <audio className="audiotrack" controls>
               <source
-                src={`https://testabucketblazeit.s3-us-west-1.amazonaws.com/${audioPath}`}
+                src={`http://d1nb1e3bp5hs25.cloudfront.net${audioPath}`}
               />
               Your browser does not support the <code>audio</code> element.
             </audio>
@@ -60,9 +61,7 @@ const TrackCards = () => {
             <h1 className="votes" id={user.id}>
               {voteCount}
             </h1>
-            <i className="fas fa-heart vote-icon" id={user.id}></i>
-
-            {/* <i className="fas fa-long-arrow-alt-up vote-icon" id={user.id}></i> */}
+            <Upvote userId={user.id} verseId={id} />
           </div>
         </div>
       </section>

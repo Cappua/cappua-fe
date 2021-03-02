@@ -1,6 +1,8 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import UserContext from "../../UserContext";
+import { useMutation } from "@apollo/client";
+import { LOGIN_USER } from "../../GraphQL/mutations";
 import "./User.css";
 
 const Profile = () => {
@@ -13,10 +15,32 @@ const Profile = () => {
   } = useAuth0();
 
   const { setUserInfo } = useContext(UserContext);
+  const [loginUser, { data }] = useMutation(LOGIN_USER);
 
-  if (user) {
-    setUserInfo(user);
-  }
+  useEffect(() => {
+    if (user && isAuthenticated) {
+      loginUser({
+        variables: {
+          emailInput: user.email,
+          imageInput: user.picture,
+          userSubInput: user.sub,
+          nameInput: user.name,
+        },
+      });
+    }
+  }, [user && isAuthenticated]);
+
+  useEffect(() => {
+    if (data) {
+      setUserInfo({
+        id: data.loginUser.id,
+        email: data.loginUser.email,
+        image: data.loginUser.image,
+        sub: data.loginUser.userSub,
+        name: data.loginUser.name,
+      });
+    }
+  }, [data]);
 
   if (!isAuthenticated) {
     return (
