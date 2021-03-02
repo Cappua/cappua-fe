@@ -61,7 +61,6 @@ const TrackCards = () => {
               {voteCount}
             </h1>
             <Upvote userId={user.id} verseId={id} />
-            {/* <i className="fas fa-long-arrow-alt-up vote-icon" id={user.id}></i> */}
           </div>
         </div>
       </section>
