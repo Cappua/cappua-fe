@@ -4,6 +4,7 @@
   justify-content: space-evenly;
   padding: 2em;
   width: fit-content;
+  margin-top: 10vh;
 }
 .announce-image {
   height: 55vh;
