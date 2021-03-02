@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top:10vh;
+  margin-top: 10vh;
 }
 #first-place-winner {
   width: 90%;
@@ -88,4 +88,51 @@
   width: 25vw;
   border-radius: 50%;
   filter: drop-shadow(1px 4px 4px #38383a);
+}
+
+/* WINNERS AUDIO STYLING */
+
+#audio-container {
+  width: 83%;
+  height: 18vh;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  padding: .5vw;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  background-color: #38383a;
+}
+#audiotrack {
+  height: 6.5vh;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  outline: none;
+}
+
+#track-username {
+  margin: 0;
+  height: 50%;
+  width: 70%;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: baseline;
+  /* font-size: 2rem; */
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+#track-title {
+  font-weight: 200;
+  font-size: 4.5vh;
+  margin: 0;
+}
+#track-artist {
+  font-size: 3.5vh;
+  font-weight: lighter;
+  margin: 0;
 }

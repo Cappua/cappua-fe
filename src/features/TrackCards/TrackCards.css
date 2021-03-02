@@ -42,30 +42,7 @@
   width: 5%;
 }
 
-.track-username {
-  margin: 0;
-  padding-bottom: 15px;
-  height: 50%;
-  color: black;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: baseline;
-  font-size: 2rem;
-  letter-spacing: 5px;
-  text-align: center;
-}
 
-.track-title {
-  font-weight: 200;
-  font-size: 85%;
-  margin: 0;
-}
-.track-artist {
-  font-size: 70%;
-  font-weight: lighter;
-  margin: 0;
-}
 
 .trackcards-container:hover .track-title {
   color: white;
@@ -118,6 +95,32 @@
   flex-direction: row;
   outline: none;
 }
+
+.track-username {
+  margin: 0;
+  padding-bottom: 15px;
+  height: 50%;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: baseline;
+  font-size: 2rem;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+.track-title {
+  font-weight: 200;
+  font-size: 85%;
+  margin: 0;
+}
+.track-artist {
+  font-size: 70%;
+  font-weight: lighter;
+  margin: 0;
+}
+
 .trackcards-container:hover {
   background-color: rgba(31, 29, 39, 0.925);
   transform: scale(1.05);
