@@ -37,8 +37,6 @@ const UploadTrack = () => {
   };
 
   const handleSubmit = (event) => {
-    console.log(userInfo.id);
-    console.log(competition.id);
     event.preventDefault();
 
     const formData = new FormData();
@@ -59,6 +57,12 @@ const UploadTrack = () => {
     })
       .then((response) => {
         console.log(response);
+        if (response.status === 200) {
+          let confirmation = window.confirm("Your file has been uploaded.");
+          if (confirmation === true) {
+            window.location.reload();
+          }
+        }
       })
       .then((error) => {
         console.log(error);
