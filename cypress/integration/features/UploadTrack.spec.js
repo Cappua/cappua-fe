@@ -1,3 +1,5 @@
+import { queryByAttribute } from "@testing-library/react";
+
 context("UploadTrack", () => {
   it("contains upload and download icons", () => {
     cy.visit("http://localhost:3000/competitions");
@@ -9,9 +11,5 @@ context("UploadTrack", () => {
   it("has upload functionality", () => {
     cy.visit("http://localhost:3000/competitions");
     cy.get(".fa-arrow-circle-up").click();
-  });
-  it("has download functionality", () => {
-    cy.visit("http://localhost:3000/competitions");
-    cy.get(".fa-arrow-circle-down").click();
   });
 });
