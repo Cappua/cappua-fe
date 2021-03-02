@@ -1,8 +1,9 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, ReactDOM } from "react";
 import "./UploadTrack.css";
 import axios from "axios";
 import UserContext from "../../UserContext";
 import { CompetitionContext } from "../../CompetitionContext";
+import displayUploadMessage from "./UploadMessage";
 
 const UploadTrack = () => {
   const [file, setFile] = useState(null);
@@ -17,15 +18,6 @@ const UploadTrack = () => {
     let days =
       time.getDate() > date.getDate() ? time.getDate() - date.getDate() : 0;
     return <div id="days">{days}</div>;
-    // if (days > 1) {
-    //   return `There are ${
-    //     <div id="days">{days}</div>
-    //   } day's remaining in this competition`
-    // } else {
-    //   return `There is ${
-    //     <div id="days">1</div>
-    //   } day remaining in this competition`;
-    // }
   };
 
   const handleFileChange = (event) => {
@@ -134,10 +126,14 @@ const UploadTrack = () => {
               />
             </div>
             <button
+              onClick={displayUploadMessage}
               className={file ? "submit-button" : "submit-button disabled"}
               title="Submit">
               Submit
             </button>
+            <div id="upload-message" className="upload-message">
+              <p>Submit Your Verse Here!</p>
+            </div>
           </form>
         </div>
       )}
