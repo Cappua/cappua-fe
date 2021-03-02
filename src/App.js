@@ -46,7 +46,7 @@ const App = () => {
               <NavBar />
               <Route
                 exact
-                path="/"
+                path="/index.html"
                 render={() => (
                   <>
                     <Banner />

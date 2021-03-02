@@ -23,7 +23,7 @@ const NavBar = () => {
 
   return (
     <div className="navbar-container">
-      <Link id="logo-container" to="/">
+      <Link id="logo-container" to="/index.html">
         <img className="logo" src={cappuaLogo} alt="logo" />
       </Link>
       <div className="navbar-contents">
@@ -45,8 +45,12 @@ const NavBar = () => {
         <div className="sidenav" ref={navRef}>
           <div id="sidenav-container">
             <div id="sidenav-contents">
-              <Link to="/olympus" className="olympus-sidenav">Hall of Fame</Link>
-              <Link to="/competitions" className="competitions-sidenav">Competitions</Link>
+              <Link to="/olympus" className="olympus-sidenav">
+                Hall of Fame
+              </Link>
+              <Link to="/competitions" className="competitions-sidenav">
+                Competitions
+              </Link>
               <User />
             </div>
           </div>
@@ -54,5 +58,5 @@ const NavBar = () => {
       </div>
     </div>
   );
-}
+};
 export default NavBar;
