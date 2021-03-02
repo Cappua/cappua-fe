@@ -168,13 +168,15 @@ header b {
   height: 4vh;
   width: 2vw;
   border-radius: 50%;
+  margin-left: 1.1vw;
 }
 
 .vote-count {
   color: black;
+  margin: 0vh 0.5vw;
 }
 
 .heart-icon {
   color: rgb(156, 5, 5);
-  margin-left: 1.1vw;
+  padding-right: .5vw;
 }

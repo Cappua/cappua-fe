@@ -22,7 +22,7 @@
 }
 
 .winner-name {
-  font-size: 8vw;
+  font-size: 5.5vw;
   margin: 0;
   line-height: 150px;
   letter-spacing: 0.5vw;
@@ -31,7 +31,9 @@
 }
 
 .month {
-  font-size: 5vw;
+  font-size: 4vw;
+    letter-spacing: 0.5vw;
+
   margin: 0;
   color: #212527;
 }

@@ -1,7 +1,6 @@
 import "./Winners.css";
 import AudioPlayer from "../AudioPlayer/AudioPlayer.js";
 import FirstPlace from "../FirstPlace/FirstPlace.js";
-import AnimatedArrows from "../AnimatedArrows/AnimatedArrows.js";
 import SoundWave from "../SoundWave/SoundWave";
 import React, { useEffect, useState } from "react";
 import { useQuery } from "@apollo/client";
@@ -76,7 +75,6 @@ function Winners() {
     <div className="winners-page">
       <header>
         {getPreviousMonth()}'s Competition<b>Winners</b>
-        <AnimatedArrows />
       </header>
       <FirstPlace />
       <AudioPlayer />
