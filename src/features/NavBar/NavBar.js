@@ -45,8 +45,8 @@ const NavBar = () => {
         <div className="sidenav" ref={navRef}>
           <div id="sidenav-container">
             <div id="sidenav-contents">
-              <Link to="/olympus">Hall of Fame</Link>
-              <Link to="/competitions">Competitions</Link>
+              <Link to="/olympus" className="olympus-sidenav">Hall of Fame</Link>
+              <Link to="/competitions" className="competitions-sidenav">Competitions</Link>
               <User />
             </div>
           </div>

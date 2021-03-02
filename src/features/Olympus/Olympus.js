@@ -12,19 +12,15 @@ const Olympus = () => {
   useEffect(() => {
     if (data) {
       setOlympus(data.verses);
-      setJanuary([
-        data.verses[0],
-      ]);
-      setFebruary([
-        data.verses[5],
-      ]);
+      setJanuary([data.verses[0]]);
+      setFebruary([data.verses[5]]);
     }
   }, [data]);
 
   const janTracks = january.map((card, i) => {
     const { user, artist, audioPath, title, voteCount } = card;
     return (
-      <div className="olympus-track january" key={user.name}>
+      <div className="olympus-track january" key={i} id={i}>
         <img className="olympian-img" src={user.image}></img>
         <div>{user.name}</div>
       </div>
@@ -34,7 +30,7 @@ const Olympus = () => {
   const febTracks = february.map((card, i) => {
     const { user, artist, audioPath, title, voteCount } = card;
     return (
-      <div className="olympus-track february" key={user.name}>
+      <div className="olympus-track february" key={i} id={i + 1}>
         <img className="olympian-img" src={user.image}></img>
         <div>{user.name}</div>
       </div>
@@ -55,7 +51,9 @@ const Olympus = () => {
             name="checkbox"
             // checked
           />
-          <label htmlFor="all">all</label>
+          <label htmlFor="all" id="all-title">
+            all
+          </label>
 
           <input
             className="checkbox-january"
@@ -63,7 +61,9 @@ const Olympus = () => {
             type="radio"
             name="checkbox"
           />
-          <label htmlFor="january">January</label>
+          <label htmlFor="january" id="january-title">
+            January
+          </label>
 
           <input
             className="checkbox-february"
@@ -71,7 +71,9 @@ const Olympus = () => {
             type="radio"
             name="checkbox"
           />
-          <label htmlFor="february">February</label>
+          <label htmlFor="february" id="february-title">
+            February
+          </label>
           <div className="olympus">
             {febTracks}
             {janTracks}

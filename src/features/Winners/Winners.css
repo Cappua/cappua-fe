@@ -168,7 +168,7 @@ header b {
   height: 4vh;
   width: 2vw;
   border-radius: 50%;
-  margin-left: 1.1vw;
+  margin-left: .5vw;
 }
 
 .vote-count {
