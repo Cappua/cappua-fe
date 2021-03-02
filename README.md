@@ -80,8 +80,8 @@ React?
 
 #### Brian Liu: [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/brian-liu-8356287b/)  [Email](mailto:brian.b.liu@gmail.com), [GitHub](https://github.com/the-color-bliu)
 #### Cooper Terrones: [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/cooper-terrones-39b508185/)  [Email](mailto:cooper.terrones@outlook.com), [GitHub](https://github.com/coopterrones)
-#### Demaceo Vincent Howard: [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/demaceo/)  [Email](mailto:sagegonzales15@gmail.com), [GitHub](https://github.com/demaceo)
-#### Eugene Theriault: [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/eugene-theriault/)  [Email](mailto:sagegonzales15@gmail.com), [GitHub](https://github.com/ETBassist)
+#### Demaceo Vincent Howard: [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/demaceo/)  [Email](mailto:hdemaceo@gmail.com), [GitHub](https://github.com/demaceo)
+#### Eugene Theriault: [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/eugene-theriault/)  [Email](mailto:hybridbassist@gmai.com), [GitHub](https://github.com/ETBassist)
 #### Nick King: [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/anickking/)  [Email](mailto:nickmaxking@gmail.com), [GitHub](https://github.com/nmking22)
 #### Sage Freeman-Gonzales: [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/sagefreemangonzales/)  [Email](mailto:sagegonzales15@gmail.com), [GitHub](https://github.com/SageOfCode)
 
