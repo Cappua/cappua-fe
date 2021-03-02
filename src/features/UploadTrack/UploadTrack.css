@@ -1,3 +1,9 @@
+.download-upload-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
 .upload-track-container {
   height: 30vh;
   width: 100%;
@@ -10,7 +16,7 @@
 
 .upload-track-form {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
