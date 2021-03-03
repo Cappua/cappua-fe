@@ -15,9 +15,7 @@ ReactDOM.render(
     <Auth0Provider
       domain={domain}
       clientId={clientId}
-      redirectUri={
-        "https://cappua-fe-bucket.s3-us-west-1.amazonaws.com/index.html"
-      }>
+      redirectUri={"https://cappua-fe.herokuapp.com/"}>
       <React.StrictMode>
         <Router>
           <App />
