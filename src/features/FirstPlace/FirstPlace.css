@@ -84,8 +84,8 @@
 }
 
 #winner-image {
-  height: 50vh;
-  width: 25vw;
+  height: 48vh;
+  width: 27vw;
   border-radius: 50%;
   filter: drop-shadow(1px 4px 4px #38383a);
 }
@@ -93,7 +93,7 @@
 /* WINNERS AUDIO STYLING */
 
 #audio-container {
-  width: 83%;
+  width: 90%;
   height: 18vh;
   border-radius: 25px;
   display: flex;

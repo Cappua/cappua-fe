@@ -1,12 +1,25 @@
 .all-cards-container {
   height: 100%;
-  width: 75%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin: 5vh 0;
+  margin: 10vh 0;
 }
+#track-card-title {
+  width: 90%;
+  font-size: 11vw;
+  font-family: "Permanent Marker";
+  font-weight: 100;
+  line-height: 100px;
+  word-spacing: 1vw;
+  letter-spacing: .5vw;
+  color: rgb(73, 72, 72);
+  text-align: center;
+  margin: 10vh 0 10vh 0;
+}
+
 .trackcards-container {
   display: flex;
   flex-direction: row;
@@ -17,7 +30,7 @@
   margin: 2.5vh 5vw;
   box-shadow: 1px 1px 15px 5px rgba(0, 0, 0, 0.05),
     -1px -1px 15px 5px rgba(0, 0, 0, 0.05);
-  width: 90%;
+  width: 70%;
   border-radius: 15px;
   transition: 0.6s;
 }
@@ -66,7 +79,7 @@
 
 .profile-img {
   width: 7vw;
-  height: 14vh;
+  height: 13vh;
   border-radius: 50%;
   box-shadow: 0px 6px 12px 0px #0000003d;
 }
