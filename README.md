@@ -26,15 +26,15 @@
 For usage on your local machine follow the instructions listed below:
 
 ```
-FILL ME
-npm start?
+git clone git@github.com:Cappua/cappua-fe.git
+npm start
 ```
 
 ## Dependencies
  
-FILL ME
-
-Packages, versions, etc.
+ - React Spring
+ - Apollo Client 
+ - Sass Loader 
 
 ## Learning Goals
 
@@ -58,9 +58,7 @@ Packages, versions, etc.
 
 ## Licenses
 
-FILL ME
-Javascript?
-React?
+- React JS 
 
 ## FrontEnd Team
 
