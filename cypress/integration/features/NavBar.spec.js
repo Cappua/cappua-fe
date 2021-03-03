@@ -1,6 +1,6 @@
 context("NavBar", () => {
   it("persist on every page", () => {
-    cy.visit("http://localhost:3000/index.html");
+    cy.visit("http://localhost:3000/");
     cy.get("<NavBar/>");
     cy.visit("http://localhost:3000/olympus");
     cy.get("<NavBar/>");
@@ -16,7 +16,7 @@ context("NavBar", () => {
   });
 
   it("has side-nav contents that navigates to their corresponding pages", () => {
-    cy.visit("http://localhost:3000/index.html");
+    cy.visit("http://localhost:3000/");
     cy.get(".fa-bars").click();
     cy.get("a.olympus-sidenav").click();
     cy.location("pathname").should("eq", "/olympus");
