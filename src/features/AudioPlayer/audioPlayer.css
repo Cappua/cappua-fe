@@ -41,7 +41,7 @@
   color: white;
   font-family: "Permanent Marker";
   font-weight: normal;
-  font-size: 3.5em;
+  font-size: 3.5vw;
 }
 .song-title:hover {
   color: rgb(241, 255, 47);
@@ -51,7 +51,7 @@
   color: white;
   font-family: "Rock Salt", cursive;
   font-weight: normal;
-  font-size: 1em;
+  font-size: 1.5vw;
 }
 .song-artist:hover {
   color: rgb(241, 255, 47);

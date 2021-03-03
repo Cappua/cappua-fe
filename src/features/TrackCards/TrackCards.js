@@ -33,17 +33,15 @@ const TrackCards = () => {
                 i <= 2 ? `fa fa-award top-${i}` : "fa fa-award invisible"
               }
             />
-            <div className="profile-img-container">
-              <img
+            <img
               alt={user.name}
-                src={
-                  user.image
-                    ? user.image
-                    : "https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg"
-                }
-                className="profile-img"
-              />
-            </div>
+              src={
+                user.image
+                  ? user.image
+                  : "https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg"
+              }
+              className="profile-img"
+            />
           </div>
           <div className="audio-container">
             <div className="track-username">
