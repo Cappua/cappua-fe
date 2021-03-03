@@ -23,7 +23,7 @@ const NavBar = () => {
 
   return (
     <div className="navbar-container">
-      <Link id="logo-container" to="/index.html">
+      <Link id="logo-container" to="/">
         <img className="logo" src={cappuaLogo} alt="logo" />
       </Link>
       <div className="navbar-contents">
