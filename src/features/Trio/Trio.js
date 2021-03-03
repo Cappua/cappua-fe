@@ -24,7 +24,7 @@ const Trio = () => {
     }
   }, [tracks]);
   const trioTabs = trio.map((card, i) => {
-    const { user, artist, audioPath, title, voteCount } = card;
+    const { user, title } = card;
     return (
       <section className="tab-container" key={nanoid()} id={nanoid()}>
         <a className="tab-img-container">

@@ -1,12 +1,14 @@
-.hall-of-fame {
+#hall-of-fame {
     height: 100%;
     width: 100%;
+    margin-bottom: 10vh;
 }
 
 #olympus-title {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex-wrap: wrap;
     color: #212527;
     text-align: center;
     font-size: 8vw;
@@ -78,13 +80,13 @@
 [type="radio"]:not(:checked)+label:after {
     content: "";
     border-radius: 2px;
-    height: 40px;
+    height: 50px;
     border-radius: 5px;
     padding: 5px;
     background-color: #e74c3c;
     position: absolute;
     left: 4px;
-    top: 7px;
+    top: 0px;
     z-index: -1;
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
@@ -123,7 +125,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     justify-content: space-evenly;
     width: 80vw;
 }
@@ -131,23 +133,58 @@
 .olympus-track {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    width: 50vw;
+    justify-content: flex-start;
+    align-items: center;
+    width: 45vw;
     border-radius: 50px;
-    font-size: 4vw;
     height: 20vh;
-    margin: 1vh;
+    margin-top: 6vh;
     background-color: #212527;
     box-shadow: 6px 7px 28px 0 rgba(16, 16, 16, 0.7);
-    -webkit-transition: all 3s linear;
-    transition: all 3s linear;
 }
 
 .olympian-img {
-    width: 10vw;
-    min-height: 20vh;
+    width: 8vw;
+    height: 16vh;
     border-radius: 50%;
-    box-shadow: 0px 0px 6px 0 rgba(255, 255, 255, 0.7);
+    margin: 0 1vw;
+    box-shadow: 0px 0px 6px 0 rgba(0, 0, 0, 0.7);
+}
+
+.olympian-audiotrack {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-evenly;
+    width: 70%;
+    // margin-left: 1vw;
+}
+
+.olympian-username {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    align-items: baseline;
+    color: whitesmoke;
+    margin: 0;
+    font-weight: 100;
+    line-height: 50px;
+}
+
+.olympian-song {
+    font-size: 1.5vw;
+    font-weight: 100;
+    margin: 0;
+}
+
+.olympian-artist {
+    font-size: 1vw;
+    font-weight: lighter;
+}
+.olympian-audiotrack audio {
+    width: 100%;
+    margin-bottom: .5vh;
 }
 
 .olympus-track:hover {
@@ -202,7 +239,23 @@
 
     .olympus {
         flex-direction: column;
+        justify-content: space-between;
         width: auto;
     }
 
+    .olympus-container label {
+        margin: 5vh 0;
+    }
+
+
+    .olympus-track {
+        height: 10vh;
+    }
+
+    .olympian-img {
+        width: 5vw;
+        height: 10vh;
+        border-radius: 50%;
+        box-shadow: 0px 0px 6px 0 rgba(255, 255, 255, 0.7);
+    }
 }

@@ -1,15 +1,13 @@
 import "./Winners.css";
-import AudioPlayer from "../AudioPlayer/AudioPlayer.js";
 import FirstPlace from "../FirstPlace/FirstPlace.js";
-import SoundWave from "../SoundWave/SoundWave";
 import React, { useEffect, useState } from "react";
 import { useQuery } from "@apollo/client";
 import { GET_ALL_VERSES } from "../../GraphQL/queries.js";
 
-function Winners() {
+const Winners= () => {
   const [tracks, setTracks] = useState(null);
   const [contenders, setContenders] = useState([]);
-  const { error, loading, data } = useQuery(GET_ALL_VERSES);
+  const { data } = useQuery(GET_ALL_VERSES);
 
   useEffect(() => {
     if (data) {
@@ -50,7 +48,6 @@ function Winners() {
           </div>
           <div className="play-holder">
             <h1 className="ordinal">{ordinal(i + 2)}</h1>
-            <i className="fa fa-play play-button" />
           </div>
           <div className="username-holder">
             <div>
@@ -61,7 +58,11 @@ function Winners() {
         </div>
         <div className="contender-votes">
           <img className="contender-icon" src={user.image}></img>
-          <SoundWave />
+          <audio className="contender-audiotrack" controls>
+            <source
+              src={`http://d1nb1e3bp5hs25.cloudfront.net${audioPath}`}
+            />
+          </audio>
           <div className="vote-count">
             <i className="fas fa-heart heart-icon"></i>
             {voteCount}
@@ -77,7 +78,6 @@ function Winners() {
         {getPreviousMonth()}'s Competition<b>Winners</b>
       </header>
       <FirstPlace />
-      <AudioPlayer />
       <h1 id="runner-ups-title">- Runner Ups -</h1>
       <section id="runner-ups">{winners}</section>
     </div>

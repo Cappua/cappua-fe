@@ -79,14 +79,16 @@ const UploadTrack = () => {
             className="upload-track-form"
             onSubmit={(event) => {
               handleSubmit(event);
-            }}>
+            }}
+          >
             <div className="download-upload-container">
               <div className="download-track-container">
                 <a
                   id="download-link"
                   href={`http://d1nb1e3bp5hs25.cloudfront.net${competition.trackPath}`}
                   title="Download"
-                  download>
+                  download
+                >
                   <i className="fas fa-arrow-circle-down down" id="icon" />
                 </a>
               </div>
@@ -128,7 +130,8 @@ const UploadTrack = () => {
             <button
               onClick={displayUploadMessage}
               className={file ? "submit-button" : "submit-button disabled"}
-              title="Submit">
+              title="Submit"
+            >
               Submit
             </button>
             <div id="upload-message" className="upload-message">
@@ -143,14 +146,16 @@ const UploadTrack = () => {
             className="upload-track-form"
             onSubmit={() => {
               displayPleaseLoginAlert();
-            }}>
+            }}
+          >
             <div className="download-upload-container">
               <div className="download-track-container">
                 <a
                   id="download-link"
                   href={`http://d1nb1e3bp5hs25.cloudfront.net${competition.trackPath}`}
                   title="Download"
-                  download>
+                  download
+                >
                   <i className="fas fa-arrow-circle-down down" id="icon" />
                 </a>
               </div>
@@ -168,20 +173,32 @@ const UploadTrack = () => {
                 accept=".mp3,audio/*"
               />
             </div>
-            <div className="filename-input-container">
-              <label style={{ margin: "10px" }} htmlFor="filename-input">
-                Filename
+            <div
+              className="filename-input-container"
+              style={{ marginBottom: "3vh", display: "flex", flexDirection:"column", alignItems: "start" }}
+            >
+              <label
+                style={{
+                  marginRight: "1.5vw",
+                  fontWeight: "200",
+                  fontSize: "1.4vw",
+                  textAlign: 'left',
+                  // textDecoration: "underline",
+                }}
+                htmlFor="filename-input"
+              >
+                Track Title:
               </label>
               <input
                 id="filename-input"
                 type="text"
-                placeholder="i.e. Song Name"
+                placeholder="Type in the title of your verse here.."
                 style={{
                   outline: "none",
-                  width: "7.5vw",
-                  height: "2.5vh",
-                  margin: "0 0 2vh",
-                  border: "2px solid black",
+                  width: "14.5vw",
+                  height: "4vh",
+                  padding: "5px",
+                  border: "1px solid black",
                   borderRadius: "5px",
                 }}
                 onChange={(event) => {
@@ -191,7 +208,8 @@ const UploadTrack = () => {
             </div>
             <button
               className={file ? "submit-button" : "submit-button disabled"}
-              title="Submit">
+              title="Submit"
+            >
               Submit
             </button>
           </form>

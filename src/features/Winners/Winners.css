@@ -55,7 +55,7 @@ header b {
 .contender-container {
   display: flex;
   flex-direction: column;
-  width: 25vw;
+  width: 35vw;
   height: 35vh;
   border-radius: 15px;
   box-shadow: 0px 6px 12px 0px #0000003d;
@@ -102,11 +102,6 @@ header b {
   text-shadow: 1px 4px 1px palevioletred;
 }
 
-.play-button {
-  display: none;
-  transition: 1s;
-}
-
 .ordinal {
   letter-spacing: 20px;
   font-weight: lighter;
@@ -115,17 +110,6 @@ header b {
   text-shadow: 0px 3px 1px palevioletred;
   mix-blend-mode: hard-light;
   font-size: calc(4rem +10vw);
-}
-
-.play-button:hover {
-  transform: scale(1.2);
-}
-
-.contender-container:hover .play-button {
-  display: flex;
-}
-.contender-container:hover .ordinal {
-  display: none;
 }
 
 .username-holder {
@@ -157,26 +141,34 @@ header b {
 
 .contender-votes {
   width: 95%;
-  margin: 1vh;
+  margin: 2vh 0 0 0;
   display: flex;
-  font-size: 3vh;
+  font-size: 3.5vh;
   flex-direction: row;
   justify-content: space-between;
 }
 
 .contender-icon {
-  height: 4vh;
-  width: 2vw;
+  height: 5.5vh;
+  width: 2.75vw;
   border-radius: 50%;
-  margin-left: .5vw;
+  margin-left: 1vw;
 }
 
 .vote-count {
   color: black;
-  margin: 0vh 0.5vw;
 }
 
 .heart-icon {
   color: rgb(156, 5, 5);
-  padding-right: .5vw;
+  padding-right: 0.5vw;
+  font-size: 3vh;
+}
+
+.contender-audiotrack {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 70%;
+  height: 3vh;
 }

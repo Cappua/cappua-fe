@@ -2,40 +2,88 @@ import "./Olympus.scss";
 import { useQuery } from "@apollo/client";
 import { GET_ALL_VERSES } from "../../GraphQL/queries.js";
 import React, { useEffect, useState } from "react";
+import { nanoid } from "nanoid";
 
 const Olympus = () => {
-  const [olympus, setOlympus] = useState([]);
-  const { error, loading, data } = useQuery(GET_ALL_VERSES);
-  const [january, setJanuary] = useState([]);
-  const [february, setFebruary] = useState([]);
+  const [january, setJanuary] = useState(null);
+  const [february, setFebruary] = useState(null);
+  const [tracks, setTracks] = useState(null);
+  const { data } = useQuery(GET_ALL_VERSES);
 
   useEffect(() => {
     if (data) {
-      setOlympus(data.verses);
-      setJanuary([data.verses[0]]);
-      setFebruary([data.verses[5]]);
+      setTracks(data.verses);
     }
   }, [data]);
 
-  const janTracks = january.map((card, i) => {
-    const { user, artist, audioPath, title, voteCount } = card;
-    return (
-      <div className="olympus-track january" key={i} id={i}>
-        <img className="olympian-img" src={user.image}></img>
-        <div>{user.name}</div>
-      </div>
-    );
-  });
+  useEffect(() => {
+    if (tracks) {
+      let januaryTracks = tracks.filter((track) => {
+        return track.competitionId === 3;
+      });
+      let sortedJan = januaryTracks.slice().sort((a, b) => {
+        return b.voteCount - a.voteCount;
+      });
 
-  const febTracks = february.map((card, i) => {
-    const { user, artist, audioPath, title, voteCount } = card;
-    return (
-      <div className="olympus-track february" key={i} id={i + 1}>
-        <img className="olympian-img" src={user.image}></img>
-        <div>{user.name}</div>
-      </div>
-    );
-  });
+      setJanuary(sortedJan[0]);
+    }
+  }, [tracks]);
+
+  useEffect(() => {
+    if (tracks) {
+      let februaryTracks = tracks.filter((track) => {
+        return track.competitionId === 2;
+      });
+      let sortedFeb = februaryTracks.slice().sort((a, b) => {
+        return b.voteCount - a.voteCount;
+      });
+      setFebruary(sortedFeb[0]);
+    }
+  }, [tracks]);
+
+  const febTracks = (
+    <>
+      {february && (
+        <div className="olympus-track february" key={nanoid()}>
+          <img className="olympian-img" src={february.user.image}></img>
+          <div className="olympian-audiotrack">
+            <div className="olympian-username">
+              <h1 className="olympian-song">{february.title}</h1>
+              <h2 className="olympian-artist">{february.user.name}</h2>
+            </div>
+            <audio className="audiotrack" controls>
+              <source
+                src={`http://d1nb1e3bp5hs25.cloudfront.net${february.audioPath}`}
+              />
+              Your browser does not support the <code>audio</code> element.
+            </audio>
+          </div>
+        </div>
+      )}
+    </>
+  );
+
+  const janTracks = (
+    <>
+      {january && (
+        <div className="olympus-track january" key={nanoid()}>
+          <img className="olympian-img" src={january.user.image}></img>
+          <div className="olympian-audiotrack">
+            <div className="olympian-username">
+              <h1 className="olympian-song">{january.title}</h1>
+              <h2 className="olympian-artist">{january.user.name}</h2>
+            </div>
+            <audio className="audiotrack" controls>
+              <source
+                src={`http://d1nb1e3bp5hs25.cloudfront.net${january.audioPath}`}
+              />
+              Your browser does not support the <code>audio</code> element.
+            </audio>
+          </div>
+        </div>
+      )}
+    </>
+  );
 
   return (
     <section id="hall-of-fame">

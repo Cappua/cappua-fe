@@ -25,17 +25,16 @@ const TrackCards = () => {
     const { user, id, audioPath, title, voteCount } = card;
 
     return (
-      <section key={i} id={id} className="trackcards-container">
-        <div className="trackcards">
-          <div className="user-order">
-            <i
-              className={
-                i <= 2 ? `fa fa-award top-${i}` : "fa fa-award invisible"
-              }
-            />
-            <div className="profile-img-container">
+        <section key={i} id={id} className="trackcards-container">
+          <div className="trackcards">
+            <div className="user-order">
+              <i
+                className={
+                  i <= 2 ? `fa fa-award top-${i}` : "fa fa-award invisible"
+                }
+              />
               <img
-              alt={user.name}
+                alt={user.name}
                 src={
                   user.image
                     ? user.image
@@ -44,27 +43,27 @@ const TrackCards = () => {
                 className="profile-img"
               />
             </div>
-          </div>
-          <div className="audio-container">
-            <div className="track-username">
-              <h1 className="track-title">{title}</h1>
-              <h1 className="track-artist">{user.name}</h1>
+            <div className="audio-container">
+              <div className="track-username">
+                <h1 className="track-title">{title}</h1>
+                <h1 className="track-artist">{user.name}</h1>
+              </div>
+              <audio className="audiotrack" controls>
+                <source
+                  src={`http://d1nb1e3bp5hs25.cloudfront.net${audioPath}`}
+                />
+                Your browser does not support the <code>audio</code> element.
+              </audio>
             </div>
-            <audio className="audiotrack" controls>
-              <source
-                src={`http://d1nb1e3bp5hs25.cloudfront.net${audioPath}`}
-              />
-              Your browser does not support the <code>audio</code> element.
-            </audio>
+            <div className="play-count">
+              <h1 className="votes" id={user.id}>
+                {voteCount}
+              </h1>
+              <Upvote userId={user.id} verseId={id} />
+            </div>
           </div>
-          <div className="play-count">
-            <h1 className="votes" id={user.id}>
-              {voteCount}
-            </h1>
-            <Upvote userId={user.id} verseId={id} />
-          </div>
-        </div>
-      </section>
+        </section>
+      
     );
   });
   if (trackCards.length === 0) {
@@ -78,7 +77,12 @@ const TrackCards = () => {
       </section>
     );
   } else {
-    return <section className="all-cards-container">{trackCards}</section>;
+    return (
+      <section className="all-cards-container">
+        <header id="track-card-title">- The Ranks -</header>
+        {trackCards}
+      </section>
+    );
   }
 };
 
