@@ -1,7 +1,7 @@
 import React from "react";
 import "./Banner.css";
 
-const Banner =() => {
+const Banner = () => {
   return (
     <div className="banner-container">
       <div className="banner">
@@ -9,6 +9,6 @@ const Banner =() => {
       </div>
     </div>
   );
-}
+};
 
 export default Banner;

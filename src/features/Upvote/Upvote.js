@@ -12,6 +12,10 @@ const Upvote = (props) => {
     const verseId = parseInt(props.verseId);
     const userId = parseInt(props.userId);
     upvote({ variables: { verseId: verseId, userId: userId } });
+    const voteConfirmed = window.confirm("You vote has been recorded!");
+    if (voteConfirmed === true) {
+      window.location.reload();
+    }
   };
 
   const showPleaseLoginMessage = () => {

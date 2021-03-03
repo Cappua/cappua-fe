@@ -4,7 +4,6 @@ import NavBar from "./features/NavBar/NavBar.js";
 import Banner from "./features/Banner/Banner.js";
 import Body from "./features/Body/Body.js";
 import Trio from "./features/Trio/Trio.js";
-import Announcement from "./features/Announcement/Announcement.js";
 import Competition from "./features/Competition/Competition.js";
 import AudioPlayer from "./features//AudioPlayer/AudioPlayer.js";
 import Winners from "./features/Winners/Winners";
@@ -53,7 +52,6 @@ const App = () => {
                     <Body />
                     <Trio />
                     <AudioPlayer />
-                    <Announcement />
                   </>
                 )}
               />
