@@ -4,10 +4,10 @@ import React, { useEffect, useState } from "react";
 import { useQuery } from "@apollo/client";
 import { GET_ALL_VERSES } from "../../GraphQL/queries.js";
 
-function Winners() {
+const Winners= () => {
   const [tracks, setTracks] = useState(null);
   const [contenders, setContenders] = useState([]);
-  const { error, loading, data } = useQuery(GET_ALL_VERSES);
+  const { data } = useQuery(GET_ALL_VERSES);
 
   useEffect(() => {
     if (data) {

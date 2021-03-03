@@ -2,7 +2,7 @@ import React from "react";
 import "./Announcement.css";
 import { Link } from "react-router-dom";
 
-export default function Announcement() {
+const Announcement = () => {
   return (
     <div className="announce-container">
       <img
@@ -23,3 +23,5 @@ export default function Announcement() {
     </div>
   );
 }
+
+export default Announcement

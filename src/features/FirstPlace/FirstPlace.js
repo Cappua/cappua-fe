@@ -2,7 +2,7 @@ import "./FirstPlace.css";
 import React, { useEffect, useState, useContext } from "react";
 import { useQuery } from "@apollo/client";
 import { GET_ALL_VERSES } from "../../GraphQL/queries.js";
-import AudioPlayer from "../AudioPlayer/AudioPlayer";
+
 
 const FirstPlace = () => {
   const [tracks, setTracks] = useState(null);
@@ -26,7 +26,6 @@ const FirstPlace = () => {
       setSortedTrack(sorted[0]);
     }
   }, [tracks]);
-  console.log(sortedTrack);
   return (
     <>
       {sortedTrack && (

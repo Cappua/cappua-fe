@@ -1,12 +1,10 @@
 import React from "react";
 import "./Error.css";
-import cappuaLogo from "../../assets/cappualogo.png";
 
 const Error = () => {
   return (
     <div
       className="error-page"
-      // style={{ backgroundImage: `url(${cappuaLogo})` }}
     >
       <div className="error">ERROR...😬</div>
     </div>
