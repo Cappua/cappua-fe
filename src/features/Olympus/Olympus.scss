@@ -8,6 +8,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex-wrap: wrap;
     color: #212527;
     text-align: center;
     font-size: 8vw;
@@ -79,7 +80,7 @@
 [type="radio"]:not(:checked)+label:after {
     content: "";
     border-radius: 2px;
-    height: 40px;
+    height: 50px;
     border-radius: 5px;
     padding: 5px;
     background-color: #e74c3c;
@@ -146,7 +147,7 @@
     width: 8vw;
     height: 16vh;
     border-radius: 50%;
-    margin-left: 1vw;
+    margin: 0 1vw;
     box-shadow: 0px 0px 6px 0 rgba(0, 0, 0, 0.7);
 }
 
@@ -172,7 +173,7 @@
 }
 
 .olympian-song {
-    font-size: 2vw;
+    font-size: 1.5vw;
     font-weight: 100;
     margin: 0;
 }
