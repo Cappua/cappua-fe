@@ -53,7 +53,6 @@ const App = () => {
                     <Body />
                     <AudioPlayer />
                     <Trio />
-                    <Announcement />
                   </>
                 )}
               />
