@@ -60,7 +60,7 @@ const Body = () => {
           <div id="audio-container">
             <div id="track-username">
               <h1 id="track-title">{sortedTrack.title}</h1>
-              <h1 id="track-artist">{sortedTrack.user.name}</h1>
+              <h1 id="track-artist">by {sortedTrack.user.name}</h1>
             </div>
             <audio id="audiotrack" controls>
               <source

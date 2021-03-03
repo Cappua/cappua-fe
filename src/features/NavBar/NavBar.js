@@ -11,11 +11,11 @@ const NavBar = () => {
   const [open, setOpen] = useState(false);
   const toggleMenu = () => {
     if (open) {
-      navRef.current.style.width = "0";
+      navRef.current.style.width = "0%";
       navIconRef.current.style.color = "black";
       setOpen(false);
     } else {
-      navRef.current.style.width = "25%";
+      navRef.current.style.width = "45vw";
       navIconRef.current.style.color = "whitesmoke";
       setOpen(true);
     }
