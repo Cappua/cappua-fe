@@ -1,4 +1,3 @@
-import { queryByAttribute } from "@testing-library/react";
 
 context("UploadTrack", () => {
   it("contains upload and download icons", () => {

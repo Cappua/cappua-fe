@@ -44,7 +44,7 @@ const Profile = () => {
 
   if (!isAuthenticated) {
     return (
-      <button className="auth0" onClick={() => loginWithRedirect()}>
+      <button className="auth0" data-cy="login-button" onClick={() => loginWithRedirect()}>
         Log In
       </button>
     );
