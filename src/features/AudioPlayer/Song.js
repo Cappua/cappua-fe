@@ -4,7 +4,7 @@ import "./audioPlayer.css";
 
 const Song = () => {
   const competitionInfo = useContext(CompetitionContext);
-  console.log(competitionInfo);
+
   return (
     <div className="song">
       <h1 className="song-title">{competitionInfo.title}</h1>
