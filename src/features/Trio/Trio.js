@@ -7,7 +7,7 @@ import { GET_ALL_VERSES } from "../../GraphQL/queries.js";
 const Trio = () => {
   const [tracks, setTracks] = useState(null);
   const [trio, setTrio] = useState([]);
-  const { error, loading, data } = useQuery(GET_ALL_VERSES);
+  const { data } = useQuery(GET_ALL_VERSES);
 
   useEffect(() => {
     if (data) {
