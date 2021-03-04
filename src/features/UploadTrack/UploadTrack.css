@@ -3,6 +3,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin-top: 8vh;
 }
 .upload-track-container {
   height: 30vh;
@@ -30,7 +31,7 @@
   padding: 1em;
   font-size: 1.25em;
   margin: 2em;
-  border-radius: 50px;
+  border-radius: 50%;
   box-shadow: 0px 6px 12px 0px #0000003d;
   transition: 0.6s;
   font-weight: bolder;
@@ -47,7 +48,7 @@
 }
 
 #icon {
-  font-size: 50px;
+  font-size: 5vw;
 }
 
 .upload-input {
@@ -58,7 +59,7 @@
   padding: 1em;
   font-size: 1.25em;
   margin: 2em;
-  border-radius: 50px;
+  border-radius: 50%;
   box-shadow: 0px 6px 12px 0px #0000003d;
   transition: 0.6s;
   font-weight: bolder;
@@ -75,7 +76,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.55em;
+  font-size: 1.55vw;
   flex-direction: row;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition: 1.3s;
@@ -100,4 +101,81 @@
   font-size: 1.25em;
   font-weight: bolder;
   animation: none;
+}
+
+#uploader {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+
+.filename-input-container {
+  margin-bottom: 3vh;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+#track-input-title {
+  margin-right: 1.5vw;
+  font-weight: 200;
+  font-size: 1.4vw;
+  text-align: left;
+  /* text-decoration: underline; */
+}
+#filename-input {
+  outline: none;
+  width: 14.5vw;
+  height: 4vh;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 1700px) {
+  .download-upload-container {
+    margin: 3vh;
+  }
+  #directions {
+    margin-bottom: 5vh;
+  }
+
+  #track-input-title {
+    font-size: 2vw;
+  }
+  #filename-input {
+    width: 18vw;
+    border-radius: 10px;
+  }
+
+  .submit-button{
+    width: 18vw;
+    font-size: 2vw;
+  }
+  #icon {
+    font-size: 7vw;
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .download-upload-container {
+    margin: 1vh;
+  }
+  .submit-button{
+    height: 5vh;
+    width: 30vw;
+    font-size: 3.5vw;
+  }
+  #icon {
+    font-size: 10vw;
+  }
+    #track-input-title {
+    font-size: 4vw;
+  }
+    #filename-input {
+    width: 30vw;
+    height: 3vh;
+    border-radius: 10px;
+  }
 }

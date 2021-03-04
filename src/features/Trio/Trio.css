@@ -39,7 +39,7 @@
   height: 60vh;
   font-family: "Permanent Marker";
   border-radius: 15px;
-  width: 24vw;
+  width: 25vw;
   padding: 10px;
   transition: 0.7s;
 }
@@ -133,7 +133,7 @@
   cursor: url("https://img.icons8.com/material/24/000000/headphones.png"), auto;
   color: black;
 }
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1600px) {
   .trio-container {
     display: flex;
     flex-direction: column;
@@ -141,6 +141,14 @@
     margin: 5vh 0vh 0;
     text-decoration: none;
   }
+
+  .tab-img-container {
+    max-width: 20vw;
+    max-height: 17vh;
+    min-height: 17vh;
+    min-width: 20vw;
+  }
+
   #featured-title {
     font-size: 7vw;
     font-weight: 100;
@@ -161,7 +169,7 @@
     box-shadow: 0px 6px 12px 0px #0000003d;
     height: 60vh;
     border-radius: 15px;
-    width: 24vw;
+    width: 30vw;
     padding: 10px;
     transition: 0.7s;
   }
@@ -174,11 +182,11 @@
     font-size: 2.5vw;
   }
   #tab-artist {
-    font-size: 2vw;
+    font-size: 3vw;
   }
   #tab-song {
     font-weight: lighter;
-    font-size: 2vw;
+    font-size: 4vw;
     padding: 0vh 2.5vw 5vh;
   }
   .tab-btn {
@@ -193,7 +201,14 @@
     margin: 0;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
+  .tab-img-container {
+    max-width: 18vw;
+    max-height: 14vh;
+    min-height: 14vh;
+    min-width: 18vw;
+  }
+
   #featured-title {
     font-size: 6vw;
     font-family: "Permanent Marker", cursive;
@@ -207,20 +222,22 @@
     height: fit-content;
   }
   .tab-container {
-    height: 50vh;
+    height: 40vh;
+        width: 25vw;
+
   }
   #tab-song {
-    font-size: 0.7em;
+    font-size: 1.5em;
   }
   .tab-btn {
     background-color: rgba(31, 29, 39, 0.925);
     border-radius: 5px;
     color: white;
-    width: fit-content;
+    width: 20vw;
     align-self: center;
-    font-size: 0.5em;
+    font-size: 2.5vw;
     border: none;
     margin: none;
-    padding: 10px;
+    padding: 5px;
   }
 }

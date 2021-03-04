@@ -172,3 +172,19 @@ header b {
   width: 70%;
   height: 3vh;
 }
+
+
+@media screen and (max-width: 1455px) {
+
+  #audio-container {
+    height: 50%;
+  }
+
+  #track-title {
+    font-size: 1vw;
+  }
+
+  #track-artist {
+    font-size: .5vw;
+  }
+}

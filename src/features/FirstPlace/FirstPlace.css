@@ -37,7 +37,7 @@
 }
 
 #medallion {
-  font-size: 15vh;
+  font-size: 15vw;
   text-shadow: 0px 3px 1px rgb(0, 0, 0);
 }
 #artist-song {
@@ -93,16 +93,19 @@
 /* WINNERS AUDIO STYLING */
 
 #audio-container {
-  width: 90%;
-  height: 18vh;
+  width: 85%;
+  height: 17vh;
   border-radius: 25px;
   display: flex;
   justify-content: center;
-  padding: .5vw;
+  margin-top: 1vh;
+  padding: 0.5vw;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
-  background-color: #38383a;
+  background-color: whitesmoke;
+  box-shadow: 1px 1px 15px 5px rgba(0, 0, 0, 0.05),
+    -1px -1px 15px 5px rgba(0, 0, 0, 0.05);
 }
 #audiotrack {
   height: 6.5vh;
@@ -110,29 +113,87 @@
   display: flex;
   flex-direction: row;
   outline: none;
+  margin-bottom: 1vh;
 }
 
 #track-username {
   margin: 0;
-  height: 50%;
+  /* height: 50%; */
   width: 70%;
-  color: white;
+  color: #38383a;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-    line-height: 75px;
-  align-items: baseline;
+  /* line-height: 75px; */
+  align-items: flex-end;
   letter-spacing: 5px;
   text-align: center;
 }
 
 #track-title {
   font-weight: 200;
-  font-size: 4.5vh;
+  font-size: 3.5vw;
   margin: 0;
 }
 #track-artist {
-  font-size: 3.5vh;
+  font-size: 3vw;
   font-weight: lighter;
   margin: 0;
+}
+
+@media screen and (max-width: 1455px) {
+  #winner-image {
+    height: 28vh;
+    width: 20vw;
+  }
+  #audio-container {
+    height: 50%;
+  }
+
+  #track-title {
+    font-size: 5vw;
+  }
+
+  #track-artist {
+    font-size: 4vw;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  #winner-image {
+    height: 20vh;
+    width: 20vw;
+  }
+  #winner-info {
+    width: 100%;
+  }
+  #first-place-song {
+    font-size: 5.5vw;
+  }
+
+  #first-place-artist {
+    font-size: 3.5vw;
+  }
+}
+
+@media screen and (max-width: 755px) {
+  #winner-image {
+    height: 15vh;
+    width: 15vw;
+  }
+  #track-title {
+    font-size: 4vw;
+  }
+
+  #track-artist {
+    font-size: 3vw;
+  }
+  #audiotrack {
+    height: 4vh;
+    /* margin-bottom: .5vh; */
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    outline: none;
+  }
 }

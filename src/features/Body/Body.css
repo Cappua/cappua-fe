@@ -1,5 +1,5 @@
-.body-fridge{
-  display:flex;
+.body-fridge {
+  display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
@@ -38,7 +38,7 @@
 
 .month {
   font-size: 4vw;
-    letter-spacing: 0.5vw;
+  letter-spacing: 0.5vw;
 
   margin: 0;
   color: #212527;
@@ -69,17 +69,24 @@
   .winner-name {
     font-size: 6vw;
   }
+  .body-image {
+  height: 25vh;
+  width: 20vw;
+}
 }
 
 @media screen and (max-width: 1186px) {
   .body-text {
-    width: 35%;
+    width: 55%;
   }
   .month {
     font-size: 4vh;
   }
   .winner-details {
     font-size: 3vh;
+  }
+  .body-image {
+    display: none;
   }
 }
 
@@ -98,38 +105,37 @@
     justify-content: center;
     text-align: left;
     margin-left: 5vw;
-    width: 35%;
+    width: 90%;
   }
   .winner-name {
-    font-size: 6vw;
+    font-size: 8vw;
   }
   .month {
-    font-size: 5vw;
+    font-size: 7vw;
   }
   .winner-details {
     font-size: 2vh;
-  }
-  .body-image {
-    height: 40vh;
-    width: 40vw;
   }
 }
 
 @media screen and (max-width: 775px) {
   .body-title {
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    /* font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif; */
     font-weight: 100;
     word-spacing: 0px;
     letter-spacing: 0px;
     color: rgb(73, 72, 72);
   }
   .winner-name {
-    font-size: 3.5em;
+    font-size: 8.5vw;
   }
   .month {
-    font-size: 1.5em;
+    font-size: 6vw;
   }
   .winner-name:after {
     content: "";
+  }
+  .body-image {
+    display: none;
   }
 }

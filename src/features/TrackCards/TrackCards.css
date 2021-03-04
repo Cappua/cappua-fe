@@ -14,7 +14,7 @@
   font-weight: 100;
   line-height: 100px;
   word-spacing: 1vw;
-  letter-spacing: .5vw;
+  letter-spacing: 0.5vw;
   color: rgb(73, 72, 72);
   text-align: center;
   margin: 10vh 0 10vh 0;
@@ -55,8 +55,6 @@
   width: 5%;
 }
 
-
-
 .trackcards-container:hover .track-title {
   color: white;
 }
@@ -75,7 +73,6 @@
     transform: translateX(-85%);
   }
 }
-
 
 .profile-img {
   width: 7vw;
@@ -206,4 +203,37 @@
   word-spacing: 3vw;
   margin: 0;
   font-weight: lighter;
+}
+
+@media screen and (max-width: 1400px) {
+
+  #track-card-title {
+  margin: 10vh 0 3vh;
+}
+  .all-cards-container {
+    margin: 0;
+  }
+
+  .trackcards-container{
+    width: 90%;
+  }
+  .trackcards {
+    height: 5vh;
+  }
+  .profile-img {
+    width: 7vw;
+    height: 7vh;
+  }
+
+  .fa-award {
+    font-size: 4vh;
+  }
+
+  .track-username {
+    font-size: 3vw;
+  }
+
+  .play-count{
+    font-size: 4vw;
+  }
 }

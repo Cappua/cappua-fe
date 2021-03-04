@@ -21,11 +21,11 @@
   box-shadow: 0px 6px 12px 0px #0000003d;
   color: rgb(83, 83, 245);
 }
-.artwork {
+/* .artwork {
   height: 150px;
   width: 150px;
   margin: 1vw;
-}
+} */
 #audio {
   width: 50%;
   outline: none;
@@ -56,24 +56,23 @@
 .song-artist:hover {
   color: rgb(241, 255, 47);
 }
-@media screen and (max-width: 800px) {
-  audio {
+@media screen and (max-width: 1000px) {
+  #audio {
     width: 80%;
   }
   .player {
     flex-direction: column;
     text-align: center;
+    height: 7vh;
   }
-  .artwork {
-    height: 15vh;
-    width: 25vw;
-    margin: 10px;
+  .song-title {
+    font-size: 3vw;
+  }
+  .song-artist {
+    font-size: 1.5vw;
   }
 }
 @media screen and (max-width: 500px) {
-  audio {
-    width: 80%;
-  }
   .song-title {
     font-size: 2.5em;
   }

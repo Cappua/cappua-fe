@@ -96,7 +96,6 @@ const UploadTrack = () => {
 
               <input
                 id="uploader"
-                style={{ visibility: "hidden", height: "0", width: "0" }}
                 type="file"
                 onChange={(event) => {
                   handleFileChange(event);
@@ -112,14 +111,6 @@ const UploadTrack = () => {
                 id="filename-input"
                 type="text"
                 placeholder="i.e. Song Name"
-                style={{
-                  outline: "none",
-                  width: "7.5vw",
-                  height: "2.5vh",
-                  margin: "0 0 2vh",
-                  border: "2px solid black",
-                  borderRadius: "5px",
-                }}
                 onChange={(event) => {
                   handleTextChange(event);
                 }}
@@ -149,18 +140,23 @@ const UploadTrack = () => {
                 <a
                   id="download-link"
                   href={`http://d1nb1e3bp5hs25.cloudfront.net${competition.trackPath}`}
-                  title="Download"
-                  download>
+                  title="Download Featured Track"
+                  download
+                >
+
                   <i className="fas fa-arrow-circle-down down" id="icon" />
                 </a>
               </div>
-              <label htmlFor="uploader" className="upload-input" title="Upload">
+              <label
+                htmlFor="uploader"
+                className="upload-input"
+                title="Upload Your Verse"
+              >
                 <i className="fas fa-arrow-circle-up up" id="icon" />
               </label>
 
               <input
                 id="uploader"
-                style={{ visibility: "hidden", height: "0", width: "0" }}
                 type="file"
                 onChange={(event) => {
                   handleFileChange(event);
@@ -168,37 +164,14 @@ const UploadTrack = () => {
                 accept=".mp3,audio/*"
               />
             </div>
-            <div
-              className="filename-input-container"
-              style={{
-                marginBottom: "3vh",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "start",
-              }}>
-              <label
-                style={{
-                  marginRight: "1.5vw",
-                  fontWeight: "200",
-                  fontSize: "1.4vw",
-                  textAlign: "left",
-                  // textDecoration: "underline",
-                }}
-                htmlFor="filename-input">
+            <div className="filename-input-container">
+              <label id="track-input-title" htmlFor="filename-input">
                 Track Title:
               </label>
               <input
                 id="filename-input"
                 type="text"
                 placeholder="Type in the title of your verse here.."
-                style={{
-                  outline: "none",
-                  width: "14.5vw",
-                  height: "4vh",
-                  padding: "5px",
-                  border: "1px solid black",
-                  borderRadius: "5px",
-                }}
                 onChange={(event) => {
                   handleTextChange(event);
                 }}
