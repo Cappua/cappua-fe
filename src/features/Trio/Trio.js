@@ -17,14 +17,18 @@ const Trio = () => {
 
   useEffect(() => {
     if (tracks) {
-      let sorted = tracks.slice().sort((a, b) => {
+      let competitionTracks = tracks.filter((track) => {
+        return track.competitionId === 3
+      })
+      let sorted = competitionTracks.slice().sort((a, b) => {
         return b.voteCount - a.voteCount;
       });
-      setTrio([sorted[0], sorted[1], sorted[2]]);
+      setTrio(sorted);
     }
   }, [tracks]);
   const trioTabs = trio.map((card, i) => {
     const { user, title } = card;
+    while(i < 3){
     return (
       <section className="tab-container" key={nanoid()} id={nanoid()}>
         <a className="tab-img-container">
@@ -40,6 +44,7 @@ const Trio = () => {
         </div>
       </section>
     );
+    }
   });
 
   return (
