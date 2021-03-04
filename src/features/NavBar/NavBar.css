@@ -19,6 +19,7 @@
   padding: 0;
   margin: 0;
 }
+
 @media screen and (min-width: 1110px) {
   .menu-container {
     display: none;
@@ -37,7 +38,7 @@
     right: 1vw;
   }
   .navbar-contents a {
-    font-size: 1.6em;
+    font-size: 1.6vw;
     text-decoration: none;
     padding: 1vw;
     border-radius: 5px;
