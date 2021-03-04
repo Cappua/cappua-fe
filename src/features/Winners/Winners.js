@@ -75,7 +75,7 @@ const Winners= () => {
   return (
     <div className="winners-page">
       <header>
-        {getPreviousMonth()}'s Competition<b>Winners</b>
+        {getPreviousMonth()}'s<b>Winners</b>
       </header>
       <FirstPlace />
       <h1 id="runner-ups-title">- Runner Ups -</h1>

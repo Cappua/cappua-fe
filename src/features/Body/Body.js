@@ -17,7 +17,10 @@ const Body = () => {
 
   useEffect(() => {
     if (tracks) {
-      let sorted = tracks.slice().sort((a, b) => {
+      let februaryTracks = tracks.filter((track) => {
+        return track.competitionId === 2;
+      })
+      let sorted = februaryTracks.slice().sort((a, b) => {
         return b.voteCount - a.voteCount;
       });
       setSortedTrack(sorted[0]);
