@@ -11,5 +11,5 @@ export const errorLink = onError(({ graphqlErrors, networkError }) => {
 
 export const client = new ApolloClient({
   cache: new InMemoryCache(),
-  uri: "http://cappua-be-dev.us-west-1.elasticbeanstalk.com/graphql",
+  uri: "https://cappua-be.herokuapp.com/graphql",
 });
