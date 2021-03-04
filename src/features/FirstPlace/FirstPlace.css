@@ -72,7 +72,7 @@
 }
 
 #winner-details {
-  font-size: 1.8em;
+  font-size: 2.8vw;
   height: 90%;
   max-height: 14.5vw;
   width: 90%;
@@ -93,7 +93,7 @@
 /* WINNERS AUDIO STYLING */
 
 #audio-container {
-  width: 85%;
+  width: 90%;
   height: 17vh;
   border-radius: 25px;
   display: flex;
@@ -132,11 +132,11 @@
 
 #track-title {
   font-weight: 200;
-  font-size: 3.5vw;
+  font-size: 3vw;
   margin: 0;
 }
 #track-artist {
-  font-size: 3vw;
+  font-size:2.5vw;
   font-weight: lighter;
   margin: 0;
 }
@@ -146,26 +146,36 @@
     height: 28vh;
     width: 20vw;
   }
+
+  #winner-info-container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    text-align: center;
+  }
+
   #audio-container {
     height: 50%;
   }
 
   #track-title {
-    font-size: 5vw;
+    font-size: 3.5vw;
   }
 
   #track-artist {
-    font-size: 4vw;
+    font-size: 3vw;
   }
 }
 
-@media screen and (max-width: 1100px) {
+/* @media screen and (max-width: 1100px) {
   #winner-image {
     height: 20vh;
     width: 20vw;
   }
   #winner-info {
     width: 100%;
+    text-align: center;
   }
   #first-place-song {
     font-size: 5.5vw;
@@ -174,20 +184,31 @@
   #first-place-artist {
     font-size: 3.5vw;
   }
-}
+} */
 
 @media screen and (max-width: 755px) {
+  #first-place-song {
+    font-size: 4.5vw;
+  }
+  #first-place-artist {
+    font-size: 2.5vw;
+  }
   #winner-image {
     height: 15vh;
     width: 15vw;
   }
+
+  #audio-container{
+    width: 90%;
+  }
   #track-title {
-    font-size: 4vw;
+    font-size: 3vw;
   }
 
   #track-artist {
-    font-size: 3vw;
+    font-size: 2vw;
   }
+
   #audiotrack {
     height: 4vh;
     /* margin-bottom: .5vh; */
@@ -195,5 +216,11 @@
     display: flex;
     flex-direction: row;
     outline: none;
+  }
+  #winner-info-container {
+    width: 100%;
+  }
+  #track-username {
+    font-size: 2vw;
   }
 }

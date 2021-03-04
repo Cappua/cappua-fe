@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  text-align: center;
 }
 
 .winners-page header {
@@ -10,7 +11,7 @@
   justify-content: center;
   color: #212527;
   text-align: center;
-  font-size: 8vw;
+  font-size: 10vw;
   letter-spacing: 4px;
   border-radius: 5px;
   margin: 3vh 1vw 0;
@@ -23,9 +24,9 @@ header b {
   color: goldenrod;
   text-shadow: 4px 4px 3px rgb(0, 0, 0);
   letter-spacing: 20px;
-  line-height: 300px;
-  width: 100%;
-  font-size: 20.7vw;
+  line-height: 200px;
+  width: 95%;
+  font-size: 18.7vw;
   margin: 0;
   padding: 0;
 }
@@ -60,7 +61,6 @@ header b {
   border-radius: 15px;
   box-shadow: 0px 6px 12px 0px #0000003d;
   background-color: #212527;
-
   transition: 0.5s;
 }
 
@@ -157,6 +157,8 @@ header b {
 
 .vote-count {
   color: black;
+  display: flex;
+  align-items: center;
 }
 
 .heart-icon {
@@ -173,9 +175,7 @@ header b {
   height: 3vh;
 }
 
-
 @media screen and (max-width: 1455px) {
-
   #audio-container {
     height: 50%;
   }
@@ -185,6 +185,63 @@ header b {
   }
 
   #track-artist {
-    font-size: .5vw;
+    font-size: 0.5vw;
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  #runner-ups {
+    flex-direction: column;
+    margin: 1vh;
+  }
+  #runner-ups-title {
+    font-size: 10vw;
+    font-family: "Permanent Marker";
+    font-weight: 100;
+    word-spacing: 20px;
+    letter-spacing: 10px;
+    color: rgb(73, 72, 72);
+    text-align: center;
+    margin: 10vh 0 1vh;
+    line-height: 150px;
+  }
+
+  #runner-ups section {
+    margin: 5vh 0;
+  }
+  .contender-container {
+    width: 55vw;
+    height: 40vh;
+  }
+
+  .play-holder {
+    font-size: 11vw;
+  }
+  .contender-icon {
+    height: 6.5vh;
+    width: 4.75vw;
+    border-radius: 50%;
+    margin-left: 1vw;
+  }
+  .contender-track {
+    font-size: 2.5vw;
+  }
+
+  .contender-artist {
+    font-size: 2vw;
+  }
+
+  .contender-audiotrack {
+    height: 4.5vh;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  #runner-ups-title {
+    font-size: 10vw;
+    word-spacing: 8px;
+    letter-spacing: 3px;
+    text-align: center;
+    line-height: 150px;
   }
 }
