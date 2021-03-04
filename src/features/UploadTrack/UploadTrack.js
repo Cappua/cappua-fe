@@ -41,7 +41,7 @@ const UploadTrack = () => {
 
     axios({
       method: "post",
-      url: "https://cappua-be.herokuapp.com/api/v1/upload",
+      url: "http://cappua-be-dev.us-west-1.elasticbeanstalk.com/upload",
       data: formData,
       headers: {
         "Content-Type": "multipart/form-data",
@@ -141,17 +141,14 @@ const UploadTrack = () => {
                   id="download-link"
                   href={`http://d1nb1e3bp5hs25.cloudfront.net${competition.trackPath}`}
                   title="Download Featured Track"
-                  download
-                >
-
+                  download>
                   <i className="fas fa-arrow-circle-down down" id="icon" />
                 </a>
               </div>
               <label
                 htmlFor="uploader"
                 className="upload-input"
-                title="Upload Your Verse"
-              >
+                title="Upload Your Verse">
                 <i className="fas fa-arrow-circle-up up" id="icon" />
               </label>
 
