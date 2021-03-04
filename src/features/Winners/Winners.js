@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { useQuery } from "@apollo/client";
 import { GET_ALL_VERSES } from "../../GraphQL/queries.js";
 
-const Winners= () => {
+const Winners = () => {
   const [tracks, setTracks] = useState(null);
   const [contenders, setContenders] = useState([]);
   const { data } = useQuery(GET_ALL_VERSES);
@@ -17,7 +17,10 @@ const Winners= () => {
 
   useEffect(() => {
     if (tracks) {
-      let sorted = tracks.slice().sort((a, b) => {
+      let februaryTracks = tracks.filter((track) => {
+        return track.competitionId === 2;
+      });
+      let sorted = februaryTracks.slice().sort((a, b) => {
         return b.voteCount - a.voteCount;
       });
       setContenders([sorted[1], sorted[2]]);
@@ -59,9 +62,7 @@ const Winners= () => {
         <div className="contender-votes">
           <img className="contender-icon" src={user.image}></img>
           <audio className="contender-audiotrack" controls>
-            <source
-              src={`http://d1nb1e3bp5hs25.cloudfront.net${audioPath}`}
-            />
+            <source src={`http://d1nb1e3bp5hs25.cloudfront.net${audioPath}`} />
           </audio>
           <div className="vote-count">
             <i className="fas fa-heart heart-icon"></i>
@@ -82,6 +83,6 @@ const Winners= () => {
       <section id="runner-ups">{winners}</section>
     </div>
   );
-}
+};
 
 export default Winners;
