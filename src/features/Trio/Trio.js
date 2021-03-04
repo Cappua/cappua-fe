@@ -18,7 +18,7 @@ const Trio = () => {
   useEffect(() => {
     if (tracks) {
       let competitionTracks = tracks.filter((track) => {
-        return track.competitionId === 3
+        return track.competitionId === 1
       })
       let sorted = competitionTracks.slice().sort((a, b) => {
         return b.voteCount - a.voteCount;
