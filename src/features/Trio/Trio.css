@@ -37,6 +37,8 @@
   text-align: center;
   box-shadow: 0px 6px 12px 0px #0000003d;
   height: 60vh;
+  /* min-height: 90vh; */
+
   font-family: "Permanent Marker";
   border-radius: 15px;
   width: 25vw;
@@ -144,8 +146,8 @@
 
   .tab-img-container {
     max-width: 20vw;
-    max-height: 17vh;
-    min-height: 17vh;
+    max-height: 20vh;
+    min-height: 20vh;
     min-width: 20vw;
   }
 
@@ -182,11 +184,11 @@
     font-size: 2.5vw;
   }
   #tab-artist {
-    font-size: 3vw;
+    font-size: 2vw;
   }
   #tab-song {
     font-weight: lighter;
-    font-size: 4vw;
+    font-size: 2.5vw;
     padding: 0vh 2.5vw 5vh;
   }
   .tab-btn {
@@ -194,7 +196,7 @@
     border-radius: 5px;
     color: white;
     align-self: center;
-    height: 4vh;
+    height: 7vh;
     width: 14vw;
     font-size: 1.8vw;
     border: 0;
@@ -250,17 +252,18 @@
   }
 
   .tab-container {
-    height: 40vh;
-    width: 50vw;
+    height: 60vh;
+    width: 40vw;
+    min-height: 60vh;
     margin: 2vh 0;
-    padding: 40px 0;
+    padding: 5vh 0;
   }
 
   .tab-img-container {
-    max-width: 25vw;
-    max-height: 15vh;
-    min-height: 15vh;
-    min-width: 25vw;
+    max-width: 20vw;
+    max-height: 20vh;
+    min-height: 20vh;
+    min-width: 20vw;
   }
   .featured-artists {
     margin: 0vh 0vh 5vh 0vh;
@@ -275,9 +278,11 @@
     color: rgb(73, 72, 72);
   }
   #tab-song {
-    font-size: 5vw;
+    font-size: 3.5vw;
+    letter-spacing: 0;
+    word-spacing: 0;
   }
-    #tab-artist {
+  #tab-artist {
     font-size: 3vw;
   }
   .tab-btn {
@@ -285,6 +290,7 @@
     border-radius: 5px;
     color: white;
     width: 20vw;
+    height: 7vh;
     align-self: center;
     font-size: 2.5vw;
     border: none;
