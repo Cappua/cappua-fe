@@ -41,7 +41,7 @@ const UploadTrack = () => {
 
     axios({
       method: "post",
-      url: "http://cappua-be-dev.us-west-1.elasticbeanstalk.com/upload",
+      url: "https://cappua-be.herokuapp.com/upload",
       data: formData,
       headers: {
         "Content-Type": "multipart/form-data",
