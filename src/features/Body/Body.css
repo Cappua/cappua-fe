@@ -9,7 +9,7 @@
   flex-direction: row;
   justify-content: space-around;
   padding: 2em;
-  margin-top: 3vh;
+  margin-top: 1vh;
 }
 
 .body-text {
@@ -28,7 +28,7 @@
 }
 
 .winner-name {
-  font-size: 5.5vw;
+  font-size: 5vw;
   margin: 0;
   line-height: 150px;
   letter-spacing: 0.5vw;
@@ -58,7 +58,7 @@
   color: rgb(7, 54, 182);
 }
 .body-image {
-  height: 50vh;
+  height: 40vh;
   width: 26vw;
   margin-right: 5vw;
   border-radius: 50%;
@@ -67,15 +67,18 @@
 
 @media screen and (max-width: 1455px) {
   .winner-name {
-    font-size: 6vw;
+    font-size: 5vw;
+      letter-spacing: 0vw;
   }
   .body-image {
     height: 25vh;
     width: 20vw;
   }
+
 }
 
 @media screen and (max-width: 1186px) {
+
   .body-text {
     width: 100%;
     text-align: center;

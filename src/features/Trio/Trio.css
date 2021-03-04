@@ -201,7 +201,7 @@
     margin: 0;
   }
 }
-@media screen and (max-width: 900px) {
+/* @media screen and (max-width: 900px) {
   .tab-img-container {
     max-width: 18vw;
     max-height: 14vh;
@@ -239,9 +239,9 @@
     margin: none;
     padding: 5px;
   }
-}
+} */
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1100px) {
   .featured-artists {
     flex-direction: column;
     justify-content: space-around;
@@ -250,22 +250,30 @@
   }
 
   .tab-container {
-    height: 50vh;
+    height: 40vh;
     width: 50vw;
     margin: 2vh 0;
+    padding: 40px 0;
   }
 
   .tab-img-container {
     max-width: 25vw;
-    max-height: 20vh;
-    min-height: 20vh;
+    max-height: 15vh;
+    min-height: 15vh;
     min-width: 25vw;
   }
   .featured-artists {
     margin: 0vh 0vh 5vh 0vh;
     height: fit-content;
   }
-
+  #featured-title {
+    font-size: 6vw;
+    font-family: "Permanent Marker", cursive;
+    font-weight: 100;
+    word-spacing: 10px;
+    letter-spacing: 5px;
+    color: rgb(73, 72, 72);
+  }
   #tab-song {
     font-size: 5vw;
   }

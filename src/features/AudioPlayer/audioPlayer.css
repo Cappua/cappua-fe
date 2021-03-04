@@ -30,6 +30,7 @@
   width: 50%;
   outline: none;
   margin: 1vw;
+  min-height: 3vh;
 }
 .song {
   user-select: none;
