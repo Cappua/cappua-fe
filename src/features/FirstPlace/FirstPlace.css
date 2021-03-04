@@ -93,8 +93,8 @@
 /* WINNERS AUDIO STYLING */
 
 #audio-container {
-  width: 90%;
-  height: 18vh;
+  width: 85%;
+  height: 17vh;
   border-radius: 25px;
   display: flex;
   justify-content: center;
@@ -132,11 +132,11 @@
 
 #track-title {
   font-weight: 200;
-  font-size: 4.5vw;
+  font-size: 3.5vw;
   margin: 0;
 }
 #track-artist {
-  font-size: 3.5vw;
+  font-size: 3vw;
   font-weight: lighter;
   margin: 0;
 }

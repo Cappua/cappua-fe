@@ -69,6 +69,10 @@
   .winner-name {
     font-size: 6vw;
   }
+  .body-image {
+  height: 25vh;
+  width: 20vw;
+}
 }
 
 @media screen and (max-width: 1186px) {

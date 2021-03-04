@@ -11,5 +11,5 @@ export const errorLink = onError(({ graphqlErrors, networkError }) => {
 
 export const client = new ApolloClient({
   cache: new InMemoryCache(),
-  uri: "http://localhost:8000/graphql",
+  uri: "https://cappua-be.herokuapp.com/graphql",
 });
