@@ -55,7 +55,7 @@ const UploadTrack = () => {
             window.location.reload();
           }
         }
-      })a
+      })
       .then((error) => {
         console.log(error);
       });
