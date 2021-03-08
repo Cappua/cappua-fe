@@ -203,15 +203,15 @@
     margin: 0;
   }
 }
-/* @media screen and (max-width: 900px) {
+@media screen and (max-width: 2500px) {
   .tab-img-container {
-    max-width: 18vw;
-    max-height: 14vh;
-    min-height: 14vh;
-    min-width: 18vw;
+    max-width: 15vw;
+    max-height: 25vh;
+    min-height: 25vh;
+    min-width: 15vw;
   }
 
-  #featured-title {
+  /* #featured-title {
     font-size: 6vw;
     font-family: "Permanent Marker", cursive;
     font-weight: 100;
@@ -240,8 +240,8 @@
     border: none;
     margin: none;
     padding: 5px;
-  }
-} */
+  } */
+}
 
 @media screen and (max-width: 1100px) {
   .featured-artists {
@@ -260,10 +260,10 @@
   }
 
   .tab-img-container {
-    max-width: 25vw;
+    max-width: 30vw;
     max-height: 25vh;
     min-height: 20vh;
-    min-width: 20vw;
+    min-width: 30vw;
   }
   .featured-artists {
     margin: 0vh 0vh 5vh 0vh;
@@ -307,8 +307,10 @@
   }
 
   .tab-img-container {
+    max-height: 20vh;
     min-height: 20vh;
-    min-width: 35vw;
+    min-width: 40vw;
+    max-width: 45vw;
   }
 
   #tab-vote{
@@ -323,5 +325,14 @@
   }
   .tab-btn{
     height: 5vh;
+  }
+}
+
+
+@media screen and (max-width:600px) {
+    .tab-container {
+    height: 30vh;
+    width: 65vw;
+    padding: 8vh 0;
   }
 }
