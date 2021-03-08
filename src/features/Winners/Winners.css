@@ -175,7 +175,14 @@ header b {
   height: 3vh;
 }
 
-@media screen and (max-width: 1455px) {
+@media screen and (max-width: 1500px) {
+  .contender-container {
+    height: 20vh;
+  }
+
+  .medallion{
+    font-size: 5vh;
+  }
   #audio-container {
     height: 50%;
   }
@@ -186,6 +193,14 @@ header b {
 
   #track-artist {
     font-size: 0.5vw;
+  }
+  .contender-icon {
+    height: 4vh;
+    width: 4vw;
+  }
+
+  .contender-votes {
+    font-size: 2vw;
   }
 }
 
