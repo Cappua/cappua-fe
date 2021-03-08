@@ -54,10 +54,10 @@
 .tab-img-container {
   display: inline-block;
   position: relative;
-  max-width: 13vw;
+  max-width: 20vw;
   max-height: 25vh;
-  min-height: 25vh;
-  min-width: 5vw;
+  min-height: 20vh;
+  min-width: 20vw;
   overflow: hidden;
   border-radius: 50%;
   box-shadow: 0px 6px 12px 0px #0000003d;
@@ -252,17 +252,17 @@
   }
 
   .tab-container {
-    height: 60vh;
-    width: 40vw;
-    min-height: 60vh;
+    height: 50vh;
+    width: 55vw;
+    min-height: 45vh;
     margin: 2vh 0;
     padding: 5vh 0;
   }
 
   .tab-img-container {
-    max-width: 20vw;
-    max-height: 20vh;
-    min-height: 20vh;
+    max-width: 25vw;
+    max-height: 25vh;
+    min-height: 15vh;
     min-width: 20vw;
   }
   .featured-artists {
@@ -297,4 +297,8 @@
     margin: none;
     padding: 5px;
   }
+}
+
+
+@media screen and (max-width: 1100px) {
 }
