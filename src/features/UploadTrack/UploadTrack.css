@@ -12,7 +12,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0;
+  margin: 1.5vh 0;
 }
 
 .upload-track-form {
@@ -149,7 +149,7 @@
     border-radius: 10px;
   }
 
-  .submit-button{
+  .submit-button {
     width: 18vw;
     font-size: 2vw;
   }
@@ -158,12 +158,11 @@
   }
 }
 
-
 @media screen and (max-width: 1000px) {
-    .download-upload-container {
+  .download-upload-container {
     margin: 1vh;
   }
-  .submit-button{
+  .submit-button {
     height: 5vh;
     width: 30vw;
     font-size: 3.5vw;
@@ -171,10 +170,10 @@
   #icon {
     font-size: 10vw;
   }
-    #track-input-title {
+  #track-input-title {
     font-size: 4vw;
   }
-    #filename-input {
+  #filename-input {
     width: 30vw;
     height: 3vh;
     border-radius: 10px;
